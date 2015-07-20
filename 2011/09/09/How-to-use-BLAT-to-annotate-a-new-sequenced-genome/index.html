@@ -30,7 +30,7 @@
 
 
 
-  <meta name="keywords" content="hexo,test," />
+  <meta name="keywords" content="bioinformatics,gene annotation," />
 
 
 
@@ -39,23 +39,19 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.4" />
 
 
-<meta name="description" content="For more information, visit:
-
-DaWei Huang’s Homepage at Zhang Zhang Lab">
+<meta name="description" content="原文
+I am in charge of Date Palm genome annotation recently. In fact, there is only one person doing this, me.UCSC and Ensembl are the most famous genome sequence databases and both developed effective">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Online">
-<meta property="og:url" content="http://daweih.github.io/2015/07/20/Online/index.html">
+<meta property="og:title" content="How to use BLAT to annotate a new sequenced genome">
+<meta property="og:url" content="http://daweih.github.io/2011/09/09/How-to-use-BLAT-to-annotate-a-new-sequenced-genome/index.html">
 <meta property="og:site_name" content="东隅">
-<meta property="og:description" content="For more information, visit:
-
-DaWei Huang’s Homepage at Zhang Zhang Lab">
-<meta property="og:image" content="http://daweih.github.io/images/default_avatar.jpg">
-<meta property="og:updated_time" content="2015-07-20T06:00:29.000Z">
+<meta property="og:description" content="原文
+I am in charge of Date Palm genome annotation recently. In fact, there is only one person doing this, me.UCSC and Ensembl are the most famous genome sequence databases and both developed effective">
+<meta property="og:updated_time" content="2015-07-20T13:41:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Online">
-<meta name="twitter:description" content="For more information, visit:
-
-DaWei Huang’s Homepage at Zhang Zhang Lab">
+<meta name="twitter:title" content="How to use BLAT to annotate a new sequenced genome">
+<meta name="twitter:description" content="原文
+I am in charge of Date Palm genome annotation recently. In fact, there is only one person doing this, me.UCSC and Ensembl are the most famous genome sequence databases and both developed effective">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -65,7 +61,7 @@ DaWei Huang’s Homepage at Zhang Zhang Lab">
   };
 </script>
 
-    <title> Online // 东隅 </title>
+    <title> How to use BLAT to annotate a new sequenced genome // 东隅 </title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
 <!--[if lte IE 8]>
@@ -168,7 +164,7 @@ DaWei Huang’s Homepage at Zhang Zhang Lab">
           
           
             
-              Online
+              How to use BLAT to annotate a new sequenced genome
             
           
         </h1>
@@ -177,8 +173,8 @@ DaWei Huang’s Homepage at Zhang Zhang Lab">
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-07-20T08:04:40+08:00" content="2015-07-20">
-            2015-07-20
+          <time itemprop="dateCreated" datetime="2011-09-09T21:37:05+08:00" content="2011-09-09">
+            2011-09-09
           </time>
         </span>
 
@@ -194,20 +190,15 @@ DaWei Huang’s Homepage at Zhang Zhang Lab">
 
       
       
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-          
-            <a class="post-gallery-img fancybox" href="http://daweih.github.io/images/default_avatar.jpg" rel="gallery_cicbyomvi0010ilo0kv2xw4b1" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-              <img src="http://daweih.github.io/images/default_avatar.jpg" itemprop="contentUrl"/>
-            </a>
-          
-        </div>
-      
 
       
-        <span itemprop="articleBody"><p>For more information, visit:</p>
-<ul>
-<li><a href="http://cbb.big.ac.cn/Dawei_Huang" target="_blank" rel="external">DaWei Huang’s Homepage at Zhang Zhang Lab</a></li>
-</ul>
+        <span itemprop="articleBody"><p><a href="https://daweimhuang.wordpress.com/2011/09/09/how-to-use-blat-to-annotate-a-new-sequenced-genome/" target="_blank" rel="external">原文</a></p>
+<p>I am in charge of Date Palm genome annotation recently. In fact, there is only one person doing this, me.<br>UCSC and Ensembl are the most famous genome sequence databases and both developed effective tool, BLAT from UCSC and pMatch from Ensembl, to do this.<br>pMatch need input of protein sequence. So it is suitable for use rich datasets to annotate a similar species’ genome without lots of sequence proteins.<br>BLAT is good at cDNA to genome alignment. So we choose BLAT because we got Newbler assembled cDNA sequence from 454.</p>
+<p>The Data Palm Genome sequence assembly based on two data source, the 454 newbler assembled contig and solid mate pair reads.<br>Newbler assemble the 454 data of genome to contigs which provide the main structure of genome assembly.<br>Solid mate pair data provide the information of relationship between contigs, including order, gap length, etc.</p>
+<p>454 can not provide sequence strand information. After assembly, the cDNA can be sense strand or anti-sense strand. Since both of the genome strand have the ability to encode genes as we defined as positive strand gene and negative strand gene, the BLAT mapping data can provide 4 kinds of mapping results due to the complexity discussed before.</p>
+<p>So the first step of annotation is to convert the anti-sense cDNA to sense strand sequence, the the mapping results will remain only two types, the positive strand gene and negative strand gene.</p>
+<p>There are several source of the strand information, splice signal, transcriptome data form solid strand specific experiment, CDS prediction data and alignment-based annotation of cDNA.</p>
+<p>Splice signal is the first 2 and last two base of intron sequence. cDNA is sequenced from mRNA which only consist exons of gene. When mapped back to genome, the alignment region of cDNA will consist multiple alignment blocks. Blocks of cDNA sequence are usually continuous whereas blocks of genome is separated by unaligned sequence blocks, usually introns.</p>
 </span>
       
     </div>
@@ -216,9 +207,9 @@ DaWei Huang’s Homepage at Zhang Zhang Lab">
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag">#hexo</a>
+            <a href="/tags/bioinformatics/" rel="tag">#bioinformatics</a>
           
-            <a href="/tags/test/" rel="tag">#test</a>
+            <a href="/tags/gene-annotation/" rel="tag">#gene annotation</a>
           
         </div>
       
@@ -227,13 +218,13 @@ DaWei Huang’s Homepage at Zhang Zhang Lab">
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/07/20/viz-of-chromosome/" rel="prev">一个染色体的可视化</a>
+              <a href="/2011/11/17/How-to-install-circos-on-Mac-OS-X-lion-10-7-x/" rel="prev">How to install circos on Mac OS X lion (10.7.x)</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/07/20/hello-world/" rel="next">Hello World</a>
+              <a href="/2011/08/31/swimming-day/" rel="next">游泳归来</a>
             
           </div>
         </div>

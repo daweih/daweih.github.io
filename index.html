@@ -329,7 +329,7 @@
       
         <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
           
-            <a class="post-gallery-img fancybox" href="http://daweih.github.io/images/default_avatar.jpg" rel="gallery_cicby86g30010eoo0w34wulfg" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+            <a class="post-gallery-img fancybox" href="http://daweih.github.io/images/default_avatar.jpg" rel="gallery_cicbyomvi0010ilo0kv2xw4b1" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
               <img src="http://daweih.github.io/images/default_avatar.jpg" itemprop="contentUrl"/>
             </a>
           
@@ -492,6 +492,74 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /Applications/Bioinformatics/circos-<span class="number">0.55</span>/example/</span><br><span class="line">/Applications/Bioinformatics/circos-<span class="number">0.55</span>/bin/circos -conf ./circos.conf</span><br></pre></td></tr></table></figure>
 <p>circos 提供的 tutorials 需要跳转到 tutorials 这个文件夹而不是 data 下运行，这个在官方的手册里是错误的。</p>
 <p>搞定。</p>
+</span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              <a class="post-title-link" href="/2011/09/09/How-to-use-BLAT-to-annotate-a-new-sequenced-genome/" itemprop="url">
+                How to use BLAT to annotate a new sequenced genome
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2011-09-09T21:37:05+08:00" content="2011-09-09">
+            2011-09-09
+          </time>
+        </span>
+
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><p><a href="https://daweimhuang.wordpress.com/2011/09/09/how-to-use-blat-to-annotate-a-new-sequenced-genome/" target="_blank" rel="external">原文</a></p>
+<p>I am in charge of Date Palm genome annotation recently. In fact, there is only one person doing this, me.<br>UCSC and Ensembl are the most famous genome sequence databases and both developed effective tool, BLAT from UCSC and pMatch from Ensembl, to do this.<br>pMatch need input of protein sequence. So it is suitable for use rich datasets to annotate a similar species’ genome without lots of sequence proteins.<br>BLAT is good at cDNA to genome alignment. So we choose BLAT because we got Newbler assembled cDNA sequence from 454.</p>
+<p>The Data Palm Genome sequence assembly based on two data source, the 454 newbler assembled contig and solid mate pair reads.<br>Newbler assemble the 454 data of genome to contigs which provide the main structure of genome assembly.<br>Solid mate pair data provide the information of relationship between contigs, including order, gap length, etc.</p>
+<p>454 can not provide sequence strand information. After assembly, the cDNA can be sense strand or anti-sense strand. Since both of the genome strand have the ability to encode genes as we defined as positive strand gene and negative strand gene, the BLAT mapping data can provide 4 kinds of mapping results due to the complexity discussed before.</p>
+<p>So the first step of annotation is to convert the anti-sense cDNA to sense strand sequence, the the mapping results will remain only two types, the positive strand gene and negative strand gene.</p>
+<p>There are several source of the strand information, splice signal, transcriptome data form solid strand specific experiment, CDS prediction data and alignment-based annotation of cDNA.</p>
+<p>Splice signal is the first 2 and last two base of intron sequence. cDNA is sequenced from mRNA which only consist exons of gene. When mapped back to genome, the alignment region of cDNA will consist multiple alignment blocks. Blocks of cDNA sequence are usually continuous whereas blocks of genome is separated by unaligned sequence blocks, usually introns.</p>
 </span>
         
       
@@ -877,7 +945,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -891,7 +959,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-count">14</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>
