@@ -193,11 +193,7 @@
 
       
         
-          <span itemprop="articleBody"><h4 id="BLAST">BLAST</h4><h4 id="配置_MCL_的_MySQL_数据库">配置 MCL 的 MySQL 数据库</h4><p><code>grep -P &quot;^[^#]&quot; orthomcl.blastout &gt; blastresult</code></p>
-<p><code>orthomclBlastParser blastresult compliantFasta &gt; similarSequences.txt</code></p>
-<p><code>perl -p -i -e &#39;s/\t(\w+)(\|.*)orthomcl/\t$1$2$1/&#39; similarSequences.txt</code></p>
-<p><code>perl -p -i -e &#39;s/0\t0/1\t-181/&#39; similarSequences.txt</code></p>
-<p><code>create database orthomcl;</code></p>
+          <span itemprop="articleBody"><h4 id="BLAST">BLAST</h4><h4 id="配置_MCL_的_MySQL_数据库">配置 MCL 的 MySQL 数据库</h4><p><code>create database orthomcl;</code></p>
 <p><code>DROP TABLE BestHit, BestInterTaxonScore, BestQueryTaxonScore, BetterHit, CoOrthNotOrtholog, CoOrtholog, CoOrthologAvgScore, CoOrthologCandidate, CoOrthologTaxon, CoOrthologTemp, InParalog, InParalog2Way, InParalogAvgScore, InParalogOrtholog, InParalogTaxonAvg, InParalogTemp, InplgOrthTaxonAvg, InplgOrthoInplg, InterTaxonMatch, Ortholog, Ortholog2Way, OrthologAvgScore, OrthologTaxon, OrthologTemp, OrthologUniqueId, SimilarSequences, UniqSimSeqsQueryId;</code></p>
 <p><code>DROP TABLE BestQueryTaxonScore;</code></p>
 <p><code>orthomclInstallSchema orthomcl.config.template</code></p>
@@ -337,11 +333,11 @@
       
         <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
           
-            <a class="post-gallery-img fancybox" href="http://daweih.github.io/images/default_avatar.jpg" rel="gallery_cicbhf9rh0010lvo0rt1p8fa3" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+            <a class="post-gallery-img fancybox" href="http://daweih.github.io/images/default_avatar.jpg" rel="gallery_cicbi4ook0010ofo0gcb5yh8l" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
               <img src="http://daweih.github.io/images/default_avatar.jpg" itemprop="contentUrl"/>
             </a>
           
-            <a class="post-gallery-img fancybox" href="http://daweih.github.io/images/default_avatar.jpg" rel="gallery_cicbhf9rh0010lvo0rt1p8fa3" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+            <a class="post-gallery-img fancybox" href="http://daweih.github.io/images/default_avatar.jpg" rel="gallery_cicbi4ook0010ofo0gcb5yh8l" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
               <img src="http://daweih.github.io/images/default_avatar.jpg" itemprop="contentUrl"/>
             </a>
           
