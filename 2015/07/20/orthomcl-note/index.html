@@ -39,22 +39,19 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.4" />
 
 
-<meta name="description" content="BLAST配置 MCL 的 MySQL 数据库grep -P &amp;quot;^[^#]&amp;quot; orthomcl.blastout &amp;gt; blastresult
-orthomclBlastParser blastresult compliantFasta &amp;gt; similarSequences.txt
-perl -p -i -e &amp;#39;s/\t(\w+)(\|.*)orthomcl/">
+<meta name="description" content="BLAST配置 MCL 的 MySQL 数据库create database orthomcl;
+DROP TABLE BestHit, BestInterTaxonScore, BestQueryTaxonScore, BetterHit, CoOrthNotOrtholog, CoOrtholog, CoOrthologAvgScore, CoOrthologCandidate, CoOrth">
 <meta property="og:type" content="article">
 <meta property="og:title" content="OrthoMCL 使用笔记">
 <meta property="og:url" content="http://daweih.github.io/2015/07/20/orthomcl-note/index.html">
 <meta property="og:site_name" content="东隅">
-<meta property="og:description" content="BLAST配置 MCL 的 MySQL 数据库grep -P &amp;quot;^[^#]&amp;quot; orthomcl.blastout &amp;gt; blastresult
-orthomclBlastParser blastresult compliantFasta &amp;gt; similarSequences.txt
-perl -p -i -e &amp;#39;s/\t(\w+)(\|.*)orthomcl/">
-<meta property="og:updated_time" content="2015-07-20T05:38:46.000Z">
+<meta property="og:description" content="BLAST配置 MCL 的 MySQL 数据库create database orthomcl;
+DROP TABLE BestHit, BestInterTaxonScore, BestQueryTaxonScore, BetterHit, CoOrthNotOrtholog, CoOrtholog, CoOrthologAvgScore, CoOrthologCandidate, CoOrth">
+<meta property="og:updated_time" content="2015-07-20T05:58:35.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OrthoMCL 使用笔记">
-<meta name="twitter:description" content="BLAST配置 MCL 的 MySQL 数据库grep -P &amp;quot;^[^#]&amp;quot; orthomcl.blastout &amp;gt; blastresult
-orthomclBlastParser blastresult compliantFasta &amp;gt; similarSequences.txt
-perl -p -i -e &amp;#39;s/\t(\w+)(\|.*)orthomcl/">
+<meta name="twitter:description" content="BLAST配置 MCL 的 MySQL 数据库create database orthomcl;
+DROP TABLE BestHit, BestInterTaxonScore, BestQueryTaxonScore, BetterHit, CoOrthNotOrtholog, CoOrtholog, CoOrthologAvgScore, CoOrthologCandidate, CoOrth">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -195,11 +192,7 @@ perl -p -i -e &amp;#39;s/\t(\w+)(\|.*)orthomcl/">
       
 
       
-        <span itemprop="articleBody"><h4 id="BLAST">BLAST</h4><h4 id="配置_MCL_的_MySQL_数据库">配置 MCL 的 MySQL 数据库</h4><p><code>grep -P &quot;^[^#]&quot; orthomcl.blastout &gt; blastresult</code></p>
-<p><code>orthomclBlastParser blastresult compliantFasta &gt; similarSequences.txt</code></p>
-<p><code>perl -p -i -e &#39;s/\t(\w+)(\|.*)orthomcl/\t$1$2$1/&#39; similarSequences.txt</code></p>
-<p><code>perl -p -i -e &#39;s/0\t0/1\t-181/&#39; similarSequences.txt</code></p>
-<p><code>create database orthomcl;</code></p>
+        <span itemprop="articleBody"><h4 id="BLAST">BLAST</h4><h4 id="配置_MCL_的_MySQL_数据库">配置 MCL 的 MySQL 数据库</h4><p><code>create database orthomcl;</code></p>
 <p><code>DROP TABLE BestHit, BestInterTaxonScore, BestQueryTaxonScore, BetterHit, CoOrthNotOrtholog, CoOrtholog, CoOrthologAvgScore, CoOrthologCandidate, CoOrthologTaxon, CoOrthologTemp, InParalog, InParalog2Way, InParalogAvgScore, InParalogOrtholog, InParalogTaxonAvg, InParalogTemp, InplgOrthTaxonAvg, InplgOrthoInplg, InterTaxonMatch, Ortholog, Ortholog2Way, OrthologAvgScore, OrthologTaxon, OrthologTemp, OrthologUniqueId, SimilarSequences, UniqSimSeqsQueryId;</code></p>
 <p><code>DROP TABLE BestQueryTaxonScore;</code></p>
 <p><code>orthomclInstallSchema orthomcl.config.template</code></p>
