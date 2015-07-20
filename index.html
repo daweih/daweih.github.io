@@ -193,16 +193,16 @@
 
       
         
-          <span itemprop="articleBody"><h4 id="BLAST">BLAST</h4><h4 id="配置_MCL_的_MySQL_数据库">配置 MCL 的 MySQL 数据库</h4><p><code>create database orthomcl;</code></p>
-<p><code>DROP TABLE BestHit, BestInterTaxonScore, BestQueryTaxonScore, BetterHit, CoOrthNotOrtholog, CoOrtholog, CoOrthologAvgScore, CoOrthologCandidate, CoOrthologTaxon, CoOrthologTemp, InParalog, InParalog2Way, InParalogAvgScore, InParalogOrtholog, InParalogTaxonAvg, InParalogTemp, InplgOrthTaxonAvg, InplgOrthoInplg, InterTaxonMatch, Ortholog, Ortholog2Way, OrthologAvgScore, OrthologTaxon, OrthologTemp, OrthologUniqueId, SimilarSequences, UniqSimSeqsQueryId;</code></p>
-<p><code>DROP TABLE BestQueryTaxonScore;</code></p>
-<p><code>orthomclInstallSchema orthomcl.config.template</code></p>
-<h4 id="载入数据到_MySQL">载入数据到 MySQL</h4><p><code>orthomclLoadBlast orthomcl.config.template similarSequences.txt</code></p>
-<p><code>orthomclLoadBlast orthomcl.config.template similarSequences.txt.rmisoform</code></p>
-<p><code>orthomclPairs orthomcl.config.template orthomcl_pairs.log cleanup=no</code></p>
-<p><code>orthomclDumpPairsFiles orthomcl.config.template</code></p>
-<h4 id="运行_OrthoMCL">运行 OrthoMCL</h4><p><code>mcl mclInput --abc -I 1.1 -o mclOutput11</code></p>
-<p><code>orthomclMclToGroups ORYSA 1 &lt; mclOutput11 &gt; groups11x.txt</code></p>
+          <span itemprop="articleBody"><h4 id="BLAST">BLAST</h4><h4 id="配置_MCL_的_MySQL_数据库">配置 MCL 的 MySQL 数据库</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create database orthomcl;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP TABLE BestHit, BestInterTaxonScore, BestQueryTaxonScore, BetterHit, CoOrthNotOrtholog, CoOrtholog, CoOrthologAvgScore, CoOrthologCandidate, CoOrthologTaxon, CoOrthologTemp, InParalog, InParalog2Way, InParalogAvgScore, InParalogOrtholog, InParalogTaxonAvg, InParalogTemp, InplgOrthTaxonAvg, InplgOrthoInplg, InterTaxonMatch, Ortholog, Ortholog2Way, OrthologAvgScore, OrthologTaxon, OrthologTemp, OrthologUniqueId, SimilarSequences, UniqSimSeqsQueryId;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP TABLE BestQueryTaxonScore;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">orthomclInstallSchema orthomcl.config.template</span><br></pre></td></tr></table></figure>
+<h4 id="载入数据到_MySQL">载入数据到 MySQL</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">orthomclLoadBlast orthomcl.config.template similarSequences.txt</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">orthomclLoadBlast orthomcl.config.template similarSequences.txt.rmisoform</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">orthomclPairs orthomcl.config.template orthomcl_pairs.log cleanup=no</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">orthomclDumpPairsFiles orthomcl.config.template</span><br></pre></td></tr></table></figure>
+<h4 id="运行_OrthoMCL">运行 OrthoMCL</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mcl mclInput --abc -I <span class="number">1.1</span> -o mclOutput11</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">orthomclMclToGroups ORYSA <span class="number">1</span> &lt; mclOutput11 &gt; groups11x.txt</span><br></pre></td></tr></table></figure>
 <h4 id="结果文件的使用">结果文件的使用</h4></span>
         
       
@@ -333,7 +333,7 @@
       
         <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
           
-            <a class="post-gallery-img fancybox" href="http://daweih.github.io/images/default_avatar.jpg" rel="gallery_cicbi7f490010qmo0dewrtkje" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+            <a class="post-gallery-img fancybox" href="http://daweih.github.io/images/default_avatar.jpg" rel="gallery_cicbiaogo0010suo02dirqhid" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
               <img src="http://daweih.github.io/images/default_avatar.jpg" itemprop="contentUrl"/>
             </a>
           
