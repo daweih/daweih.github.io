@@ -10,47 +10,25 @@ tags: [bioinformatics, evolution]
 
 
 ``` bash
-create database orthomcl;
+$ create database orthomcl;
+$ DROP TABLE BestHit, BestInterTaxonScore, BestQueryTaxonScore, BetterHit, CoOrthNotOrtholog, CoOrtholog, CoOrthologAvgScore, CoOrthologCandidate, CoOrthologTaxon, CoOrthologTemp, InParalog, InParalog2Way, InParalogAvgScore, InParalogOrtholog, InParalogTaxonAvg, InParalogTemp, InplgOrthTaxonAvg, InplgOrthoInplg, InterTaxonMatch, Ortholog, Ortholog2Way, OrthologAvgScore, OrthologTaxon, OrthologTemp, OrthologUniqueId, SimilarSequences, UniqSimSeqsQueryId;
+$ DROP TABLE BestQueryTaxonScore;
+$ orthomclInstallSchema orthomcl.config.template
 ```
-
-``` bash
-DROP TABLE BestHit, BestInterTaxonScore, BestQueryTaxonScore, BetterHit, CoOrthNotOrtholog, CoOrtholog, CoOrthologAvgScore, CoOrthologCandidate, CoOrthologTaxon, CoOrthologTemp, InParalog, InParalog2Way, InParalogAvgScore, InParalogOrtholog, InParalogTaxonAvg, InParalogTemp, InplgOrthTaxonAvg, InplgOrthoInplg, InterTaxonMatch, Ortholog, Ortholog2Way, OrthologAvgScore, OrthologTaxon, OrthologTemp, OrthologUniqueId, SimilarSequences, UniqSimSeqsQueryId;
-```
-
-``` bash
-DROP TABLE BestQueryTaxonScore;
-```
-
-``` bash
-orthomclInstallSchema orthomcl.config.template
-```
-
 #### 载入数据到 MySQL
 
 ``` bash
-orthomclLoadBlast orthomcl.config.template similarSequences.txt
-```
-
-``` bash
-orthomclLoadBlast orthomcl.config.template similarSequences.txt.rmisoform
-```
-
-``` bash
-orthomclPairs orthomcl.config.template orthomcl_pairs.log cleanup=no
-```
-
-``` bash
-orthomclDumpPairsFiles orthomcl.config.template
+$ orthomclLoadBlast orthomcl.config.template similarSequences.txt
+$ orthomclLoadBlast orthomcl.config.template similarSequences.txt.rmisoform
+$ orthomclPairs orthomcl.config.template orthomcl_pairs.log cleanup=no
+$ orthomclDumpPairsFiles orthomcl.config.template
 ```
 
 #### 运行 OrthoMCL
 
 ``` bash
-mcl mclInput --abc -I 1.1 -o mclOutput11
-```
-
-``` bash
-orthomclMclToGroups ORYSA 1 < mclOutput11 > groups11x.txt
+$ mcl mclInput --abc -I 1.1 -o mclOutput11
+$ orthomclMclToGroups ORYSA 1 < mclOutput11 > groups11x.txt
 ```
 
 #### 结果文件的使用
