@@ -1,5 +1,5 @@
 title: batch BLAT
-date: 2015-07-20 22:04:18
+date: 2011-07-20 22:04:18
 tags: [bioinformatics, perl] 
 type: "profession"
 ---
