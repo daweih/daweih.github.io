@@ -1,7 +1,7 @@
 title: batch BLAT
 date: 2011-07-20 22:04:18
 tags: [bioinformatics, perl] 
-categories: "profession"
+categories: profession
 ---
 
 这个脚本可以自动化BLAT的运行。
