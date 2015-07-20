@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="hexo,test," />
+  <meta name="keywords" content="bioinformatics,d3,visualization," />
 
 
 
@@ -37,24 +37,28 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.4" />
 
 
-<meta name="description" content="For more information, visit:
-
-DaWei Huang’s Homepage at Zhang Zhang Lab">
+<meta name="description" content="做了一个染色体的可视化，可以用来显示染色体上特定区域的注释信息，如QTL，基因等等。
+如何使用首先，你需要安装 Apache 服务器和 Php 环境在你的电脑上。
+之后，用 git 把这个文件夹克隆到你电脑中网络文件存放的位置。
+通过浏览器来（chrome, safari, 还是 firefox 根据你的喜好）访问 index.php 这个文件即可见可视化。
+如果上面的步骤都成功了，你可以用自己的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Online">
-<meta property="og:url" content="http://daweih.github.io/2015/07/20/Online/index.html">
+<meta property="og:title" content="viz_of_chromosome">
+<meta property="og:url" content="http://daweih.github.io/2015/07/20/viz-of-chromosome/index.html">
 <meta property="og:site_name" content="东隅">
-<meta property="og:description" content="For more information, visit:
-
-DaWei Huang’s Homepage at Zhang Zhang Lab">
-<meta property="og:image" content="http://daweih.github.io/images/default_avatar.jpg">
-<meta property="og:image" content="http://daweih.github.io/images/default_avatar.jpg">
-<meta property="og:updated_time" content="2015-07-20T02:40:58.000Z">
+<meta property="og:description" content="做了一个染色体的可视化，可以用来显示染色体上特定区域的注释信息，如QTL，基因等等。
+如何使用首先，你需要安装 Apache 服务器和 Php 环境在你的电脑上。
+之后，用 git 把这个文件夹克隆到你电脑中网络文件存放的位置。
+通过浏览器来（chrome, safari, 还是 firefox 根据你的喜好）访问 index.php 这个文件即可见可视化。
+如果上面的步骤都成功了，你可以用自己的">
+<meta property="og:updated_time" content="2015-07-20T02:43:19.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Online">
-<meta name="twitter:description" content="For more information, visit:
-
-DaWei Huang’s Homepage at Zhang Zhang Lab">
+<meta name="twitter:title" content="viz_of_chromosome">
+<meta name="twitter:description" content="做了一个染色体的可视化，可以用来显示染色体上特定区域的注释信息，如QTL，基因等等。
+如何使用首先，你需要安装 Apache 服务器和 Php 环境在你的电脑上。
+之后，用 git 把这个文件夹克隆到你电脑中网络文件存放的位置。
+通过浏览器来（chrome, safari, 还是 firefox 根据你的喜好）访问 index.php 这个文件即可见可视化。
+如果上面的步骤都成功了，你可以用自己的">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -64,7 +68,7 @@ DaWei Huang’s Homepage at Zhang Zhang Lab">
   };
 </script>
 
-    <title> Online // 东隅 </title>
+    <title> viz_of_chromosome // 东隅 </title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 <!--[if lte IE 8]>
@@ -175,7 +179,7 @@ DaWei Huang’s Homepage at Zhang Zhang Lab">
           
           
             
-              Online
+              viz_of_chromosome
             
           
         </h1>
@@ -184,7 +188,7 @@ DaWei Huang’s Homepage at Zhang Zhang Lab">
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-07-20T08:04:40+08:00" content="2015-07-20">
+          <time itemprop="dateCreated" datetime="2015-07-20T10:40:02+08:00" content="2015-07-20">
             2015-07-20
           </time>
         </span>
@@ -201,23 +205,16 @@ DaWei Huang’s Homepage at Zhang Zhang Lab">
 
       
       
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-          
-            <a class="post-gallery-img fancybox" href="http://daweih.github.io/images/default_avatar.jpg" rel="gallery_cicbb5sl8000aiao0ir397xke" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-              <img src="http://daweih.github.io/images/default_avatar.jpg" itemprop="contentUrl"/>
-            </a>
-          
-            <a class="post-gallery-img fancybox" href="http://daweih.github.io/images/default_avatar.jpg" rel="gallery_cicbb5sl8000aiao0ir397xke" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-              <img src="http://daweih.github.io/images/default_avatar.jpg" itemprop="contentUrl"/>
-            </a>
-          
-        </div>
-      
 
       
-        <span itemprop="articleBody"><p>For more information, visit:</p>
-<ul>
-<li><a href="http://cbb.big.ac.cn/Dawei_Huang" target="_blank" rel="external">DaWei Huang’s Homepage at Zhang Zhang Lab</a></li>
+        <span itemprop="articleBody"><p>做了一个<a href="https://github.com/daweih/d3_bioviz/tree/master/chromosomes" target="_blank" rel="external">染色体的可视化</a>，可以用来显示染色体上特定区域的注释信息，如QTL，基因等等。</p>
+<h2 id="如何使用">如何使用</h2><p>首先，你需要安装 Apache 服务器和 Php 环境在你的电脑上。</p>
+<p>之后，用 git 把这个文件夹克隆到你电脑中网络文件存放的位置。</p>
+<p>通过浏览器来（chrome, safari, 还是 firefox 根据你的喜好）访问 index.php 这个文件即可见可视化。</p>
+<p>如果上面的步骤都成功了，你可以用自己的数据来替换 example_data 文件夹里的例子数据。</p>
+<p>图片的例子显示了水稻染色体的SNP，数据集来源于第一个参考文献。</p>
+<h2 id="参考文献">参考文献</h2><ul>
+<li><a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=23034647" target="_blank" rel="external">Huang,X. et al. (2012) A map of rice genome variation reveals the origin of cultivated rice. Nature, 490, 497–501.</a></li>
 </ul>
 </span>
       
@@ -227,9 +224,11 @@ DaWei Huang’s Homepage at Zhang Zhang Lab">
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag">#hexo</a>
+            <a href="/tags/bioinformatics/" rel="tag">#bioinformatics</a>
           
-            <a href="/tags/test/" rel="tag">#test</a>
+            <a href="/tags/d3/" rel="tag">#d3</a>
+          
+            <a href="/tags/visualization/" rel="tag">#visualization</a>
           
         </div>
       
@@ -238,13 +237,11 @@ DaWei Huang’s Homepage at Zhang Zhang Lab">
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/07/20/viz-of-chromosome/" rel="prev">viz_of_chromosome</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/07/20/Dawei-Hello-world/" rel="next">Dawei: Hello world</a>
+              <a href="/2015/07/20/Online/" rel="next">Online</a>
             
           </div>
         </div>
@@ -349,7 +346,7 @@ DaWei Huang’s Homepage at Zhang Zhang Lab">
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何使用"><span class="nav-number">1.</span> <span class="nav-text">如何使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">2.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
