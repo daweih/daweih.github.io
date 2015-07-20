@@ -30,7 +30,7 @@
 
 
 
-  <meta name="keywords" content="Hexo,next" />
+  <meta name="keywords" content="bioinformatics,evolution," />
 
 
 
@@ -39,19 +39,22 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.4" />
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="BLAST配置 MCL 的 MySQL 数据库grep -P &amp;quot;^[^#]&amp;quot; orthomcl.blastout &amp;gt; blastresult
+orthomclBlastParser blastresult compliantFasta &amp;gt; similarSequences.txt
+perl -p -i -e &amp;#39;s/\t(\w+)(\|.*)orthomcl/">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://daweih.github.io/2015/07/20/hello-world/index.html">
+<meta property="og:title" content="OrthoMCL 使用笔记">
+<meta property="og:url" content="http://daweih.github.io/2015/07/20/orthomcl-note/index.html">
 <meta property="og:site_name" content="东隅">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2015-07-19T23:27:04.000Z">
+<meta property="og:description" content="BLAST配置 MCL 的 MySQL 数据库grep -P &amp;quot;^[^#]&amp;quot; orthomcl.blastout &amp;gt; blastresult
+orthomclBlastParser blastresult compliantFasta &amp;gt; similarSequences.txt
+perl -p -i -e &amp;#39;s/\t(\w+)(\|.*)orthomcl/">
+<meta property="og:updated_time" content="2015-07-20T05:38:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="OrthoMCL 使用笔记">
+<meta name="twitter:description" content="BLAST配置 MCL 的 MySQL 数据库grep -P &amp;quot;^[^#]&amp;quot; orthomcl.blastout &amp;gt; blastresult
+orthomclBlastParser blastresult compliantFasta &amp;gt; similarSequences.txt
+perl -p -i -e &amp;#39;s/\t(\w+)(\|.*)orthomcl/">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -61,7 +64,7 @@ Quick">
   };
 </script>
 
-    <title> Hello World // 东隅 </title>
+    <title> OrthoMCL 使用笔记 // 东隅 </title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
 <!--[if lte IE 8]>
@@ -164,7 +167,7 @@ Quick">
           
           
             
-              Hello World
+              OrthoMCL 使用笔记
             
           
         </h1>
@@ -173,7 +176,7 @@ Quick">
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-07-20T07:27:04+08:00" content="2015-07-20">
+          <time itemprop="dateCreated" datetime="2015-07-20T13:30:30+08:00" content="2015-07-20">
             2015-07-20
           </time>
         </span>
@@ -192,33 +195,44 @@ Quick">
       
 
       
-        <span itemprop="articleBody"><p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-</span>
+        <span itemprop="articleBody"><h4 id="BLAST">BLAST</h4><h4 id="配置_MCL_的_MySQL_数据库">配置 MCL 的 MySQL 数据库</h4><p><code>grep -P &quot;^[^#]&quot; orthomcl.blastout &gt; blastresult</code></p>
+<p><code>orthomclBlastParser blastresult compliantFasta &gt; similarSequences.txt</code></p>
+<p><code>perl -p -i -e &#39;s/\t(\w+)(\|.*)orthomcl/\t$1$2$1/&#39; similarSequences.txt</code></p>
+<p><code>perl -p -i -e &#39;s/0\t0/1\t-181/&#39; similarSequences.txt</code></p>
+<p><code>create database orthomcl;</code></p>
+<p><code>DROP TABLE BestHit, BestInterTaxonScore, BestQueryTaxonScore, BetterHit, CoOrthNotOrtholog, CoOrtholog, CoOrthologAvgScore, CoOrthologCandidate, CoOrthologTaxon, CoOrthologTemp, InParalog, InParalog2Way, InParalogAvgScore, InParalogOrtholog, InParalogTaxonAvg, InParalogTemp, InplgOrthTaxonAvg, InplgOrthoInplg, InterTaxonMatch, Ortholog, Ortholog2Way, OrthologAvgScore, OrthologTaxon, OrthologTemp, OrthologUniqueId, SimilarSequences, UniqSimSeqsQueryId;</code></p>
+<p><code>DROP TABLE BestQueryTaxonScore;</code></p>
+<p><code>orthomclInstallSchema orthomcl.config.template</code></p>
+<h4 id="载入数据到_MySQL">载入数据到 MySQL</h4><p><code>orthomclLoadBlast orthomcl.config.template similarSequences.txt</code></p>
+<p><code>orthomclLoadBlast orthomcl.config.template similarSequences.txt.rmisoform</code></p>
+<p><code>orthomclPairs orthomcl.config.template orthomcl_pairs.log cleanup=no</code></p>
+<p><code>orthomclDumpPairsFiles orthomcl.config.template</code></p>
+<h4 id="运行_OrthoMCL">运行 OrthoMCL</h4><p><code>mcl mclInput --abc -I 1.1 -o mclOutput11</code></p>
+<p><code>orthomclMclToGroups ORYSA 1 &lt; mclOutput11 &gt; groups11x.txt</code></p>
+<h4 id="结果文件的使用">结果文件的使用</h4></span>
       
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/bioinformatics/" rel="tag">#bioinformatics</a>
+          
+            <a href="/tags/evolution/" rel="tag">#evolution</a>
+          
+        </div>
       
 
       
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/07/20/Online/" rel="prev">Online</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2011/08/31/swimming-day/" rel="next">游泳归来</a>
+              <a href="/2015/07/20/viz-of-chromosome/" rel="next">一个染色体的可视化</a>
             
           </div>
         </div>
@@ -323,7 +337,7 @@ Quick">
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick_Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create_a_new_post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run_server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate_static_files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy_to_remote_sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#BLAST"><span class="nav-number">1.</span> <span class="nav-text">BLAST</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置_MCL_的_MySQL_数据库"><span class="nav-number">2.</span> <span class="nav-text">配置 MCL 的 MySQL 数据库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#载入数据到_MySQL"><span class="nav-number">3.</span> <span class="nav-text">载入数据到 MySQL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运行_OrthoMCL"><span class="nav-number">4.</span> <span class="nav-text">运行 OrthoMCL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#结果文件的使用"><span class="nav-number">5.</span> <span class="nav-text">结果文件的使用</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
