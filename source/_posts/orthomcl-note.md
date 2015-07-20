@@ -35,3 +35,10 @@ $ orthomclMclToGroups ORYSA 1 < mclOutput11 > groups11x.txt
 
 
 
+#### Reference
+- [Li,L. et al. (2003) OrthoMCL: identification of ortholog groups for eukaryotic genomes. Genome Res., 13, 2178–2189.](http://www.ncbi.nlm.nih.gov/pubmed/?term=12952885)
+
+
+
+
+
