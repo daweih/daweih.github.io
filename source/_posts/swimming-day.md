@@ -1,6 +1,7 @@
 title: 游泳归来
 date: 2011-08-31 13:06:10
 tags: [swimming, SaudiArabia, life] 
+categories: diary
 ---
 
 从题目看就可以归为碎碎念。不过今天不想只写碎碎念～

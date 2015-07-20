@@ -1,6 +1,7 @@
 title: 长兄是什么？
 date: 2010-08-21 13:25:50
 tags: [reading, life, family] 
+categories: life
 ---
 
 给自己放假回家，主要的工作就是听父母唠嗑。

@@ -1,6 +1,7 @@
 title: How to install circos on Mac OS X lion (10.7.x)
 date: 2011-11-17 20:02:24
 tags: [bioinformatics, visualization] 
+categories: profession
 ---
 
 Circos 是个画圈图的好工具。在基因组相关文章里展示基因排列，同源性区段，duplication 等，效果很好。由于现在高对平文章对图表的美观程度都有了更高的要求，所以转移到 circos 下来绘制圈图很有必要了（虽然有很多其他的软件和工具）。

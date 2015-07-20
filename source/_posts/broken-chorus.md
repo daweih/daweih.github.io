@@ -1,6 +1,7 @@
 title: 破碎的副歌——从独唱团开始
 date: 2010-09-05 13:21:44
 tags: [reading, life] 
+categories: reading
 ---
 
 破碎的副歌
