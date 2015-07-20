@@ -1,6 +1,6 @@
 title: Online
 date: 2015-07-20 08:04:40
-tags: test
+tags: [test, hexo]
 ---
 
 For more information, visit:
