@@ -1,4 +1,4 @@
-title: viz_of_chromosome
+title: 一个染色体的可视化
 date: 2015-07-20 10:40:02
 tags:  [d3, bioinformatics, visualization] 
 ---
