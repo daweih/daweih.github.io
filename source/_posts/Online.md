@@ -4,7 +4,6 @@ date: 2015-07-20 08:04:40
 tags: [test, hexo] 
 photos:
 - http://daweih.github.io/images/default_avatar.jpg
-- http://daweih.github.io/images/default_avatar.jpg
 ---
 
 For more information, visit:
