@@ -162,6 +162,81 @@
           
           
             
+              <a class="post-title-link" href="/2015/07/20/orthomcl-note/" itemprop="url">
+                OrthoMCL 使用笔记
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2015-07-20T13:30:30+08:00" content="2015-07-20">
+            2015-07-20
+          </time>
+        </span>
+
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><h4 id="BLAST">BLAST</h4><h4 id="配置_MCL_的_MySQL_数据库">配置 MCL 的 MySQL 数据库</h4><p><code>grep -P &quot;^[^#]&quot; orthomcl.blastout &gt; blastresult</code></p>
+<p><code>orthomclBlastParser blastresult compliantFasta &gt; similarSequences.txt</code></p>
+<p><code>perl -p -i -e &#39;s/\t(\w+)(\|.*)orthomcl/\t$1$2$1/&#39; similarSequences.txt</code></p>
+<p><code>perl -p -i -e &#39;s/0\t0/1\t-181/&#39; similarSequences.txt</code></p>
+<p><code>create database orthomcl;</code></p>
+<p><code>DROP TABLE BestHit, BestInterTaxonScore, BestQueryTaxonScore, BetterHit, CoOrthNotOrtholog, CoOrtholog, CoOrthologAvgScore, CoOrthologCandidate, CoOrthologTaxon, CoOrthologTemp, InParalog, InParalog2Way, InParalogAvgScore, InParalogOrtholog, InParalogTaxonAvg, InParalogTemp, InplgOrthTaxonAvg, InplgOrthoInplg, InterTaxonMatch, Ortholog, Ortholog2Way, OrthologAvgScore, OrthologTaxon, OrthologTemp, OrthologUniqueId, SimilarSequences, UniqSimSeqsQueryId;</code></p>
+<p><code>DROP TABLE BestQueryTaxonScore;</code></p>
+<p><code>orthomclInstallSchema orthomcl.config.template</code></p>
+<h4 id="载入数据到_MySQL">载入数据到 MySQL</h4><p><code>orthomclLoadBlast orthomcl.config.template similarSequences.txt</code></p>
+<p><code>orthomclLoadBlast orthomcl.config.template similarSequences.txt.rmisoform</code></p>
+<p><code>orthomclPairs orthomcl.config.template orthomcl_pairs.log cleanup=no</code></p>
+<p><code>orthomclDumpPairsFiles orthomcl.config.template</code></p>
+<h4 id="运行_OrthoMCL">运行 OrthoMCL</h4><p><code>mcl mclInput --abc -I 1.1 -o mclOutput11</code></p>
+<p><code>orthomclMclToGroups ORYSA 1 &lt; mclOutput11 &gt; groups11x.txt</code></p>
+<h4 id="结果文件的使用">结果文件的使用</h4></span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2015/07/20/viz-of-chromosome/" itemprop="url">
                 一个染色体的可视化
               </a>
@@ -262,11 +337,11 @@
       
         <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
           
-            <a class="post-gallery-img fancybox" href="http://daweih.github.io/images/default_avatar.jpg" rel="gallery_cicbh0paz000whpo0s3r8a0ah" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+            <a class="post-gallery-img fancybox" href="http://daweih.github.io/images/default_avatar.jpg" rel="gallery_cicbhf9rh0010lvo0rt1p8fa3" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
               <img src="http://daweih.github.io/images/default_avatar.jpg" itemprop="contentUrl"/>
             </a>
           
-            <a class="post-gallery-img fancybox" href="http://daweih.github.io/images/default_avatar.jpg" rel="gallery_cicbh0paz000whpo0s3r8a0ah" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+            <a class="post-gallery-img fancybox" href="http://daweih.github.io/images/default_avatar.jpg" rel="gallery_cicbhf9rh0010lvo0rt1p8fa3" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
               <img src="http://daweih.github.io/images/default_avatar.jpg" itemprop="contentUrl"/>
             </a>
           
@@ -734,7 +809,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -748,7 +823,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-count">13</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>
