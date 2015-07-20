@@ -39,19 +39,16 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.4" />
 
 
-<meta name="description" content="BLAST配置 MCL 的 MySQL 数据库1create database orthomcl;
-1DROP TABLE BestHit, BestInterTaxonScore, BestQueryTaxonScore, BetterHit, CoOrthNotOrtholog, CoOrtholog, CoOrthologAvgScore, CoOrthologCandidate, CoOr">
+<meta name="description" content="BLAST配置 MCL 的 MySQL 数据库1234$ create database orthomcl;$ DROP TABLE BestHit, BestInterTaxonScore, BestQueryTaxonScore, BetterHit, CoOrthNotOrtholog, CoOrtholog, CoOrthologAvgScore, CoOrthologCandidate,">
 <meta property="og:type" content="article">
 <meta property="og:title" content="OrthoMCL 使用笔记">
 <meta property="og:url" content="http://daweih.github.io/2015/07/20/orthomcl-note/index.html">
 <meta property="og:site_name" content="东隅">
-<meta property="og:description" content="BLAST配置 MCL 的 MySQL 数据库1create database orthomcl;
-1DROP TABLE BestHit, BestInterTaxonScore, BestQueryTaxonScore, BetterHit, CoOrthNotOrtholog, CoOrtholog, CoOrthologAvgScore, CoOrthologCandidate, CoOr">
-<meta property="og:updated_time" content="2015-07-20T06:03:15.000Z">
+<meta property="og:description" content="BLAST配置 MCL 的 MySQL 数据库1234$ create database orthomcl;$ DROP TABLE BestHit, BestInterTaxonScore, BestQueryTaxonScore, BetterHit, CoOrthNotOrtholog, CoOrtholog, CoOrthologAvgScore, CoOrthologCandidate,">
+<meta property="og:updated_time" content="2015-07-20T06:08:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OrthoMCL 使用笔记">
-<meta name="twitter:description" content="BLAST配置 MCL 的 MySQL 数据库1create database orthomcl;
-1DROP TABLE BestHit, BestInterTaxonScore, BestQueryTaxonScore, BetterHit, CoOrthNotOrtholog, CoOrtholog, CoOrthologAvgScore, CoOrthologCandidate, CoOr">
+<meta name="twitter:description" content="BLAST配置 MCL 的 MySQL 数据库1234$ create database orthomcl;$ DROP TABLE BestHit, BestInterTaxonScore, BestQueryTaxonScore, BetterHit, CoOrthNotOrtholog, CoOrtholog, CoOrthologAvgScore, CoOrthologCandidate,">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -192,16 +189,9 @@
       
 
       
-        <span itemprop="articleBody"><h4 id="BLAST">BLAST</h4><h4 id="配置_MCL_的_MySQL_数据库">配置 MCL 的 MySQL 数据库</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create database orthomcl;</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP TABLE BestHit, BestInterTaxonScore, BestQueryTaxonScore, BetterHit, CoOrthNotOrtholog, CoOrtholog, CoOrthologAvgScore, CoOrthologCandidate, CoOrthologTaxon, CoOrthologTemp, InParalog, InParalog2Way, InParalogAvgScore, InParalogOrtholog, InParalogTaxonAvg, InParalogTemp, InplgOrthTaxonAvg, InplgOrthoInplg, InterTaxonMatch, Ortholog, Ortholog2Way, OrthologAvgScore, OrthologTaxon, OrthologTemp, OrthologUniqueId, SimilarSequences, UniqSimSeqsQueryId;</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP TABLE BestQueryTaxonScore;</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">orthomclInstallSchema orthomcl.config.template</span><br></pre></td></tr></table></figure>
-<h4 id="载入数据到_MySQL">载入数据到 MySQL</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">orthomclLoadBlast orthomcl.config.template similarSequences.txt</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">orthomclLoadBlast orthomcl.config.template similarSequences.txt.rmisoform</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">orthomclPairs orthomcl.config.template orthomcl_pairs.log cleanup=no</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">orthomclDumpPairsFiles orthomcl.config.template</span><br></pre></td></tr></table></figure>
-<h4 id="运行_OrthoMCL">运行 OrthoMCL</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mcl mclInput --abc -I <span class="number">1.1</span> -o mclOutput11</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">orthomclMclToGroups ORYSA <span class="number">1</span> &lt; mclOutput11 &gt; groups11x.txt</span><br></pre></td></tr></table></figure>
+        <span itemprop="articleBody"><h4 id="BLAST">BLAST</h4><h4 id="配置_MCL_的_MySQL_数据库">配置 MCL 的 MySQL 数据库</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ create database orthomcl;</span><br><span class="line">$ DROP TABLE BestHit, BestInterTaxonScore, BestQueryTaxonScore, BetterHit, CoOrthNotOrtholog, CoOrtholog, CoOrthologAvgScore, CoOrthologCandidate, CoOrthologTaxon, CoOrthologTemp, InParalog, InParalog2Way, InParalogAvgScore, InParalogOrtholog, InParalogTaxonAvg, InParalogTemp, InplgOrthTaxonAvg, InplgOrthoInplg, InterTaxonMatch, Ortholog, Ortholog2Way, OrthologAvgScore, OrthologTaxon, OrthologTemp, OrthologUniqueId, SimilarSequences, UniqSimSeqsQueryId;</span><br><span class="line">$ DROP TABLE BestQueryTaxonScore;</span><br><span class="line">$ orthomclInstallSchema orthomcl.config.template</span><br></pre></td></tr></table></figure>
+<h4 id="载入数据到_MySQL">载入数据到 MySQL</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ orthomclLoadBlast orthomcl.config.template similarSequences.txt</span><br><span class="line">$ orthomclLoadBlast orthomcl.config.template similarSequences.txt.rmisoform</span><br><span class="line">$ orthomclPairs orthomcl.config.template orthomcl_pairs.log cleanup=no</span><br><span class="line">$ orthomclDumpPairsFiles orthomcl.config.template</span><br></pre></td></tr></table></figure>
+<h4 id="运行_OrthoMCL">运行 OrthoMCL</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mcl mclInput --abc -I <span class="number">1.1</span> -o mclOutput11</span><br><span class="line">$ orthomclMclToGroups ORYSA <span class="number">1</span> &lt; mclOutput11 &gt; groups11x.txt</span><br></pre></td></tr></table></figure>
 <h4 id="结果文件的使用">结果文件的使用</h4></span>
       
     </div>
