@@ -1,0 +1,65 @@
+title: How to install circos on Mac OS X lion (10.7.x)
+date: 2011-11-17 20:02:24
+tags: [bioinformatics, visualization] 
+---
+
+Circos是个画圈图的好工具。在基因组相关文章里展示基因排列，同源性区段，duplication等，效果很好。由于现在高对平文章对图表的美观程度都有了更高的要求，所以转移到circos下来绘制圈图很有必要了（虽然有很多其他的软件和工具）。
+
+Circos可以安装在unix based os上。由于Mac OS X是unix内核，于是就没有理由不研究一下circus的本地化。另外一个原因就是，做生物信息，如果完全把软件问题交给管理员，那么能学的技术问题就很有限。而且走人之后，服务器肯定是不能带走的。因此完全本地化工具包是很有必要的。
+
+circus的安装其实很简单。下载解压后，cd ../circos-0.55/bin，运行 ./test.modules，就可以看到需要的包有那些已经安装，那些需要手动安装。比如：
+
+``` bash
+ok Carp
+ok Config::General
+ok Data::Dumper
+ok Digest::MD5
+ok File::Basename
+ok File::Spec::Functions
+ok FindBin
+ok GD
+ok GD::Polyline
+ok Getopt::Long
+ok Graphics::ColorObject
+ok IO::File
+ok List::MoreUtils
+ok List::Util
+ok Math::Bezier
+ok Math::BigFloat
+ok Math::Round
+ok Math::VecStat
+ok Memoize
+ok POSIX
+ok Params::Validate
+ok Pod::Usage
+ok Readonly
+ok Regexp::Common
+ok Set::IntSpan
+ok Storable
+ok Time::HiRes
+```
+
+
+以上是全部安装正常的结果。如果第一次运行这个check脚本，显示有未安装的。可以尝试以下两种方法来安装：
+1.fink
+2.cpan
+
+由于cirsos是个基于perl+svg编写的软件，所以大部分要安装的包都可以通过cpan。
+在os x下，sudo perl -MCPAN -e shel，之后键入install + 包名称即可，如键入“install Math::Bezier”。
+
+由于未知原因，GD无法用cpan安装，于是借助fink。
+fink下移植了大部分的linux通用的软件，只是更新会比osx稍慢。不过象GD这种常用的包更新还很快。bioperl就没那么幸运了（bioperl我只能通过cpan来安装了，发现比fink的速度更快，只是perldoc无法调用）。
+GD安装的日志竟然跑了1万多行。
+
+配置
+修改/bin/env
+由于mac os x的默认路径和一般linux不同，因此要将程序的第一行中“/bin/env”修改为“/usr/bin/env”。
+或者使用命令“ sudo ln -s /usr/bin/env /bin/en”建立一个镜像。
+
+测试
+现在可以用circos提供的测试文件来检查安装是否成功了。
+cd /Applications/Bioinformatics/circos-0.55/example/
+/Applications/Bioinformatics/circos-0.55/bin/circos -conf ./circos.conf
+circos提供的tutorials需要跳转到tutorials这个文件夹而不是data下运行，这个在官方的手册里是错误的。
+
+搞定。
