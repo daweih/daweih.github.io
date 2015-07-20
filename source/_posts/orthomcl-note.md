@@ -8,13 +8,6 @@ tags: [bioinformatics, evolution]
 
 #### 配置 MCL 的 MySQL 数据库
 
-`grep -P "^[^#]" orthomcl.blastout > blastresult`
-
-`orthomclBlastParser blastresult compliantFasta > similarSequences.txt`
-
-`perl -p -i -e 's/\t(\w+)(\|.*)orthomcl/\t$1$2$1/' similarSequences.txt`
-
-`perl -p -i -e 's/0\t0/1\t-181/' similarSequences.txt`
 
 `create database orthomcl;`
 
