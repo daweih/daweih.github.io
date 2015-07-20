@@ -161,89 +161,6 @@
     
       
 
-  <article class="post post-type-profession " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/07/20/batch-BLAT/" itemprop="url">
-                batch BLAT
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on
-          <time itemprop="dateCreated" datetime="2015-07-20T22:04:18+08:00" content="2015-07-20">
-            2015-07-20
-          </time>
-        </span>
-
-        
-
-        
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody"><p>这个脚本可以自动化BLAT的运行。<br>提供以下功能：</p>
-<ol>
-<li>提供打包后的并行运行功能。</li>
-<li>监控所有节点上进程并在结束后更新log文件</li>
-<li>通过生成ooc文件加快比对速度</li>
-<li>所有中间文件被保存。单个任务的错误只学要重新提交单个包即可</li>
-</ol>
-<p>适用：</p>
-<ol>
-<li>主要适用cDNA对基因组注释的提速</li>
-<li>可以指定包的数量；对于大的任务，可以拆分为更多的小包来提速。</li>
-<li>通过修改system函数内的命令，可以应用于其他序列比对软件的提速。</li>
-</ol>
-<p>使用：</p>
-<ol>
-<li>必须用nohup命令在login上提交（cluster的管理节点）。</li>
-<li>使用&gt;符来指定log文件的输出位置。</li>
-<li>提交后可以关闭console，但必须在log文件输出Done making ooc file.。这个位置的功能尚需要改进。</li>
-</ol>
-<p>经过测试，单个基因组水平（使用人，小鼠，水稻测试）的cDNA注释可以在20分钟内完成。<br>cpuinfo:<br>Intel(R) Xeon(R)  Processor (Intel64 Harpertown)<br>=====  Processor composition  =====<br>Processors(CPUs)  : 8<br>Packages(sockets) : 2<br>Cores per package : 4<br>Threads per core  : 1</p>
-<p>memory: 16G</p>
-<p><a href="">下载</a></p>
-</span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
@@ -420,7 +337,7 @@
       
         <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
           
-            <a class="post-gallery-img fancybox" href="http://daweih.github.io/images/default_avatar.jpg" rel="gallery_cicc2popb00197ks68k1r9ynd" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+            <a class="post-gallery-img fancybox" href="http://daweih.github.io/images/default_avatar.jpg" rel="gallery_cicc2r3pj00198ms6e4hf87z2" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
               <img src="http://daweih.github.io/images/default_avatar.jpg" itemprop="contentUrl"/>
             </a>
           
@@ -729,6 +646,89 @@
 </ol>
 <p>以上是今天游泳后的体会。</p>
 <p>明天回利雅得，又要努力工作了。加油！</p>
+</span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-profession " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              <a class="post-title-link" href="/2011/07/20/batch-BLAT/" itemprop="url">
+                batch BLAT
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2011-07-20T22:04:18+08:00" content="2011-07-20">
+            2011-07-20
+          </time>
+        </span>
+
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><p>这个脚本可以自动化BLAT的运行。<br>提供以下功能：</p>
+<ol>
+<li>提供打包后的并行运行功能。</li>
+<li>监控所有节点上进程并在结束后更新log文件</li>
+<li>通过生成ooc文件加快比对速度</li>
+<li>所有中间文件被保存。单个任务的错误只学要重新提交单个包即可</li>
+</ol>
+<p>适用：</p>
+<ol>
+<li>主要适用cDNA对基因组注释的提速</li>
+<li>可以指定包的数量；对于大的任务，可以拆分为更多的小包来提速。</li>
+<li>通过修改system函数内的命令，可以应用于其他序列比对软件的提速。</li>
+</ol>
+<p>使用：</p>
+<ol>
+<li>必须用nohup命令在login上提交（cluster的管理节点）。</li>
+<li>使用&gt;符来指定log文件的输出位置。</li>
+<li>提交后可以关闭console，但必须在log文件输出Done making ooc file.。这个位置的功能尚需要改进。</li>
+</ol>
+<p>经过测试，单个基因组水平（使用人，小鼠，水稻测试）的cDNA注释可以在20分钟内完成。<br>cpuinfo:<br>Intel(R) Xeon(R)  Processor (Intel64 Harpertown)<br>=====  Processor composition  =====<br>Processors(CPUs)  : 8<br>Packages(sockets) : 2<br>Cores per package : 4<br>Threads per core  : 1</p>
+<p>memory: 16G</p>
+<p><a href="">下载</a></p>
 </span>
         
       
