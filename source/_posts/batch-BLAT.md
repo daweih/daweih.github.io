@@ -33,4 +33,4 @@ Threads per core  : 1
 
 memory: 16G
 
-[下载](https://github.com/daweih/daweih.github.io/blob/master/images/package_blat.pl)
+[下载](https://github.com/daweih/d3_bioviz/blob/master/batch_blat/package_blat.pl)
