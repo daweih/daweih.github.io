@@ -3,7 +3,7 @@ date: 2011-09-09 21:37:05
 tags: [bioinformatics, gene annotation] 
 categories: profession
 ---
-> 原载于我的 wordpress [博客](https://daweimhuang.wordpress.com/)
+> 原载于我的 [wordpress 博客](https://daweimhuang.wordpress.com/)
 
 [原文](https://daweimhuang.wordpress.com/2011/09/09/how-to-use-blat-to-annotate-a-new-sequenced-genome/)
 
