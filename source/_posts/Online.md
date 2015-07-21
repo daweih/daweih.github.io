@@ -6,6 +6,6 @@ categories: life
 photos:
 - http://daweih.github.io/images/default_avatar.jpg
 ---
+新博客开张。之前的主要是从旧博客选择性搬迁了一部分。
 
-For more information, visit:
-- [DaWei Huang's Homepage at Zhang Zhang Lab](http://cbb.big.ac.cn/Dawei_Huang)
+谢谢捧场。

@@ -3,6 +3,7 @@ date: 2010-09-05 13:21:44
 tags: [reading, life] 
 categories: reading
 ---
+> 原载于人人网个人主页
 
 破碎的副歌
  

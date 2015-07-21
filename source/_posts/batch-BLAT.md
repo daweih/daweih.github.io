@@ -3,7 +3,7 @@ date: 2011-07-20 22:04:18
 tags: [bioinformatics, perl] 
 categories: profession
 ---
-> 原载于我的 wordpress 博客
+> 原载于我的 wordpress [博客](https://daweimhuang.wordpress.com/)
 
 这个脚本可以自动化BLAT的运行。
 提供以下功能：
@@ -33,4 +33,4 @@ Threads per core  : 1
 
 memory: 16G
 
-[下载]()
+[下载](https://github.com/daweih/daweih.github.io/blob/master/images/package_blat.pl)
