@@ -6,6 +6,8 @@ categories: profession
 
 做了一个[染色体的可视化](https://github.com/daweih/d3_bioviz/tree/master/chromosomes)，可以用来显示染色体上特定区域的注释信息，如QTL，基因等等。
 
+![chr.js](http://daweih.github.io/images/chr.js.png)
+
 #### 如何使用
 
 首先，你需要安装 Apache 服务器和 Php 环境在你的电脑上。
