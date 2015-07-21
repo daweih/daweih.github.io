@@ -1,6 +1,6 @@
 title: 修修补补方成人
 date: 2010-09-06 13:16:01
-tags: [popularscience, life, writting] 
+tags: [popular science, life, writting] 
 categories: popular science
 ---
 > 原载于基因世界杂志

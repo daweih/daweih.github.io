@@ -1,9 +1,9 @@
 title: 游泳归来
 date: 2011-08-31 13:06:10
-tags: [swimming, SaudiArabia, life] 
+tags: [swimming, Saudi Arabia, life] 
 categories: diary
 ---
-> 原载于我的 [wordpress 博客](https://daweimhuang.wordpress.com/)
+> 原载于[我的 wordpress 博客](https://daweimhuang.wordpress.com/)
 
 从题目看就可以归为碎碎念。不过今天不想只写碎碎念～
 来Al Khobar旅游比黄金海岸还要简约，连沙滩游都省了，在宾馆睡睡懒觉，看书，游泳。特别是最后一项，再惬意不过了。要知道这可是在消耗石油来净化海水得沙特～
