@@ -5,6 +5,10 @@ categories: profession
 ---
 > 原载于[我的 wordpress 博客](https://daweimhuang.wordpress.com/)
 
+
+![circos](http://daweih.github.io/images/cancer-genome-challenge.jpg)
+
+
 Circos 是个画圈图的好工具。在基因组相关文章里展示基因排列，同源性区段，duplication 等，效果很好。由于现在高对平文章对图表的美观程度都有了更高的要求，所以转移到 circos 下来绘制圈图很有必要了（虽然有很多其他的软件和工具）。
 
 Circos 可以安装在 unix based os 上。由于 Mac OS X 是 unix 内核，于是就没有理由不研究一下 circus 的本地化。另外一个原因就是，做生物信息，如果完全把软件问题交给管理员，那么能学的技术问题就很有限。而且走人之后，服务器肯定是不能带走的。因此完全本地化工具包是很有必要的。
