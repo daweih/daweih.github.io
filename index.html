@@ -214,9 +214,30 @@
 </li>
 </ul>
 <h4 id="Illumina_sequence_identifiers">Illumina sequence identifiers</h4><p>Illumina 软件输出的 identifier 格式比较特殊：<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@HWUSI-EAS100R:</span><span class="number">6</span>:<span class="number">73</span>:<span class="number">941</span>:<span class="number">1973</span><span class="hexcolor">#0</span>/<span class="number">1</span></span><br></pre></td></tr></table></figure></p>
-<table><br><tr><br>    <th style="min-width: 160px;">Code</th><br>    <th>Meaning</th><br>  </tr><br><tr><td>HWUSI-EAS100R</td><td>设备名称</td></tr><br><tr><td>6</td><td>flowcell lane</td></tr><br><tr><td>73</td><td>tile number within the flowcell lane（坐标）</td></tr><br><tr><td>941</td><td>‘x’-coordinate of the cluster within the tile（x坐标）</td></tr><br><tr><td>1973</td><td>‘y’-coordinate of the cluster within the tile（y坐标）</td></tr><br><tr><td>#0</td><td>index number for a multiplexed sample (0 for no indexing)（多样本的index编号）</td></tr><br><tr><td>/1</td><td>the member of a pair, /1 or /2 (paired-end or mate-pair reads only)（成对reads的标记）</td></tr><br><table><br><br><br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@EAS139:</span><span class="number">136</span>:<span class="attribute">FC706VJ</span>:<span class="number">2</span>:<span class="number">2104</span>:<span class="number">15343</span>:<span class="number">197393</span> <span class="number">1</span>:<span class="attribute">Y</span>:<span class="number">18</span>:ATCACG</span><br></pre></td></tr></table></figure><br><br><table><br><tr><br>    <th style="min-width: 160px;">Code</th><br>    <th>Meaning</th><br>  </tr><br><tr><td>EAS139</td><br><br><td align="right">设备名称</td></tr><br><tr><td>136</td><td align="right">the run id</td></tr><br><tr><td>FC706VJ</td><td>the flowcell id</td></tr><br><tr><td>2</td><td>flowcell lane</td></tr><br><tr><td>2104</td><td>tile number within the flowcell lane</td></tr><br><tr><td>15343</td><td>‘x’-coordinate of the cluster within the tile</td></tr><br><tr><td>197393</td><td>‘y’-coordinate of the cluster within the tile</td></tr><br><tr><td>1</td><td>the member of a pair, 1 or 2 (paired-end or mate-pair reads only)</td></tr><br><tr><td>Y</td><td>Y if the read is filtered, N otherwise</td></tr><br><tr><td>18</td><td>0 when none of the control bits are on, otherwise it is an even number</td></tr><br><tr><td>ATCACG</td><td>index sequence</td></tr><br></table>
-
-</table></table></span>
+<ul>
+<li>HWUSI-EAS100R: 设备名称</li>
+<li>6: flowcell lane</li>
+<li>73: tile number within the flowcell lane（坐标）</li>
+<li>941: ‘x’-coordinate of the cluster within the tile（x坐标）</li>
+<li>1973: ‘y’-coordinate of the cluster within the tile（y坐标）</li>
+<li><h1 id="0:_index_number_for_a_multiplexed_sample_(0_for_no_indexing)（多样本的index编号）">0: index number for a multiplexed sample (0 for no indexing)（多样本的index编号）</h1></li>
+<li>/1: the member of a pair, /1 or /2 (paired-end or mate-pair reads only)（成对reads的标记）</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@EAS139:</span><span class="number">136</span>:<span class="attribute">FC706VJ</span>:<span class="number">2</span>:<span class="number">2104</span>:<span class="number">15343</span>:<span class="number">197393</span> <span class="number">1</span>:<span class="attribute">Y</span>:<span class="number">18</span>:ATCACG</span><br></pre></td></tr></table></figure>
+<ul>
+<li>EAS139: 设备名称</li>
+<li>136: the run id</li>
+<li>FC706VJ: the flowcell id</li>
+<li>2: flowcell lane</li>
+<li>2104: tile number within the flowcell lane</li>
+<li>15343: ‘x’-coordinate of the cluster within the tile</li>
+<li>197393: ‘y’-coordinate of the cluster within the tile</li>
+<li>1: the member of a pair, 1 or 2 (paired-end or mate-pair reads only)</li>
+<li>Y: Y if the read is filtered, N otherwise</li>
+<li>18: 0 when none of the control bits are on, otherwise it is an even number</li>
+<li>ATCACG: index sequence</li>
+</ul>
+</span>
         
       
     </div>
