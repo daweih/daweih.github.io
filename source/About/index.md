@@ -19,7 +19,7 @@ categories: profession
 
 请加我的微信。
 
-![wechat](http://daweih.github.io/images/wechat.jpg)
+![wechat](http://daweih.github.io/images/wechat_small.jpg)
 
 #### 更多
 
