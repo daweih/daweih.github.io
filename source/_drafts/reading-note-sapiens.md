@@ -1,11 +1,11 @@
 title: 'Reading note: Sapiens'
 date: 2015-07-22 20:09:06
 updated: 2015-07-22 20:09:06
-tags: 
-categories:
+tags: [reading] 
+categories: reading
 ---
 
-<div center>![sapiens](http://daweih.github.io/images/sapiens.jpg)</div>
+![sapiens](http://daweih.github.io/images/sapiens.jpg)
 
 已经不记得从来里看到的这本书的介绍。后来这本书成了我和爱人一起读的第一本书，却也是在我们最忙的时候读的一本。陆陆续续的批注，攒成这个札记。
 
