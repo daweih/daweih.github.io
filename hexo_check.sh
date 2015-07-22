@@ -1,3 +1,3 @@
 hexo g
 hexo d
-hexo s
+hexo s  --drafts

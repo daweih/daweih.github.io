@@ -1,6 +1,8 @@
 title: FASTAQ format
 date: 2015-07-21 17:02:19
-tags:
+updated: 
+tags: [bioinformatics, NGS] 
+categories: profession
 ---
 
 ```
