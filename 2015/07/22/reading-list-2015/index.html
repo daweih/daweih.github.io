@@ -30,7 +30,7 @@
 
 
 
-  <meta name="keywords" content="bioinformatics,evolution," />
+  <meta name="keywords" content="life,reading," />
 
 
 
@@ -39,16 +39,43 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.4" />
 
 
-<meta name="description" content="BLAST配置 MCL 的 MySQL 数据库1234$ create database orthomcl;$ DROP TABLE BestHit, BestInterTaxonScore, BestQueryTaxonScore, BetterHit, CoOrthNotOrtholog, CoOrtholog, CoOrthologAvgScore, CoOrthologCandidate,">
+<meta name="description" content="2015 年读书单
+在读的和读完的书
+在读
+Sapiens: A Brief History of Humankind by Yuval Noah Harari 
+人造恐慌 by 袁越
+
+读完
+一转念 : 用经济学思考 by 兰小欢
+The elements of style by William Strunk Jr. and E. B. White
+Pro Git by Scott Chacon">
 <meta property="og:type" content="article">
-<meta property="og:title" content="OrthoMCL 使用笔记">
-<meta property="og:url" content="http://daweih.github.io/2015/07/20/orthomcl-note/index.html">
+<meta property="og:title" content="Reading list 2015">
+<meta property="og:url" content="http://daweih.github.io/2015/07/22/reading-list-2015/index.html">
 <meta property="og:site_name" content="东隅">
-<meta property="og:description" content="BLAST配置 MCL 的 MySQL 数据库1234$ create database orthomcl;$ DROP TABLE BestHit, BestInterTaxonScore, BestQueryTaxonScore, BetterHit, CoOrthNotOrtholog, CoOrtholog, CoOrthologAvgScore, CoOrthologCandidate,">
-<meta property="og:updated_time" content="2015-07-20T16:14:47.000Z">
+<meta property="og:description" content="2015 年读书单
+在读的和读完的书
+在读
+Sapiens: A Brief History of Humankind by Yuval Noah Harari 
+人造恐慌 by 袁越
+
+读完
+一转念 : 用经济学思考 by 兰小欢
+The elements of style by William Strunk Jr. and E. B. White
+Pro Git by Scott Chacon">
+<meta property="og:updated_time" content="2015-07-22T05:49:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="OrthoMCL 使用笔记">
-<meta name="twitter:description" content="BLAST配置 MCL 的 MySQL 数据库1234$ create database orthomcl;$ DROP TABLE BestHit, BestInterTaxonScore, BestQueryTaxonScore, BetterHit, CoOrthNotOrtholog, CoOrtholog, CoOrthologAvgScore, CoOrthologCandidate,">
+<meta name="twitter:title" content="Reading list 2015">
+<meta name="twitter:description" content="2015 年读书单
+在读的和读完的书
+在读
+Sapiens: A Brief History of Humankind by Yuval Noah Harari 
+人造恐慌 by 袁越
+
+读完
+一转念 : 用经济学思考 by 兰小欢
+The elements of style by William Strunk Jr. and E. B. White
+Pro Git by Scott Chacon">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -58,7 +85,7 @@
   };
 </script>
 
-    <title> OrthoMCL 使用笔记 // 东隅 </title>
+    <title> Reading list 2015 // 东隅 </title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
 <!--[if lte IE 8]>
@@ -169,7 +196,7 @@
           
           
             
-              OrthoMCL 使用笔记
+              Reading list 2015
             
           
         </h1>
@@ -178,8 +205,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-07-20T13:30:30+08:00" content="2015-07-20">
-            2015-07-20
+          <time itemprop="dateCreated" datetime="2015-07-22T13:49:00+08:00" content="2015-07-22">
+            2015-07-22
           </time>
         </span>
 
@@ -187,7 +214,7 @@
           <span class="post-category" >
             &nbsp; | &nbsp; In
             
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/profession/" itemprop="url" rel="index"><span itemprop="name">profession</span></a></span>
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/life/" itemprop="url" rel="index"><span itemprop="name">life</span></a></span>
 
               
               
@@ -208,12 +235,17 @@
       
 
       
-        <span itemprop="articleBody"><h4 id="BLAST">BLAST</h4><h4 id="配置_MCL_的_MySQL_数据库">配置 MCL 的 MySQL 数据库</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ create database orthomcl;</span><br><span class="line">$ DROP TABLE BestHit, BestInterTaxonScore, BestQueryTaxonScore, BetterHit, CoOrthNotOrtholog, CoOrtholog, CoOrthologAvgScore, CoOrthologCandidate, CoOrthologTaxon, CoOrthologTemp, InParalog, InParalog2Way, InParalogAvgScore, InParalogOrtholog, InParalogTaxonAvg, InParalogTemp, InplgOrthTaxonAvg, InplgOrthoInplg, InterTaxonMatch, Ortholog, Ortholog2Way, OrthologAvgScore, OrthologTaxon, OrthologTemp, OrthologUniqueId, SimilarSequences, UniqSimSeqsQueryId;</span><br><span class="line">$ DROP TABLE BestQueryTaxonScore;</span><br><span class="line">$ orthomclInstallSchema orthomcl.config.template</span><br></pre></td></tr></table></figure>
-<h4 id="载入数据到_MySQL">载入数据到 MySQL</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ orthomclLoadBlast orthomcl.config.template similarSequences.txt</span><br><span class="line">$ orthomclLoadBlast orthomcl.config.template similarSequences.txt.rmisoform</span><br><span class="line">$ orthomclPairs orthomcl.config.template orthomcl_pairs.log cleanup=no</span><br><span class="line">$ orthomclDumpPairsFiles orthomcl.config.template</span><br></pre></td></tr></table></figure>
-<h4 id="运行_OrthoMCL">运行 OrthoMCL</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mcl mclInput --abc -I <span class="number">1.1</span> -o mclOutput11</span><br><span class="line">$ orthomclMclToGroups ORYSA <span class="number">1</span> &lt; mclOutput11 &gt; groups11x.txt</span><br></pre></td></tr></table></figure>
-<h4 id="结果文件的使用">结果文件的使用</h4><h4 id="Reference">Reference</h4><ul>
-<li><a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=12952885" target="_blank" rel="external">Li,L. et al. (2003) OrthoMCL: identification of ortholog groups for eukaryotic genomes. Genome Res., 13, 2178–2189.</a></li>
-</ul>
+        <span itemprop="articleBody"><p>2015 年读书单</p>
+<p>在读的和读完的书</p>
+<h5 id="在读">在读</h5><ol>
+<li><a href="http://book.douban.com/subject/25904521/" target="_blank" rel="external">Sapiens: A Brief History of Humankind</a> by Yuval Noah Harari </li>
+<li><a href="http://book.douban.com/subject/26140658/" target="_blank" rel="external">人造恐慌</a> by 袁越</li>
+</ol>
+<h5 id="读完">读完</h5><ol>
+<li><a href="http://book.douban.com/subject_search?search_text=一转念&amp;cat=1001" target="_blank" rel="external">一转念 : 用经济学思考</a> by 兰小欢</li>
+<li><a href="http://book.douban.com/subject/1433835/" target="_blank" rel="external">The elements of style</a> by William Strunk Jr. and E. B. White</li>
+<li><a href="http://book.douban.com/subject/3420144/" target="_blank" rel="external">Pro Git</a> by Scott Chacon </li>
+</ol>
 </span>
       
     </div>
@@ -222,9 +254,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/bioinformatics/" rel="tag">#bioinformatics</a>
+            <a href="/tags/life/" rel="tag">#life</a>
           
-            <a href="/tags/evolution/" rel="tag">#evolution</a>
+            <a href="/tags/reading/" rel="tag">#reading</a>
           
         </div>
       
@@ -233,13 +265,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/07/22/reading-list-2015/" rel="prev">Reading list 2015</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/07/20/viz-of-chromosome/" rel="next">一个染色体的可视化</a>
+              <a href="/2015/07/20/orthomcl-note/" rel="next">OrthoMCL 使用笔记</a>
             
           </div>
         </div>
@@ -344,7 +374,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#BLAST"><span class="nav-number">1.</span> <span class="nav-text">BLAST</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置_MCL_的_MySQL_数据库"><span class="nav-number">2.</span> <span class="nav-text">配置 MCL 的 MySQL 数据库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#载入数据到_MySQL"><span class="nav-number">3.</span> <span class="nav-text">载入数据到 MySQL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运行_OrthoMCL"><span class="nav-number">4.</span> <span class="nav-text">运行 OrthoMCL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#结果文件的使用"><span class="nav-number">5.</span> <span class="nav-text">结果文件的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Reference"><span class="nav-number">6.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#在读"><span class="nav-number">1.</span> <span class="nav-text">在读</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#读完"><span class="nav-number">2.</span> <span class="nav-text">读完</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
