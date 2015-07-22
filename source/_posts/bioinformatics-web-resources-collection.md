@@ -12,10 +12,11 @@ categories: profession
 - [UCSC Genome Browser Home](https://genome.ucsc.edu): `hg19`
 
 #### Coding
-- [Github](http://github.com)
-- [CPAN](http://cpan.org)
-- [bioperl](http://www.bioperl.org/)
-- [BioJS](http://biojs.net)
+- [Github](http://github.com): `circos` `wormbase-pipeline` `ensembl-compara`
+- [sourceforge](http://sourceforge.net)
+- [CPAN](http://cpan.org): `pm`
+- [bioperl](http://www.bioperl.org/):  `pm`
+- [BioJS](http://biojs.net): `Phylogenetic Tree` `MSA` `Proteome visualization` `Genetic variation viewer`
 - [Generic Model Organism Database](http://gmod.org/wiki/Main_Page): `Jbrowse` `Galaxy` `WebApollo`
 
 #### Community
@@ -23,7 +24,7 @@ categories: profession
 - [BioStar](https://www.biostars.org)
 - [SeqAnswer](http://seqanswers.com)
 - [Public library of bioinformatics](www.plob.org)
-- [生信菜鸟团](http://www.bio-info-trainee.com): QQgroup-201161227
+- [生信菜鸟团](http://www.bio-info-trainee.com): QQ group 201161227
 
 
 #### Blogs
@@ -31,3 +32,5 @@ categories: profession
 - [Sam's Note](http://qinqianshan.com)
 - [铁汉1990](http://blog.sina.com.cn/tiehan1990)
 - [linxiao.name](http://linxiao.name)
+- [Mike Bostock](http://bost.ocks.org/mike/): author of `d3` `viz`
+- [Jason Davies](http://www.jasondavies.com): `d3` `map` `viz`

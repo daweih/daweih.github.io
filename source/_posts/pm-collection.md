@@ -10,4 +10,13 @@ categories: profession
 
 ##### parser
 - [swissknife](http://sourceforge.net/projects/swissknife/?source=navbar): `uniprot`
+- Bio::TreeIO
+- Bio::Phylo::IO
+
+##### Data and debug
+- Data::Dumper
+
+
+##### Other 
+- SVG::Convert
 
