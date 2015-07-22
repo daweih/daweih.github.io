@@ -8,7 +8,7 @@ categories: profession
 
 对比较有趣的包，有复杂的用法会单独写文章。
 
-#### parser
+#### Parser
 - [swissknife](http://sourceforge.net/projects/swissknife/?source=navbar): `uniprot`
 - Bio::TreeIO
 - Bio::Phylo::IO
