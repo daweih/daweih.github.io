@@ -170,6 +170,103 @@
           
           
             
+              <a class="post-title-link" href="/2011/07/20/batch-BLAT/" itemprop="url">
+                batch BLAT
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2011-07-20T22:04:18+08:00" content="2011-07-20">
+            2011-07-20
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/profession/" itemprop="url" rel="index"><span itemprop="name">profession</span></a></span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><blockquote>
+<p>原载于<a href="https://daweimhuang.wordpress.com/" target="_blank" rel="external">我的 wordpress 博客</a></p>
+</blockquote>
+<p>这个脚本可以自动化BLAT的运行。<br>提供以下功能：</p>
+<ol>
+<li>提供打包后的并行运行功能。</li>
+<li>监控所有节点上进程并在结束后更新log文件</li>
+<li>通过生成ooc文件加快比对速度</li>
+<li>所有中间文件被保存。单个任务的错误只学要重新提交单个包即可</li>
+</ol>
+<p>适用：</p>
+<ol>
+<li>主要适用cDNA对基因组注释的提速</li>
+<li>可以指定包的数量；对于大的任务，可以拆分为更多的小包来提速。</li>
+<li>通过修改system函数内的命令，可以应用于其他序列比对软件的提速。</li>
+</ol>
+<p>使用：</p>
+<ol>
+<li>必须用nohup命令在login上提交（cluster的管理节点）。</li>
+<li>使用&gt;符来指定log文件的输出位置。</li>
+<li>提交后可以关闭console，但必须在log文件输出Done making ooc file.。这个位置的功能尚需要改进。</li>
+</ol>
+<p>经过测试，单个基因组水平（使用人，小鼠，水稻测试）的cDNA注释可以在20分钟内完成。<br>cpuinfo:<br>Intel(R) Xeon(R)  Processor (Intel64 Harpertown)<br>=====  Processor composition  =====<br>Processors(CPUs)  : 8<br>Packages(sockets) : 2<br>Cores per package : 4<br>Threads per core  : 1</p>
+<p>memory: 16G</p>
+<p><a href="https://github.com/daweih/d3_bioviz/blob/master/batch_blat/package_blat.pl" target="_blank" rel="external">下载</a></p>
+</span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2010/09/06/being-human/" itemprop="url">
                 修修补补方成人
               </a>
@@ -488,7 +585,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-count">14</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
