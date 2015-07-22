@@ -73,3 +73,5 @@ deploy:
   type: git
   repo: https://github.com/daweih/daweih.github.io.git
   branch: master  
+  
+swiftype_key: your-swiftype-key  
