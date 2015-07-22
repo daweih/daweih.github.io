@@ -13,4 +13,5 @@ $ hexo publish [layout] <filename>
 
 #### 相关资源
 - [Hexo 官网](http://hexo.io)
+- [next theme](http://notes.iissnan.com)
 - Hexo 系列教程 [1](http://zipperary.com/2013/05/28/hexo-guide-1/)，[2](http://zipperary.com/2013/05/28/hexo-guide-2/)，[3](http://zipperary.com/2013/05/28/hexo-guide-3/)，[4](http://zipperary.com/2013/05/28/hexo-guide-4/)，[5](http://zipperary.com/2013/05/28/hexo-guide-5/).
