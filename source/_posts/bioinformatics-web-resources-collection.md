@@ -5,7 +5,7 @@ tags: [bioinformatics, web]
 categories: profession
 ---
 
-##### Database
+#### Database
 - [NCBI](http://ncbi.nlm.nih.gov/): `PubMed` `RefSeq` `SRA` `Taxonomy`
 - [Ensembl](http://asia.ensembl.org/): `Gramene` `Ensembl Plants`
 - [Uniprot](http://uniprot.org/): `swissknife` `Expert Biocuration`
@@ -34,3 +34,8 @@ categories: profession
 - [linxiao.name](http://linxiao.name)
 - [Mike Bostock](http://bost.ocks.org/mike/): author of `d3` `viz`
 - [Jason Davies](http://www.jasondavies.com): `d3` `map` `viz`
+
+#### Others
+- [阮一峰的网络日志](http://www.ruanyifeng.com/blog/)
+- [乱象，印迹](http://www.luanxiang.org/blog/)
+- [徐宥](http://blog.youxu.info)
