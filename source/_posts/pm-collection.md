@@ -4,9 +4,9 @@ updated: 2015-07-22 15:18:08
 tags: [bioinformatics, perl, parser, module] 
 categories: profession
 ---
-收集我用过的 Perl module。写一些简单的用法。
+收集我用过的 Perl module，写一些简单的用法。
 
-比较有趣的包，有复杂的用法会单独写文章。
+对比较有趣的包，有复杂的用法会单独写文章。
 
 ##### parser
 - [swissknife](http://sourceforge.net/projects/swissknife/?source=navbar): `uniprot`
