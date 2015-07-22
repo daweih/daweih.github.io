@@ -4,8 +4,11 @@ updated: 2015-07-22 10:40:02
 tags:  [d3, bioinformatics, visualization] 
 categories: profession
 ---
+
 升级：增加了画着丝粒的功能。
------
+
+------
+
 做了一个[染色体的可视化](https://github.com/daweih/d3_bioviz/tree/master/chromosomes)，可以用来显示染色体上特定区域的注释信息，如QTL，基因等等。
 
 ![chr.js](http://daweih.github.io/images/chr.js.png)
