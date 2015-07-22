@@ -30,7 +30,7 @@
 
 
 
-  <meta name="keywords" content="bioinformatics,gene annotation," />
+  <meta name="keywords" content="bioinformatics,web," />
 
 
 
@@ -39,25 +39,46 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.4" />
 
 
-<meta name="description" content="原载于我的 wordpress 博客
+<meta name="description" content="Database
+NCBI
+EBI
+Uniprot
 
-原文
-I am in charge of Date Palm genome annotation recently. In fact, there is only one person doing this, me.UCSC and Ensembl are the most famous genome sequence databases and both">
+Coding
+Github
+CPAN
+
+Community-Stack Overflow-BioStar-Public library of bioinformatics-生信菜鸟团
+Blogs-博耘生物">
 <meta property="og:type" content="article">
-<meta property="og:title" content="How to use BLAT to annotate a new sequenced genome">
-<meta property="og:url" content="http://daweih.github.io/2011/09/09/How-to-use-BLAT-to-annotate-a-new-sequenced-genome/index.html">
+<meta property="og:title" content="生物信息社区资源收集（不定期更新）">
+<meta property="og:url" content="http://daweih.github.io/2015/07/22/bioinformatics-web-resources-collection/index.html">
 <meta property="og:site_name" content="东隅">
-<meta property="og:description" content="原载于我的 wordpress 博客
+<meta property="og:description" content="Database
+NCBI
+EBI
+Uniprot
 
-原文
-I am in charge of Date Palm genome annotation recently. In fact, there is only one person doing this, me.UCSC and Ensembl are the most famous genome sequence databases and both">
-<meta property="og:updated_time" content="2015-07-21T02:16:15.000Z">
+Coding
+Github
+CPAN
+
+Community-Stack Overflow-BioStar-Public library of bioinformatics-生信菜鸟团
+Blogs-博耘生物">
+<meta property="og:updated_time" content="2015-07-22T06:20:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="How to use BLAT to annotate a new sequenced genome">
-<meta name="twitter:description" content="原载于我的 wordpress 博客
+<meta name="twitter:title" content="生物信息社区资源收集（不定期更新）">
+<meta name="twitter:description" content="Database
+NCBI
+EBI
+Uniprot
 
-原文
-I am in charge of Date Palm genome annotation recently. In fact, there is only one person doing this, me.UCSC and Ensembl are the most famous genome sequence databases and both">
+Coding
+Github
+CPAN
+
+Community-Stack Overflow-BioStar-Public library of bioinformatics-生信菜鸟团
+Blogs-博耘生物">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -67,7 +88,7 @@ I am in charge of Date Palm genome annotation recently. In fact, there is only o
   };
 </script>
 
-    <title> How to use BLAT to annotate a new sequenced genome // 东隅 </title>
+    <title> 生物信息社区资源收集（不定期更新） // 东隅 </title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
 <!--[if lte IE 8]>
@@ -178,7 +199,7 @@ I am in charge of Date Palm genome annotation recently. In fact, there is only o
           
           
             
-              How to use BLAT to annotate a new sequenced genome
+              生物信息社区资源收集（不定期更新）
             
           
         </h1>
@@ -187,8 +208,8 @@ I am in charge of Date Palm genome annotation recently. In fact, there is only o
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2011-09-09T21:37:05+08:00" content="2011-09-09">
-            2011-09-09
+          <time itemprop="dateCreated" datetime="2015-07-22T14:20:16+08:00" content="2015-07-22">
+            2015-07-22
           </time>
         </span>
 
@@ -217,16 +238,17 @@ I am in charge of Date Palm genome annotation recently. In fact, there is only o
       
 
       
-        <span itemprop="articleBody"><blockquote>
-<p>原载于<a href="https://daweimhuang.wordpress.com/" target="_blank" rel="external">我的 wordpress 博客</a></p>
-</blockquote>
-<p><a href="https://daweimhuang.wordpress.com/2011/09/09/how-to-use-blat-to-annotate-a-new-sequenced-genome/" target="_blank" rel="external">原文</a></p>
-<p>I am in charge of Date Palm genome annotation recently. In fact, there is only one person doing this, me.<br>UCSC and Ensembl are the most famous genome sequence databases and both developed effective tool, BLAT from UCSC and pMatch from Ensembl, to do this.<br>pMatch need input of protein sequence. So it is suitable for use rich datasets to annotate a similar species’ genome without lots of sequence proteins.<br>BLAT is good at cDNA to genome alignment. So we choose BLAT because we got Newbler assembled cDNA sequence from 454.</p>
-<p>The Data Palm Genome sequence assembly based on two data source, the 454 newbler assembled contig and solid mate pair reads.<br>Newbler assemble the 454 data of genome to contigs which provide the main structure of genome assembly.<br>Solid mate pair data provide the information of relationship between contigs, including order, gap length, etc.</p>
-<p>454 can not provide sequence strand information. After assembly, the cDNA can be sense strand or anti-sense strand. Since both of the genome strand have the ability to encode genes as we defined as positive strand gene and negative strand gene, the BLAT mapping data can provide 4 kinds of mapping results due to the complexity discussed before.</p>
-<p>So the first step of annotation is to convert the anti-sense cDNA to sense strand sequence, the the mapping results will remain only two types, the positive strand gene and negative strand gene.</p>
-<p>There are several source of the strand information, splice signal, transcriptome data form solid strand specific experiment, CDS prediction data and alignment-based annotation of cDNA.</p>
-<p>Splice signal is the first 2 and last two base of intron sequence. cDNA is sequenced from mRNA which only consist exons of gene. When mapped back to genome, the alignment region of cDNA will consist multiple alignment blocks. Blocks of cDNA sequence are usually continuous whereas blocks of genome is separated by unaligned sequence blocks, usually introns.</p>
+        <span itemprop="articleBody"><h5 id="Database">Database</h5><ul>
+<li><a href="">NCBI</a></li>
+<li><a href="">EBI</a></li>
+<li><a href="">Uniprot</a></li>
+</ul>
+<h4 id="Coding">Coding</h4><ul>
+<li><a href="http://github.com" target="_blank" rel="external">Github</a></li>
+<li><a href="http://cpan.org" target="_blank" rel="external">CPAN</a></li>
+</ul>
+<h4 id="Community">Community</h4><p>-<a href="stackoverflow.com/">Stack Overflow</a><br>-<a href="https://www.biostars.org" target="_blank" rel="external">BioStar</a><br>-<a href="">Public library of bioinformatics</a><br>-<a href="http://www.bio-info-trainee.com" target="_blank" rel="external">生信菜鸟团</a></p>
+<h4 id="Blogs">Blogs</h4><p>-<a href="http://boyun.sh.cn/bio/" target="_blank" rel="external">博耘生物</a></p>
 </span>
       
     </div>
@@ -237,7 +259,7 @@ I am in charge of Date Palm genome annotation recently. In fact, there is only o
           
             <a href="/tags/bioinformatics/" rel="tag">#bioinformatics</a>
           
-            <a href="/tags/gene-annotation/" rel="tag">#gene annotation</a>
+            <a href="/tags/web/" rel="tag">#web</a>
           
         </div>
       
@@ -246,13 +268,11 @@ I am in charge of Date Palm genome annotation recently. In fact, there is only o
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2011/11/17/How-to-install-circos-on-Mac-OS-X-lion-10-7-x/" rel="prev">How to install circos on Mac OS X lion (10.7.x)</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2011/08/31/swimming-day/" rel="next">游泳归来</a>
+              <a href="/2015/07/22/reading-list-2015/" rel="next">Reading list 2015</a>
             
           </div>
         </div>
@@ -357,7 +377,7 @@ I am in charge of Date Palm genome annotation recently. In fact, there is only o
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">This post does not have a Table Of Contents</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Database"><span class="nav-number">1.</span> <span class="nav-text">Database</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Coding"><span class="nav-number"></span> <span class="nav-text">Coding</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Community"><span class="nav-number"></span> <span class="nav-text">Community</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Blogs"><span class="nav-number"></span> <span class="nav-text">Blogs</span></a></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
