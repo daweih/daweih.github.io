@@ -6,7 +6,11 @@ categories: life
 ---
 2015 年读书单
 
-在读的和读完的书
+在读的和读完的书。
+
+我一直关注电子阅读。用过第一代的 Kindle DX, 后来该用 iPad。目前读书，一部分在 iPad/iPhone，一部分在电脑上。
+
+准备陆续在这里写写读书笔记。欢迎抬杠。
 
 ##### 在读
 1. [Sapiens: A Brief History of Humankind](http://book.douban.com/subject/25904521/) by Yuval Noah Harari 
@@ -16,3 +20,4 @@ categories: life
 3. [一转念 : 用经济学思考](http://book.douban.com/subject_search?search_text=一转念&cat=1001) by 兰小欢
 4. [The elements of style](http://book.douban.com/subject/1433835/) by William Strunk Jr. and E. B. White
 5. [Pro Git](http://book.douban.com/subject/3420144/) by Scott Chacon 
+

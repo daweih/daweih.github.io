@@ -1,0 +1,33 @@
+title: 生物信息社区资源收集（不定期更新）
+date: 2015-07-22 14:20:16
+updated: 2015-07-22 14:20:16
+tags: [bioinformatics, web] 
+categories: profession
+---
+
+##### Database
+- [NCBI](http://ncbi.nlm.nih.gov/): `PubMed` `RefSeq` `SRA` `Taxonomy`
+- [Ensembl](http://asia.ensembl.org/): `Gramene` `Ensembl Plants`
+- [Uniprot](http://uniprot.org/): `swissknife` `Expert Biocuration`
+- [UCSC Genome Browser Home](https://genome.ucsc.edu): `hg19`
+
+#### Coding
+- [Github](http://github.com)
+- [CPAN](http://cpan.org)
+- [bioperl](http://www.bioperl.org/)
+- [BioJS](http://biojs.net)
+- [Generic Model Organism Database](http://gmod.org/wiki/Main_Page): `Jbrowse` `Galaxy` `WebApollo`
+
+#### Community
+- [Stack Overflow](stackoverflow.com/)
+- [BioStar](https://www.biostars.org)
+- [SeqAnswer](http://seqanswers.com)
+- [Public library of bioinformatics](www.plob.org)
+- [生信菜鸟团](http://www.bio-info-trainee.com): QQgroup-201161227
+
+
+#### Blogs
+- [博耘生物](http://boyun.sh.cn/bio/)
+- [Sam's Note](http://qinqianshan.com)
+- [铁汉1990](http://blog.sina.com.cn/tiehan1990)
+- [linxiao.name](http://linxiao.name)
