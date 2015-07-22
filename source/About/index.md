@@ -1,9 +1,9 @@
 title: About
 date: 2015-07-20 08:00:56
 tags: [about] 
-
+categories: profession
 ---
-## 关于我
+### 关于我
 
 祖籍东北，生于热河。本科在山东折腾了 4 年，研究生考到帝都。
 
@@ -15,6 +15,8 @@ tags: [about]
 
 这里是我的技术博客，欢迎交流。
 
-## 更多
+### 更多
 - [我的 github 页面](https://github.com/daweih)
+- [豆瓣主页](http://www.douban.com/people/4878302/)
+- wechat: daweih
 
