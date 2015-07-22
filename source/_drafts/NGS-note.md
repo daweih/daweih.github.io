@@ -16,6 +16,7 @@ GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
 !''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
 ```
 
+
 一个 FASTQ 文件中，一条序列有四行。
 
 * 第一行以@开始，后面是序列 identifier 和 可选的描述，类似 FASTA 格式的标题。

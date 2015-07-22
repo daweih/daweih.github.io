@@ -7,3 +7,4 @@ public/
 .deploy*/
 .gitignore
 hexo_post.sh
+blog.bbprojectd/
