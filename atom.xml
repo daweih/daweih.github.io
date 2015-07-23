@@ -16,7 +16,7 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[UNIPROT How-To 1]]></title>
+    <title><![CDATA[UNIPROT How-To series]]></title>
     <link href="http://daweih.github.io/2015/07/23/uniprot-how-to-1/"/>
     <id>http://daweih.github.io/2015/07/23/uniprot-how-to-1/</id>
     <published>2015-07-23T03:13:40.000Z</published>
@@ -30,7 +30,20 @@
 <p>可以使用 uniprot 整理好的 ID。从下载的 uniprot text 的 OrderedLocusNames 属性提取。</p>
 </blockquote>
 <p>其实，这只是 uniprot 数据库的一个简单的应用。作为世界最大的蛋白质数据库，uniprot 可是说是 biocuration 工作的集大成者。我觉得有必要写一个系列来讲讲 uniprot 的各种有趣的用处。本文作为这个系列的第一篇。</p>
-<p><img src="http://daweih.github.io/images/wechat_small_black.jpg" alt="wechat"></p>
+<p><a href="http://wikipedia.org" target="_blank" rel="external">Mr.Wiki</a> 说：</p>
+<blockquote>
+<p>UniProt is a <code>comprehensive</code>, <code>high-quality</code> and <code>freely accessible</code> database of protein sequence and functional information, many entries being derived from <code>genome sequencing projects</code>. It contains a large amount of information about the biological function of proteins derived from the<code>research literature</code>.</p>
+</blockquote>
+<p>作为一个 uniprot 的老用户，个人认为三大特性当之无愧：</p>
+<ul>
+<li>comprehensive: 自动化的流程对多个数据库资源的深度整合（有没有百宝箱的感觉？）</li>
+<li>high-quality: 进行了大量的人工校正</li>
+<li>freely accessible</li>
+</ul>
+<p>uniprot 的最大亮点还在于 research literature 的文献挖掘。这点让大量的文献标准化，从而可以被标准化地分析利用。</p>
+<p><br></p>
+<h4 id="UNIPROT_的数据格式">UNIPROT 的数据格式</h4><p><br><br><center>–To be continued–</center></p>
+<p><br><br><img src="http://daweih.github.io/images/wechat_small_black.jpg" alt="wechat"></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>今天师弟问了一个问题：</p>
@@ -62,7 +75,7 @@
 <blockquote>
 <p>在历史的路上，有三大重要革命：大约7万年前，“认知革命”（Cognitive Revolution）让历史正式启动。大约12000年前，“农业革命”（Agricultural Revolution）让历史加速发展。而到了大约不过是500年前，“科学革命”（Scientific Revolution）可以说是让历史画下句点而另创新局。</p>
 </blockquote>
-<p>人类的三次重要革命（伟大的xx革命根本排不上号）：</p>
+<p>人类的三次重要革命（伟大的 XX 革命根本排不上号）：</p>
 <ul>
 <li>Cognitive Revolution</li>
 <li>Agricultural Revolution</li>
@@ -72,7 +85,7 @@
 <blockquote>
 <p>这点对妇女来说造成的负担更大。直立的步行方式需要让臀部变窄，于是产道宽度受限，而且别忘了婴儿的头还越来越大。于是，分娩死亡成了女性的一大风险。</p>
 </blockquote>
-<p>所以，<code>剖开腹产</code>是一种变相的人工进化吗？</p>
+<p>所以，<code>剖腹产</code>是一种变相的人工进化吗？</p>
 <p><br></p>
 <blockquote>
 <p>其他在金字塔顶端的动物（例如狮子、鲨鱼）得要花上好几百万年的时间，才终于通过演化站上顶峰。因此<code>生态系统有时间发展出种种制衡</code>，避免狮子和鲨鱼造成太大的破坏。<br>……<br>但相比之下，智人就像是个香蕉共和国的独裁者。我们在不久之前，还是大草原上的小可怜，整天充满恐惧和焦虑，但这也让人类更加残酷和危险。人类历史上众多的<code>灾难</code>，不论是<code>生灵涂炭的战乱</code>还是<code>生态遭逢的浩劫</code>，其实都是源自这场过于<code>仓促的地位跳跃</code>。</p>
@@ -476,7 +489,7 @@
     <link href="http://daweih.github.io/2011/07/20/batch-BLAT/"/>
     <id>http://daweih.github.io/2011/07/20/batch-BLAT/</id>
     <published>2011-07-20T14:04:18.000Z</published>
-    <updated>2015-07-23T01:22:19.000Z</updated>
+    <updated>2015-07-23T03:45:11.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>原载于<a href="https://daweimhuang.wordpress.com/" target="_blank" rel="external">我的 wordpress 博客</a></p>
 </blockquote>
@@ -501,8 +514,7 @@
 </ol>
 <p>经过测试，单个基因组水平（使用人，小鼠，水稻测试）的cDNA注释可以在20分钟内完成。<br>cpuinfo:<br>Intel(R) Xeon(R)  Processor (Intel64 Harpertown)<br>=====  Processor composition  =====<br>Processors(CPUs)  : 8<br>Packages(sockets) : 2<br>Cores per package : 4<br>Threads per core  : 1</p>
 <p>memory: 16G</p>
-<p><a href="https://github.com/daweih/d3_bioviz/blob/master/batch_blat/package_blat.pl" target="_blank" rel="external">下载</a></p>
-<p><img src="http://daweih.github.io/images/wechat_small_black.jpg" alt="wechat"></p>
+<p><a href="https://github.com/daweih/d3_bioviz/blob/master/batch_blat/package_blat.pl" target="_blank" rel="external">下载</a><br><br><br><img src="http://daweih.github.io/images/wechat_small_black.jpg" alt="wechat"></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<blockquote>
