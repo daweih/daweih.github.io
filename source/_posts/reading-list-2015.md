@@ -22,4 +22,3 @@ categories: life
 2. [The elements of style](http://book.douban.com/subject/1433835/) by William Strunk Jr. and E. B. White
 1. [Pro Git](http://book.douban.com/subject/3420144/) by Scott Chacon 
 
-![wechat](http://daweih.github.io/images/wechat_small_black.jpg)

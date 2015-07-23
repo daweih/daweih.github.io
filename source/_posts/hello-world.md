@@ -43,4 +43,3 @@ Do not just seek happiness for yourself. Seek happiness for all. Through kindnes
 {% endblockquote %}
 
 
-![wechat](http://daweih.github.io/images/wechat_small_black.jpg)

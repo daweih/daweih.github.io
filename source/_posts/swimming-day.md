@@ -27,4 +27,3 @@ categories: diary
 明天回利雅得，又要努力工作了。加油！
 
 
-![wechat](http://daweih.github.io/images/wechat_small_black.jpg)

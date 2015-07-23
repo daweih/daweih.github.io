@@ -94,4 +94,3 @@ categories: popular science
 人不是完美的。在演化学说的理论体系里，最适应环境的物种也不是最具有选择优势的。如果人的演化的方向就是更高的智力，那么这个粉红的大脑袋是否是个“完美”的未来呢？
 
 
-![wechat](http://daweih.github.io/images/wechat_small_black.jpg)

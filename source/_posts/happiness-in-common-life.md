@@ -24,4 +24,3 @@ categories: diary
 清汤面还能找到，烤棒子估计都用管道煤气了吧。哦，不对，在北京烤棒子车不能上街，影响市容。
 
 
-![wechat](http://daweih.github.io/images/wechat_small_black.jpg)

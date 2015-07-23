@@ -10,4 +10,3 @@ categories: life
 
 谢谢捧场。
 
-![wechat](http://daweih.github.io/images/wechat_small_black.jpg)
