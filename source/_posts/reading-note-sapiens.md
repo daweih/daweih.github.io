@@ -61,4 +61,4 @@ categories: reading
 <br><br><center>–To be continued–
 
 
-![wechat](http://daweih.github.io/images/wechat_small.jpg)
+![wechat](http://daweih.github.io/images/wechat_small_black.jpg)

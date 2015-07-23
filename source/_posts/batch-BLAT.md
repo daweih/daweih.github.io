@@ -35,4 +35,4 @@ memory: 16G
 
 [下载](https://github.com/daweih/d3_bioviz/blob/master/batch_blat/package_blat.pl)
 
-![wechat](http://daweih.github.io/images/wechat_small.jpg)
+![wechat](http://daweih.github.io/images/wechat_small_black.jpg)
