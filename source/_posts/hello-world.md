@@ -41,3 +41,6 @@ More info: [Deployment](http://hexo.io/docs/deployment.html)
 {% blockquote David Levithan, Wide Awake %}
 Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.
 {% endblockquote %}
+
+
+![wechat](http://daweih.github.io/images/wechat_small_black.jpg)

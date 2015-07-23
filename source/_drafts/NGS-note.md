@@ -62,3 +62,4 @@ Illumina 软件输出的 identifier 格式比较特殊：
 10. 18: 0 when none of the control bits are on, otherwise it is an even number
 11. ATCACG: index sequence
 
+![wechat](http://daweih.github.io/images/wechat_small_black.jpg)

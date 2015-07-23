@@ -29,3 +29,4 @@ There are several source of the strand information, splice signal, transcriptome
 
 Splice signal is the first 2 and last two base of intron sequence. cDNA is sequenced from mRNA which only consist exons of gene. When mapped back to genome, the alignment region of cDNA will consist multiple alignment blocks. Blocks of cDNA sequence are usually continuous whereas blocks of genome is separated by unaligned sequence blocks, usually introns.
 
+![wechat](http://daweih.github.io/images/wechat_small_black.jpg)

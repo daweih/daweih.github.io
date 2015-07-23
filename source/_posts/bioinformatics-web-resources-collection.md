@@ -39,3 +39,6 @@ categories: profession
 - [阮一峰的网络日志](http://www.ruanyifeng.com/blog/)
 - [乱象，印迹](http://www.luanxiang.org/blog/)
 - [徐宥](http://blog.youxu.info)
+
+
+![wechat](http://daweih.github.io/images/wechat_small_black.jpg)

@@ -82,3 +82,6 @@ cd /Applications/Bioinformatics/circos-0.55/example/
 circos 提供的 tutorials 需要跳转到 tutorials 这个文件夹而不是 data 下运行，这个在官方的手册里是错误的。
 
 搞定。
+
+
+![wechat](http://daweih.github.io/images/wechat_small_black.jpg)

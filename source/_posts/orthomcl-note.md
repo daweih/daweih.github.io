@@ -43,3 +43,4 @@ $ orthomclMclToGroups ORYSA 1 < mclOutput11 > groups11x.txt
 
 
 
+![wechat](http://daweih.github.io/images/wechat_small_black.jpg)

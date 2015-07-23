@@ -9,3 +9,5 @@ categories: life
 新博客开张。这篇之前的文章是从我的旧博客处选择性搬迁了一部分到此。
 
 谢谢捧场。
+
+![wechat](http://daweih.github.io/images/wechat_small_black.jpg)

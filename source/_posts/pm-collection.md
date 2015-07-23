@@ -20,3 +20,4 @@ categories: profession
 #### Other 
 - SVG::Convert
 
+![wechat](http://daweih.github.io/images/wechat_small_black.jpg)
