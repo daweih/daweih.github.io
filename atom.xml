@@ -5,7 +5,7 @@
   <subtitle><![CDATA[桑榆]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://daweih.github.io//"/>
-  <updated>2015-07-22T12:09:06.000Z</updated>
+  <updated>2015-07-23T03:13:40.000Z</updated>
   <id>http://daweih.github.io//</id>
   
   <author>
@@ -14,6 +14,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[UNIPROT How-To 1]]></title>
+    <link href="http://daweih.github.io/2015/07/23/uniprot-how-to-1/"/>
+    <id>http://daweih.github.io/2015/07/23/uniprot-how-to-1/</id>
+    <published>2015-07-23T03:13:40.000Z</published>
+    <updated>2015-07-23T03:13:40.000Z</updated>
+    <content type="html"><![CDATA[<p>今天师弟问了一个问题：</p>
+<blockquote>
+<p>由于 rab-db 提供的水稻 loc ID 和 Os ID 的转换服务不能用了，有没有其他资源可以提供 ID 转化呢？</p>
+</blockquote>
+<p>我答：</p>
+<blockquote>
+<p>可以使用 uniprot 整理好的 ID。从下载的 uniprot text 的 OrderedLocusNames 属性提取。</p>
+</blockquote>
+<p>其实，这只是 uniprot 数据库的一个简单的应用。作为世界最大的蛋白质数据库，uniprot 可是说是 biocuration 工作的集大成者。我觉得有必要写一个系列来讲讲 uniprot 的各种有趣的用处。本文作为这个系列的第一篇。</p>
+<p><img src="http://daweih.github.io/images/wechat_small_black.jpg" alt="wechat"></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>今天师弟问了一个问题：</p>
+<blockquote>
+<p>由于 rab-db 提供的水稻 loc ID 和 Os ID 的转换服务不能用了，有没有其他资源可以提供 ID 转化呢？</p>
+</blockquote>
+<p>我答：</p>
+<blockquote>
+<p]]>
+    </summary>
+    
+      <category term="bioinformatics" scheme="http://daweih.github.io/tags/bioinformatics/"/>
+    
+      <category term="database" scheme="http://daweih.github.io/tags/database/"/>
+    
+      <category term="profession" scheme="http://daweih.github.io/categories/profession/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Reading note: Sapiens]]></title>
