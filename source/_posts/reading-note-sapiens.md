@@ -16,7 +16,7 @@ categories: reading
 
 >在历史的路上，有三大重要革命：大约7万年前，“认知革命”（Cognitive Revolution）让历史正式启动。大约12000年前，“农业革命”（Agricultural Revolution）让历史加速发展。而到了大约不过是500年前，“科学革命”（Scientific Revolution）可以说是让历史画下句点而另创新局。
 
-人类的三次重要革命（伟大的xx革命根本排不上号）：
+人类的三次重要革命（伟大的 XX 革命根本排不上号）：
   - Cognitive Revolution
   - Agricultural Revolution
   - Scientific Revolution
@@ -25,7 +25,7 @@ categories: reading
 
 > 这点对妇女来说造成的负担更大。直立的步行方式需要让臀部变窄，于是产道宽度受限，而且别忘了婴儿的头还越来越大。于是，分娩死亡成了女性的一大风险。
 
-所以，`剖开腹产`是一种变相的人工进化吗？
+所以，`剖腹产`是一种变相的人工进化吗？
 
 <br>
 
