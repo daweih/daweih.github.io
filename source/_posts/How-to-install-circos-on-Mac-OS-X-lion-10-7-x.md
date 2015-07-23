@@ -1,6 +1,6 @@
 title: How to install circos on Mac OS X lion (10.7.x)
 date: 2011-11-17 20:02:24
-tags: [bioinformatics, visualization] 
+tags: [bioinformatics, visualization, OS X] 
 categories: profession
 ---
 > 原载于[我的 wordpress 博客](https://daweimhuang.wordpress.com/)

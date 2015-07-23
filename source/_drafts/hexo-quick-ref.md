@@ -11,6 +11,24 @@ $ hexo server --drafts/hexo s --drafts
 $ hexo publish [layout] <filename>
 ```
 
+#####禁用特定页面的评论功能
+
+在那个页面的设置区域添加代码：
+
+```
+comments: false
+````
+
+比如 tags 页面（`/source/tags/index.md`）：
+
+```
+title: All tags
+date: 2015-07-20 09:52:36
+type: "tags"
+comments: false
+---
+
+```
 #### 相关资源
 - [Hexo 官网](http://hexo.io)
 - [next theme](http://notes.iissnan.com)
