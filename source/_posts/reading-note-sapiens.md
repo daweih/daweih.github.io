@@ -58,4 +58,4 @@ categories: reading
 为什么这只发生在智人的DNA里，而没有发生在尼安德特人的DNA里？我们现在只能说这就是`纯粹的偶然`。
 
 
-<br><br><center>To be continued
+<br><br><center>–To be continued–
