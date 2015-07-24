@@ -5,25 +5,25 @@ tags: [bioinformatics, NGS, baby step]
 categories: profession
 ---
 
-### install and test bowtie and tophat
+### Install and test bowtie and tophat
 
-注意 `abs_path/filename` 表示存放 `filename` 文件的绝对路径。
+注意 `/abs_path/filename` 表示存放 `filename` 文件的绝对路径。
 
 #### 下载可执行程序：
 
-```
+``` bash
 # 查看系统的版本
 $ uname -a
 *x86_64*
 
 # 下载
-wget http://vorboss.dl.sourceforge.net/project/bowtie-bio/bowtie2/2.2.5/bowtie2-2.2.5-linux-x86_64.zip
-wget http://ccb.jhu.edu/software/tophat/downloads/tophat-2.1.0.Linux_x86_64.tar.gz
+$ wget http://vorboss.dl.sourceforge.net/project/bowtie-bio/bowtie2/2.2.5/bowtie2-2.2.5-linux-x86_64.zip
+$ wget http://ccb.jhu.edu/software/tophat/downloads/tophat-2.1.0.Linux_x86_64.tar.gz
 ```
 
 #### 修改环境变量
 
-```
+``` bash
 $ vi ~/.bash_profile
 
 # 添加下面一行
@@ -35,7 +35,7 @@ $ source ~/.bash_profile
 
 #### 下载测试用数据，用 bowtie2 做 index，测试 tophat:
 
-```
+``` bash
 $ wget http://ccb.jhu.edu/software/tophat/downloads/test_data.zip
 $ unzip test_data.zip
 $ cd test_data

@@ -32,12 +32,12 @@ categories: profession
 - [Xiaole Shirley Liu's Blog](http://www.longwoodgenomics.org): `COMPUTATIONAL GENOMICS` `CANCER EPIGENETICS` `MINING BIG DATA`
 - [伊现富](http://yixf.name)
 - [知行斋](http://caoyaqiang.com)
-- [糗世界](): `Circos教程` `NGS` `R` `bioconductor`
+- [糗世界](https://ssl.qiuworld.com): `Circos教程` `NGS` `R` `bioconductor`
 - [数据科学与R语言](http://xccds1977.blogspot.co.uk)
 - [博耘生物](http://boyun.sh.cn/bio/)
 - [Sam's Note](http://qinqianshan.com)
 - [铁汉1990](http://blog.sina.com.cn/tiehan1990)
-- [linxiao.name](http://linxiao.name)
+- [linxiao.name](http://linxiao.name): `NGS` `R` `PAML` `GMO`
 - [Mike Bostock](http://bost.ocks.org/mike/): author of `d3` `viz`
 - [Jason Davies](http://www.jasondavies.com): `d3` `map` `viz`
 

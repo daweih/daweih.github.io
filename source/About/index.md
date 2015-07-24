@@ -6,6 +6,12 @@ comments: false
 ---
 #### 关于我
 
+<div align=right style="color:steelblue;font-family:Georgia;font-style: italic;"><font size="2">דוד</div>
+
+<div align=right style="color:steelblue;font-family:Georgia;font-style: italic;"><font size="2">David&#160;&#160;&#160;&#160;&#160;&#160;</div>
+
+<div align=right style="color:steelblue;font-family:Georgia;"><font size="2">大维&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</div>
+
 祖籍东北，生于热河。我本科时候在山东折腾了 4 年，研究生考到帝都。
 
 本科学农，硕博做生物信息。
