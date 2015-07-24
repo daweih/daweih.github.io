@@ -19,13 +19,13 @@ GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
 
 一个 FASTQ 文件中，一条序列有四行。
 
-* 第一行以@开始，后面是序列 identifier 和 可选的描述，类似 FASTA 格式的标题。
+* 第一行以@开始，它用`:`分隔，，后面是序列 identifier 和 可选的描述，类似 FASTA 格式的标题。
 
 * 第二行是原始序列
 
 * 第三行以+开始，后面是序列 identifier 和 可选的描述
 
-* 第四行是第二行是原始序列对应的质量值，字符的长度一致
+* 第四行是第二行是原始序列对应的质量值，字符的长度一致（phred质量：phred=-10*log(p/(1-p), base=10)）
 
 
 #### Illumina sequence identifiers
@@ -62,4 +62,12 @@ Illumina 软件输出的 identifier 格式比较特殊：
 10. 18: 0 when none of the control bits are on, otherwise it is an even number
 11. ATCACG: index sequence
 
+注意`9.`字母 `Y/N`: 在1.8中，它表明了read的结果是否可以接受，用于对fastq文件进行筛选。
+
+
+#### Reference
+- [Indexing and Barcoding for Illumina NextGen Sequencing](http://www.umassmed.edu/uploadedFiles/nemo/Landing_Pages/Indexing%20and%20Barcoding%20for%20Illumina%20NextGen%20Sequencing.pdf)
+
 ![wechat](http://daweih.github.io/images/wechat_small_black.jpg)
+
+

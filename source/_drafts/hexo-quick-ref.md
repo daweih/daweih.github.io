@@ -11,9 +11,9 @@ $ hexo server --drafts/hexo s --drafts
 $ hexo publish [layout] <filename>
 ```
 
-#####禁用特定页面的评论功能
+##### 禁用特定页面的评论功能
 
-在那个页面的设置区域添加代码：
+在那个页面的设置区域添加代码 ([ref.](http://hexo.chenall.net/post/nocomments/))：
 
 ```
 comments: false

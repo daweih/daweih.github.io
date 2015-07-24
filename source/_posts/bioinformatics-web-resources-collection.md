@@ -25,9 +25,15 @@ categories: profession
 - [SeqAnswer](http://seqanswers.com)
 - [Public library of bioinformatics](www.plob.org)
 - [生信菜鸟团](http://www.bio-info-trainee.com): QQ group 201161227
+- [BJC俱乐部](http://bio985.com)
 
 
 #### Blogs
+- [Xiaole Shirley Liu's Blog](http://www.longwoodgenomics.org): `COMPUTATIONAL GENOMICS` `CANCER EPIGENETICS` `MINING BIG DATA`
+- [伊现富](http://yixf.name)
+- [知行斋](http://caoyaqiang.com)
+- [糗世界](): `Circos教程` `NGS` `R` `bioconductor`
+- [数据科学与R语言](http://xccds1977.blogspot.co.uk)
 - [博耘生物](http://boyun.sh.cn/bio/)
 - [Sam's Note](http://qinqianshan.com)
 - [铁汉1990](http://blog.sina.com.cn/tiehan1990)
