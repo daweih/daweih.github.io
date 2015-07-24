@@ -30,7 +30,7 @@
 
 
 
-  <meta name="keywords" content="bioinformatics,gene annotation," />
+  <meta name="keywords" content="NGS,SRA,bioinformatics," />
 
 
 
@@ -41,29 +41,20 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.4" />
 
 
-<meta name="description" content="原载于我的 wordpress 博客
-
-原文
-I am in charge of Date Palm genome annotation recently. In fact, there is only one person doing this, me.
-UCSC and Ensembl are the most famous genome sequence databases and both">
+<meta name="description" content="安装 aspera-connect：123456789101112# 查看系统的版本$ uname -a*x86_64*# 下载对应的版本（目前测试需要翻墙）$ wget http://download.asperasoft.com/download/sw/connect/3.6.0/aspera-connect-3.6.0.106805-linux-64.tar.gz$ gunzip asper">
 <meta property="og:type" content="article">
-<meta property="og:title" content="How to use BLAT to annotate a new sequenced genome">
-<meta property="og:url" content="http://daweih.github.io/2011/09/09/How-to-use-BLAT-to-annotate-a-new-sequenced-genome/index.html">
+<meta property="og:title" content="Aspera download data from SRA">
+<meta property="og:url" content="http://daweih.github.io/2015/07/24/aspera-download-data-from-sra/index.html">
 <meta property="og:site_name" content="东隅">
-<meta property="og:description" content="原载于我的 wordpress 博客
-
-原文
-I am in charge of Date Palm genome annotation recently. In fact, there is only one person doing this, me.
-UCSC and Ensembl are the most famous genome sequence databases and both">
+<meta property="og:description" content="安装 aspera-connect：123456789101112# 查看系统的版本$ uname -a*x86_64*# 下载对应的版本（目前测试需要翻墙）$ wget http://download.asperasoft.com/download/sw/connect/3.6.0/aspera-connect-3.6.0.106805-linux-64.tar.gz$ gunzip asper">
+<meta property="og:image" content="http://daweih.github.io/images/sra1.png">
+<meta property="og:image" content="http://daweih.github.io/images/sra2.png">
+<meta property="og:image" content="http://daweih.github.io/images/ascp.png">
 <meta property="og:image" content="http://daweih.github.io/images/wechat_small_black.jpg">
-<meta property="og:updated_time" content="2015-07-23T01:47:39.000Z">
+<meta property="og:updated_time" content="2015-07-24T14:15:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="How to use BLAT to annotate a new sequenced genome">
-<meta name="twitter:description" content="原载于我的 wordpress 博客
-
-原文
-I am in charge of Date Palm genome annotation recently. In fact, there is only one person doing this, me.
-UCSC and Ensembl are the most famous genome sequence databases and both">
+<meta name="twitter:title" content="Aspera download data from SRA">
+<meta name="twitter:description" content="安装 aspera-connect：123456789101112# 查看系统的版本$ uname -a*x86_64*# 下载对应的版本（目前测试需要翻墙）$ wget http://download.asperasoft.com/download/sw/connect/3.6.0/aspera-connect-3.6.0.106805-linux-64.tar.gz$ gunzip asper">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -73,7 +64,7 @@ UCSC and Ensembl are the most famous genome sequence databases and both">
   };
 </script>
 
-    <title> How to use BLAT to annotate a new sequenced genome // 东隅 </title>
+    <title> Aspera download data from SRA // 东隅 </title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
 <!--[if lte IE 8]>
@@ -202,7 +193,7 @@ UCSC and Ensembl are the most famous genome sequence databases and both">
           
           
             
-              How to use BLAT to annotate a new sequenced genome
+              Aspera download data from SRA
             
           
         </h1>
@@ -211,8 +202,8 @@ UCSC and Ensembl are the most famous genome sequence databases and both">
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2011-09-09T21:37:05+08:00" content="2011-09-09">
-            2011-09-09
+          <time itemprop="dateCreated" datetime="2015-07-24T22:15:54+08:00" content="2015-07-24">
+            2015-07-24
           </time>
         </span>
 
@@ -233,8 +224,8 @@ UCSC and Ensembl are the most famous genome sequence databases and both">
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2011/09/09/How-to-use-BLAT-to-annotate-a-new-sequenced-genome/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2011/09/09/How-to-use-BLAT-to-annotate-a-new-sequenced-genome/" itemprop="commentsCount"></span>
+              <a href="/2015/07/24/aspera-download-data-from-sra/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/24/aspera-download-data-from-sra/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -248,22 +239,25 @@ UCSC and Ensembl are the most famous genome sequence databases and both">
       
 
       
-        <span itemprop="articleBody"><blockquote>
-<p>原载于<a href="https://daweimhuang.wordpress.com/" target="_blank" rel="external">我的 wordpress 博客</a></p>
-</blockquote>
-<p><a href="https://daweimhuang.wordpress.com/2011/09/09/how-to-use-blat-to-annotate-a-new-sequenced-genome/" target="_blank" rel="external">原文</a></p>
-<p>I am in charge of Date Palm genome annotation recently. In fact, there is only one person doing this, me.</p>
-<p>UCSC and Ensembl are the most famous genome sequence databases and both developed effective tool, BLAT from UCSC and pMatch from Ensembl, to do this.</p>
-<p>pMatch need input of protein sequence. So it is suitable for use rich datasets to annotate a similar species’ genome without lots of sequence proteins.</p>
-<p>BLAT is good at cDNA to genome alignment. So we choose BLAT because we got Newbler assembled cDNA sequence from 454.</p>
-<p>The Data Palm Genome sequence assembly based on two data source, the 454 newbler assembled contig and solid mate pair reads.</p>
-<p>Newbler assemble the 454 data of genome to contigs which provide the main structure of genome assembly.</p>
-<p>Solid mate pair data provide the information of relationship between contigs, including order, gap length, etc.</p>
-<p>454 can not provide sequence strand information. After assembly, the cDNA can be sense strand or anti-sense strand. Since both of the genome strand have the ability to encode genes as we defined as positive strand gene and negative strand gene, the BLAT mapping data can provide 4 kinds of mapping results due to the complexity discussed before.</p>
-<p>So the first step of annotation is to convert the anti-sense cDNA to sense strand sequence, the the mapping results will remain only two types, the positive strand gene and negative strand gene.</p>
-<p>There are several source of the strand information, splice signal, transcriptome data form solid strand specific experiment, CDS prediction data and alignment-based annotation of cDNA.</p>
-<p>Splice signal is the first 2 and last two base of intron sequence. cDNA is sequenced from mRNA which only consist exons of gene. When mapped back to genome, the alignment region of cDNA will consist multiple alignment blocks. Blocks of cDNA sequence are usually continuous whereas blocks of genome is separated by unaligned sequence blocks, usually introns.</p>
-<p><img src="http://daweih.github.io/images/wechat_small_black.jpg" alt="wechat"></p>
+        <span itemprop="articleBody"><h4 id="安装_aspera-connect：">安装 aspera-connect：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看系统的版本</span></span><br><span class="line">$ uname <span class="operator">-a</span></span><br><span class="line">*x86_64*</span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载对应的版本（目前测试需要翻墙）</span></span><br><span class="line">$ wget http://download.asperasoft.com/download/sw/connect/<span class="number">3.6</span>.<span class="number">0</span>/aspera-connect-<span class="number">3.6</span>.<span class="number">0.106805</span>-linux-<span class="number">64</span>.tar.gz</span><br><span class="line"></span><br><span class="line">$ gunzip aspera-connect-<span class="number">3.6</span>.<span class="number">0.106805</span>-linux-<span class="number">64</span>.tar.gz</span><br><span class="line">$ tar -xvf aspera-connect-<span class="number">3.6</span>.<span class="number">0.106805</span>-linux-<span class="number">64</span>.tar</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装</span></span><br><span class="line">$ sh aspera-connect-<span class="number">3.6</span>.<span class="number">0.106805</span>-linux-<span class="number">64</span>.sh</span><br></pre></td></tr></table></figure>
+<p>安装输出结果</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Installing Aspera Connect</span><br><span class="line"></span><br><span class="line">Deploying Aspera Connect (/home/your_user_name/.aspera/connect) <span class="keyword">for</span> the current user only.</span><br><span class="line">Restart firefox manually to load the Aspera Connect plug-in</span><br><span class="line"></span><br><span class="line">Install complete.</span><br></pre></td></tr></table></figure>
+<h4 id="修改环境变量">修改环境变量</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ vi ~/.bash_profile</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加下面一行</span></span><br><span class="line"><span class="built_in">export</span> PATH=/home/your_user_name/.aspera/connect/bin:<span class="variable">$PATH</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 环境变量生效</span></span><br><span class="line">$ <span class="built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure>
+<h4 id="配置参数，测试下载">配置参数，测试下载</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># PRIVATE-KEY-FILE 文件位置</span></span><br><span class="line">~/.aspera/connect/etc/asperaweb_id_dsa.openssh</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载用的命令</span></span><br><span class="line">ascp  -i asperaweb_id_dsa.openssh --mode recv --host ftp-private.ncbi.nlm.nih.gov --user anonftp   --file-list  sra_list.txt  -k <span class="number">1</span> -QT <span class="operator">-l</span> <span class="number">200</span>m  /path_to_save_download/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 对参数的解释</span></span><br><span class="line">Usage: ascp [OPTION] SRC... DEST</span><br><span class="line">          SRC to DEST, or multiple SRC to DEST dir</span><br><span class="line">          SRC, DEST format: [[user@]host:]PATH</span><br><span class="line">  -h,--help                       Display usage</span><br><span class="line">  -A,--version                    Display version.</span><br><span class="line">  -i PRIVATE-KEY-FILE             Private-key file name (id_rsa)</span><br><span class="line">  --mode=MODE                     MODE: send, recv</span><br><span class="line">  --host=HOSTNAME</span><br><span class="line">  --user=USERNAME</span><br><span class="line">  --file-list=FILENAME            File with list of sources</span><br><span class="line">  -k RESUME-LEVEL                 Resume criterion: <span class="number">0</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span></span><br><span class="line">  <span class="operator">-l</span> MAX-RATE                     Max transfer rate</span><br><span class="line">  -q                              Disable progress display</span><br><span class="line">  -T                              Disable encryption</span><br><span class="line"><span class="comment"># 一般来说，你只要修改 `--file-list` `-i` 对因你自己的情况即可</span></span><br></pre></td></tr></table></figure>
+<h4 id="获取下载文件地址">获取下载文件地址</h4><p>一个 <code>sra_list.txt</code> 例子:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/sra/sra-instant/reads/ByRun/sra/ERR/ERR009/ERR009428/ERR009428.sra</span><br></pre></td></tr></table></figure>
+<p>如何获取此地址：</p>
+<ol>
+<li><p>找到 <code>sra</code> 文件的页面（发表的文章一般会提供这个页面的 ID），点击红框进入下一页</p>
+<p><img src="http://daweih.github.io/images/sra1.png" alt="找到sra文件的页面（发表的文章一般会提供这个页面的 ID），点击红框进入下一页"></p>
+</li>
+<li><p>地址栏里显示了地址，然后按照上文的 <code>sra_list.txt</code> 模式编写</p>
+<p><img src="http://daweih.github.io/images/sra2.png" alt="地址栏里显示了地址，然后按照上文的 `sra_list.txt` 模式编写"></p>
+</li>
+</ol>
+<p>最后，请欣赏华丽丽的下载速度。</p>
+<p><img src="http://daweih.github.io/images/ascp.png" alt="ascp"></p>
+<p><br><br><br><br><img src="http://daweih.github.io/images/wechat_small_black.jpg" alt="wechat"></p>
 </span>
       
     </div>
@@ -272,9 +266,11 @@ UCSC and Ensembl are the most famous genome sequence databases and both">
       
         <div class="post-tags">
           
-            <a href="/tags/bioinformatics/" rel="tag">#bioinformatics</a>
+            <a href="/tags/NGS/" rel="tag">#NGS</a>
           
-            <a href="/tags/gene-annotation/" rel="tag">#gene annotation</a>
+            <a href="/tags/SRA/" rel="tag">#SRA</a>
+          
+            <a href="/tags/bioinformatics/" rel="tag">#bioinformatics</a>
           
         </div>
       
@@ -283,13 +279,11 @@ UCSC and Ensembl are the most famous genome sequence databases and both">
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2011/11/17/How-to-install-circos-on-Mac-OS-X-lion-10-7-x/" rel="prev">How to install circos on Mac OS X lion (10.7.x)</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2011/08/31/swimming-day/" rel="next">游泳归来</a>
+              <a href="/2015/07/24/Install-and-test-bowtie-and-tophat/" rel="next">Install and test bowtie and tophat</a>
             
           </div>
         </div>
@@ -315,8 +309,8 @@ UCSC and Ensembl are the most famous genome sequence databases and both">
             
               <div class="comments" id="comments">
                 
-                  <div class="ds-thread" data-thread-key="2011/09/09/How-to-use-BLAT-to-annotate-a-new-sequenced-genome/"
-                       data-title="How to use BLAT to annotate a new sequenced genome" data-url="http://daweih.github.io/2011/09/09/How-to-use-BLAT-to-annotate-a-new-sequenced-genome/">
+                  <div class="ds-thread" data-thread-key="2015/07/24/aspera-download-data-from-sra/"
+                       data-title="Aspera download data from SRA" data-url="http://daweih.github.io/2015/07/24/aspera-download-data-from-sra/">
                   </div>
                 
               </div>
@@ -419,7 +413,7 @@ UCSC and Ensembl are the most famous genome sequence databases and both">
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">This post does not have a Table Of Contents</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装_aspera-connect："><span class="nav-number">1.</span> <span class="nav-text">安装 aspera-connect：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改环境变量"><span class="nav-number">2.</span> <span class="nav-text">修改环境变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置参数，测试下载"><span class="nav-number">3.</span> <span class="nav-text">配置参数，测试下载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#获取下载文件地址"><span class="nav-number">4.</span> <span class="nav-text">获取下载文件地址</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
