@@ -190,6 +190,97 @@
           
           
             
+              <a class="post-title-link" href="/2015/07/24/Install-and-test-bowtie-and-tophat/" itemprop="url">
+                Install and test bowtie and tophat
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2015-07-24T16:27:11+08:00" content="2015-07-24">
+            2015-07-24
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/profession/" itemprop="url" rel="index"><span itemprop="name">profession</span></a></span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/07/24/Install-and-test-bowtie-and-tophat/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/24/Install-and-test-bowtie-and-tophat/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><h3 id="install_and_test_bowtie_and_tophat">install and test bowtie and tophat</h3><p>注意 <code>abs_path/filename</code> 表示存放 <code>filename</code> 文件的绝对路径。</p>
+<h4 id="下载可执行程序：">下载可执行程序：</h4><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看系统的版本</span></span><br><span class="line"><span class="variable">$ </span>uname -a</span><br><span class="line">*x86_64*</span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载</span></span><br><span class="line">wget <span class="symbol">http:</span>/<span class="regexp">/vorboss.dl.sourceforge.net/project</span><span class="regexp">/bowtie-bio/bowtie</span>2/<span class="number">2.2</span>.<span class="number">5</span>/bowtie2-<span class="number">2.2</span>.<span class="number">5</span>-linux-x86_64.zip</span><br><span class="line">wget <span class="symbol">http:</span>/<span class="regexp">/ccb.jhu.edu/software</span><span class="regexp">/tophat/downloads</span><span class="regexp">/tophat-2.1.0.Linux_x86_64.tar.gz</span></span><br></pre></td></tr></table></figure>
+<h4 id="修改环境变量">修改环境变量</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ vi ~/.bash_profile</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加下面一行</span></span><br><span class="line"><span class="built_in">export</span> PATH=/abs_path/tophat-<span class="number">2.1</span>.<span class="number">0</span>.Linux_x86_64:/abs_path/bowtie2-<span class="number">2.2</span>.<span class="number">5</span>:<span class="variable">$PATH</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 环境变量生效</span></span><br><span class="line">$ <span class="built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure>
+<h4 id="下载测试用数据，用_bowtie2_做_index，测试_tophat:">下载测试用数据，用 bowtie2 做 index，测试 tophat:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ wget http://ccb.jhu.edu/software/tophat/downloads/<span class="built_in">test</span>_data.zip</span><br><span class="line">$ unzip <span class="built_in">test</span>_data.zip</span><br><span class="line">$ <span class="built_in">cd</span> <span class="built_in">test</span>_data</span><br><span class="line">$ bowtie2-build /abs_path/<span class="built_in">test</span>_ref.fa /abs_path/<span class="built_in">test</span>_ref</span><br><span class="line">$ tophat /abs_path/<span class="built_in">test</span>_ref <span class="built_in">test</span>_reads.fq</span><br></pre></td></tr></table></figure>
+<h4 id="Reference">Reference</h4><ul>
+<li><a href="http://www.umassmed.edu/uploadedFiles/nemo/Landing_Pages/Indexing%20and%20Barcoding%20for%20Illumina%20NextGen%20Sequencing.pdf" target="_blank" rel="external">Indexing and Barcoding for Illumina NextGen Sequencing</a></li>
+</ul>
+<h4 id="Software">Software</h4><ul>
+<li><a href="http://ccb.jhu.edu/software/tophat/index.shtml" target="_blank" rel="external">tophat</a>: <a href="http://ccb.jhu.edu/software/tophat/downloads/test_data.zip" target="_blank" rel="external">test_data_set</a></li>
+<li><a href="http://bowtie-bio.sourceforge.net/index.shtml" target="_blank" rel="external">bowtie</a></li>
+</ul>
+<p><br><br><img src="http://daweih.github.io/images/wechat_small_black.jpg" alt="wechat"></p>
+</span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2015/07/23/uniprot-how-to-1/" itemprop="url">
                 UNIPROT How-To series
               </a>
@@ -1039,109 +1130,6 @@
 
 
     
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2011/11/17/How-to-install-circos-on-Mac-OS-X-lion-10-7-x/" itemprop="url">
-                How to install circos on Mac OS X lion (10.7.x)
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on
-          <time itemprop="dateCreated" datetime="2011-11-17T20:02:24+08:00" content="2011-11-17">
-            2011-11-17
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; In
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/profession/" itemprop="url" rel="index"><span itemprop="name">profession</span></a></span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2011/11/17/How-to-install-circos-on-Mac-OS-X-lion-10-7-x/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2011/11/17/How-to-install-circos-on-Mac-OS-X-lion-10-7-x/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody"><blockquote>
-<p>原载于<a href="https://daweimhuang.wordpress.com/" target="_blank" rel="external">我的 wordpress 博客</a></p>
-</blockquote>
-<p><img src="http://daweih.github.io/images/cancer-genome-challenge.jpg" alt="circos"></p>
-<p>Circos 是个画圈图的好工具。在基因组相关文章里展示基因排列，同源性区段，duplication 等，效果很好。由于现在高对平文章对图表的美观程度都有了更高的要求，所以转移到 circos 下来绘制圈图很有必要了（虽然有很多其他的软件和工具）。</p>
-<p>Circos 可以安装在 unix based os 上。由于 Mac OS X 是 unix 内核，于是就没有理由不研究一下 circus 的本地化。另外一个原因就是，做生物信息，如果完全把软件问题交给管理员，那么能学的技术问题就很有限。而且走人之后，服务器肯定是不能带走的。因此完全本地化工具包是很有必要的。</p>
-<h4 id="安装依赖的包">安装依赖的包</h4><p>circus 的安装其实很简单。下载解压后，cd ../circos-0.55/bin，运行 ./test.modules，就可以看到需要的包有那些已经安装，那些需要手动安装。比如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">ok Carp</span><br><span class="line">ok Config::General</span><br><span class="line">ok Data::Dumper</span><br><span class="line">ok Digest::MD5</span><br><span class="line">ok File::Basename</span><br><span class="line">ok File::Spec::Functions</span><br><span class="line">ok FindB<span class="keyword">in</span></span><br><span class="line">ok GD</span><br><span class="line">ok GD::Polyline</span><br><span class="line">ok Getopt::Long</span><br><span class="line">ok Graphics::ColorObject</span><br><span class="line">ok IO::File</span><br><span class="line">ok List::MoreUtils</span><br><span class="line">ok List::Util</span><br><span class="line">ok Math::Bezier</span><br><span class="line">ok Math::BigFloat</span><br><span class="line">ok Math::Round</span><br><span class="line">ok Math::VecStat</span><br><span class="line">ok Memoize</span><br><span class="line">ok POSIX</span><br><span class="line">ok Params::Validate</span><br><span class="line">ok Pod::Usage</span><br><span class="line">ok Readonly</span><br><span class="line">ok Regexp::Common</span><br><span class="line">ok Set::IntSpan</span><br><span class="line">ok Storable</span><br><span class="line">ok Time::HiRes</span><br></pre></td></tr></table></figure>
-<h4 id="其他">其他</h4><p>以上是全部安装正常的结果。如果第一次运行这个 check 脚本，显示有未安装的。可以尝试以下两种方法来安装：</p>
-<ol>
-<li>fink</li>
-<li>cpan</li>
-</ol>
-<p>由于 cirsos 是个基于 perl+svg 编写的软件，所以大部分要安装的包都可以通过 cpan。<br>在 os x下，sudo perl -MCPAN -e shel，之后键入 install + 包名称即可，如键入<code>install Math::Bezier</code>。</p>
-<p>由于未知原因，GD 无法用 cpan 安装，于是借助 fink。</p>
-<p>fink 下移植了大部分的 linux 通用的软件，只是更新会比 osx 稍慢。不过象 GD 这种常用的包更新还很快。bioperl 就没那么幸运了（bioperl 我只能通过 cpan 来安装了，发现比 fink 的速度更快，只是 perldoc 无法调用）。</p>
-<p>GD 安装的日志竟然跑了 1 万多行。</p>
-<h4 id="配置">配置</h4><h5 id="修改/bin/env">修改/bin/env</h5><p>由于mac os x的默认路径和一般linux不同，因此要将程序的第一行中“/bin/env”修改为“/usr/bin/env”。</p>
-<p>或者使用命令“ sudo ln -s /usr/bin/env /bin/en”建立一个镜像。</p>
-<h4 id="测试">测试</h4><p>现在可以用circos提供的测试文件来检查安装是否成功了。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /Applications/Bioinformatics/circos-<span class="number">0.55</span>/example/</span><br><span class="line">/Applications/Bioinformatics/circos-<span class="number">0.55</span>/bin/circos -conf ./circos.conf</span><br></pre></td></tr></table></figure>
-<p>circos 提供的 tutorials 需要跳转到 tutorials 这个文件夹而不是 data 下运行，这个在官方的手册里是错误的。</p>
-<p>搞定。</p>
-<p><img src="http://daweih.github.io/images/wechat_small_black.jpg" alt="wechat"></p>
-</span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1181,7 +1169,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">16</span>
+              <span class="site-state-item-count">17</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
