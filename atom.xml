@@ -5,7 +5,7 @@
   <subtitle><![CDATA[桑榆]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://daweih.github.io//"/>
-  <updated>2015-07-24T08:27:11.000Z</updated>
+  <updated>2015-07-24T14:15:54.000Z</updated>
   <id>http://daweih.github.io//</id>
   
   <author>
@@ -16,13 +16,53 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[Aspera download data from SRA]]></title>
+    <link href="http://daweih.github.io/2015/07/24/aspera-download-data-from-sra/"/>
+    <id>http://daweih.github.io/2015/07/24/aspera-download-data-from-sra/</id>
+    <published>2015-07-24T14:15:54.000Z</published>
+    <updated>2015-07-24T14:15:54.000Z</updated>
+    <content type="html"><![CDATA[<h4 id="安装_aspera-connect：">安装 aspera-connect：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看系统的版本</span></span><br><span class="line">$ uname <span class="operator">-a</span></span><br><span class="line">*x86_64*</span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载对应的版本（目前测试需要翻墙）</span></span><br><span class="line">$ wget http://download.asperasoft.com/download/sw/connect/<span class="number">3.6</span>.<span class="number">0</span>/aspera-connect-<span class="number">3.6</span>.<span class="number">0.106805</span>-linux-<span class="number">64</span>.tar.gz</span><br><span class="line"></span><br><span class="line">$ gunzip aspera-connect-<span class="number">3.6</span>.<span class="number">0.106805</span>-linux-<span class="number">64</span>.tar.gz</span><br><span class="line">$ tar -xvf aspera-connect-<span class="number">3.6</span>.<span class="number">0.106805</span>-linux-<span class="number">64</span>.tar</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装</span></span><br><span class="line">$ sh aspera-connect-<span class="number">3.6</span>.<span class="number">0.106805</span>-linux-<span class="number">64</span>.sh</span><br></pre></td></tr></table></figure>
+<p>安装输出结果</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Installing Aspera Connect</span><br><span class="line"></span><br><span class="line">Deploying Aspera Connect (/home/your_user_name/.aspera/connect) <span class="keyword">for</span> the current user only.</span><br><span class="line">Restart firefox manually to load the Aspera Connect plug-in</span><br><span class="line"></span><br><span class="line">Install complete.</span><br></pre></td></tr></table></figure>
+<h4 id="修改环境变量">修改环境变量</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ vi ~/.bash_profile</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加下面一行</span></span><br><span class="line"><span class="built_in">export</span> PATH=/home/your_user_name/.aspera/connect/bin:<span class="variable">$PATH</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 环境变量生效</span></span><br><span class="line">$ <span class="built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure>
+<h4 id="配置参数，测试下载">配置参数，测试下载</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># PRIVATE-KEY-FILE 文件位置</span></span><br><span class="line">~/.aspera/connect/etc/asperaweb_id_dsa.openssh</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载用的命令</span></span><br><span class="line">ascp  -i asperaweb_id_dsa.openssh --mode recv --host ftp-private.ncbi.nlm.nih.gov --user anonftp   --file-list  sra_list.txt  -k <span class="number">1</span> -QT <span class="operator">-l</span> <span class="number">200</span>m  /path_to_save_download/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 对参数的解释</span></span><br><span class="line">Usage: ascp [OPTION] SRC... DEST</span><br><span class="line">          SRC to DEST, or multiple SRC to DEST dir</span><br><span class="line">          SRC, DEST format: [[user@]host:]PATH</span><br><span class="line">  -h,--help                       Display usage</span><br><span class="line">  -A,--version                    Display version.</span><br><span class="line">  -i PRIVATE-KEY-FILE             Private-key file name (id_rsa)</span><br><span class="line">  --mode=MODE                     MODE: send, recv</span><br><span class="line">  --host=HOSTNAME</span><br><span class="line">  --user=USERNAME</span><br><span class="line">  --file-list=FILENAME            File with list of sources</span><br><span class="line">  -k RESUME-LEVEL                 Resume criterion: <span class="number">0</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span></span><br><span class="line">  <span class="operator">-l</span> MAX-RATE                     Max transfer rate</span><br><span class="line">  -q                              Disable progress display</span><br><span class="line">  -T                              Disable encryption</span><br><span class="line"><span class="comment"># 一般来说，你只要修改 `--file-list` `-i` 对因你自己的情况即可</span></span><br></pre></td></tr></table></figure>
+<h4 id="获取下载文件地址">获取下载文件地址</h4><p>一个 <code>sra_list.txt</code> 例子:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/sra/sra-instant/reads/ByRun/sra/ERR/ERR009/ERR009428/ERR009428.sra</span><br></pre></td></tr></table></figure>
+<p>如何获取此地址：</p>
+<ol>
+<li><p>找到 <code>sra</code> 文件的页面（发表的文章一般会提供这个页面的 ID），点击红框进入下一页</p>
+<p><img src="http://daweih.github.io/images/sra1.png" alt="找到sra文件的页面（发表的文章一般会提供这个页面的 ID），点击红框进入下一页"></p>
+</li>
+<li><p>地址栏里显示了地址，然后按照上文的 <code>sra_list.txt</code> 模式编写</p>
+<p><img src="http://daweih.github.io/images/sra2.png" alt="地址栏里显示了地址，然后按照上文的 `sra_list.txt` 模式编写"></p>
+</li>
+</ol>
+<p>最后，请欣赏华丽丽的下载速度。</p>
+<p><img src="http://daweih.github.io/images/ascp.png" alt="ascp"></p>
+<p><br><br><br><br><img src="http://daweih.github.io/images/wechat_small_black.jpg" alt="wechat"></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h4 id="安装_aspera-connect：">安装 aspera-connect：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</s]]>
+    </summary>
+    
+      <category term="NGS" scheme="http://daweih.github.io/tags/NGS/"/>
+    
+      <category term="SRA" scheme="http://daweih.github.io/tags/SRA/"/>
+    
+      <category term="bioinformatics" scheme="http://daweih.github.io/tags/bioinformatics/"/>
+    
+      <category term="profession" scheme="http://daweih.github.io/categories/profession/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Install and test bowtie and tophat]]></title>
     <link href="http://daweih.github.io/2015/07/24/Install-and-test-bowtie-and-tophat/"/>
     <id>http://daweih.github.io/2015/07/24/Install-and-test-bowtie-and-tophat/</id>
     <published>2015-07-24T08:27:11.000Z</published>
     <updated>2015-07-24T08:27:11.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="install_and_test_bowtie_and_tophat">install and test bowtie and tophat</h3><p>注意 <code>abs_path/filename</code> 表示存放 <code>filename</code> 文件的绝对路径。</p>
-<h4 id="下载可执行程序：">下载可执行程序：</h4><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看系统的版本</span></span><br><span class="line"><span class="variable">$ </span>uname -a</span><br><span class="line">*x86_64*</span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载</span></span><br><span class="line">wget <span class="symbol">http:</span>/<span class="regexp">/vorboss.dl.sourceforge.net/project</span><span class="regexp">/bowtie-bio/bowtie</span>2/<span class="number">2.2</span>.<span class="number">5</span>/bowtie2-<span class="number">2.2</span>.<span class="number">5</span>-linux-x86_64.zip</span><br><span class="line">wget <span class="symbol">http:</span>/<span class="regexp">/ccb.jhu.edu/software</span><span class="regexp">/tophat/downloads</span><span class="regexp">/tophat-2.1.0.Linux_x86_64.tar.gz</span></span><br></pre></td></tr></table></figure>
+    <content type="html"><![CDATA[<h3 id="Install_and_test_bowtie_and_tophat">Install and test bowtie and tophat</h3><p>注意 <code>/abs_path/filename</code> 表示存放 <code>filename</code> 文件的绝对路径。</p>
+<h4 id="下载可执行程序：">下载可执行程序：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看系统的版本</span></span><br><span class="line">$ uname <span class="operator">-a</span></span><br><span class="line">*x86_64*</span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载</span></span><br><span class="line">$ wget http://vorboss.dl.sourceforge.net/project/bowtie-bio/bowtie2/<span class="number">2.2</span>.<span class="number">5</span>/bowtie2-<span class="number">2.2</span>.<span class="number">5</span>-linux-x86_64.zip</span><br><span class="line">$ wget http://ccb.jhu.edu/software/tophat/downloads/tophat-<span class="number">2.1</span>.<span class="number">0</span>.Linux_x86_64.tar.gz</span><br></pre></td></tr></table></figure>
 <h4 id="修改环境变量">修改环境变量</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ vi ~/.bash_profile</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加下面一行</span></span><br><span class="line"><span class="built_in">export</span> PATH=/abs_path/tophat-<span class="number">2.1</span>.<span class="number">0</span>.Linux_x86_64:/abs_path/bowtie2-<span class="number">2.2</span>.<span class="number">5</span>:<span class="variable">$PATH</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 环境变量生效</span></span><br><span class="line">$ <span class="built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure>
 <h4 id="下载测试用数据，用_bowtie2_做_index，测试_tophat:">下载测试用数据，用 bowtie2 做 index，测试 tophat:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ wget http://ccb.jhu.edu/software/tophat/downloads/<span class="built_in">test</span>_data.zip</span><br><span class="line">$ unzip <span class="built_in">test</span>_data.zip</span><br><span class="line">$ <span class="built_in">cd</span> <span class="built_in">test</span>_data</span><br><span class="line">$ bowtie2-build /abs_path/<span class="built_in">test</span>_ref.fa /abs_path/<span class="built_in">test</span>_ref</span><br><span class="line">$ tophat /abs_path/<span class="built_in">test</span>_ref <span class="built_in">test</span>_reads.fq</span><br></pre></td></tr></table></figure>
 <h4 id="Reference">Reference</h4><ul>
@@ -35,7 +75,7 @@
 <p><br><br><img src="http://daweih.github.io/images/wechat_small_black.jpg" alt="wechat"></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h3 id="install_and_test_bowtie_and_tophat">install and test bowtie and tophat</h3><p>注意 <code>abs_path/filename</code> 表示存放 <code>filename<]]>
+    <![CDATA[<h3 id="Install_and_test_bowtie_and_tophat">Install and test bowtie and tophat</h3><p>注意 <code>/abs_path/filename</code> 表示存放 <code>filename]]>
     </summary>
     
       <category term="NGS" scheme="http://daweih.github.io/tags/NGS/"/>
@@ -220,12 +260,12 @@
 <li><a href="http://www.longwoodgenomics.org" target="_blank" rel="external">Xiaole Shirley Liu’s Blog</a>: <code>COMPUTATIONAL GENOMICS</code> <code>CANCER EPIGENETICS</code> <code>MINING BIG DATA</code></li>
 <li><a href="http://yixf.name" target="_blank" rel="external">伊现富</a></li>
 <li><a href="http://caoyaqiang.com" target="_blank" rel="external">知行斋</a></li>
-<li><a href="">糗世界</a>: <code>Circos教程</code> <code>NGS</code> <code>R</code> <code>bioconductor</code></li>
+<li><a href="https://ssl.qiuworld.com" target="_blank" rel="external">糗世界</a>: <code>Circos教程</code> <code>NGS</code> <code>R</code> <code>bioconductor</code></li>
 <li><a href="http://xccds1977.blogspot.co.uk" target="_blank" rel="external">数据科学与R语言</a></li>
 <li><a href="http://boyun.sh.cn/bio/" target="_blank" rel="external">博耘生物</a></li>
 <li><a href="http://qinqianshan.com" target="_blank" rel="external">Sam’s Note</a></li>
 <li><a href="http://blog.sina.com.cn/tiehan1990" target="_blank" rel="external">铁汉1990</a></li>
-<li><a href="http://linxiao.name" target="_blank" rel="external">linxiao.name</a></li>
+<li><a href="http://linxiao.name" target="_blank" rel="external">linxiao.name</a>: <code>NGS</code> <code>R</code> <code>PAML</code> <code>GMO</code></li>
 <li><a href="http://bost.ocks.org/mike/" target="_blank" rel="external">Mike Bostock</a>: author of <code>d3</code> <code>viz</code></li>
 <li><a href="http://www.jasondavies.com" target="_blank" rel="external">Jason Davies</a>: <code>d3</code> <code>map</code> <code>viz</code></li>
 </ul>
