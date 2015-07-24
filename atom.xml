@@ -5,7 +5,7 @@
   <subtitle><![CDATA[桑榆]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://daweih.github.io//"/>
-  <updated>2015-07-23T03:13:40.000Z</updated>
+  <updated>2015-07-24T08:27:11.000Z</updated>
   <id>http://daweih.github.io//</id>
   
   <author>
@@ -14,6 +14,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Install and test bowtie and tophat]]></title>
+    <link href="http://daweih.github.io/2015/07/24/Install-and-test-bowtie-and-tophat/"/>
+    <id>http://daweih.github.io/2015/07/24/Install-and-test-bowtie-and-tophat/</id>
+    <published>2015-07-24T08:27:11.000Z</published>
+    <updated>2015-07-24T08:27:11.000Z</updated>
+    <content type="html"><![CDATA[<h3 id="install_and_test_bowtie_and_tophat">install and test bowtie and tophat</h3><p>注意 <code>abs_path/filename</code> 表示存放 <code>filename</code> 文件的绝对路径。</p>
+<h4 id="下载可执行程序：">下载可执行程序：</h4><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看系统的版本</span></span><br><span class="line"><span class="variable">$ </span>uname -a</span><br><span class="line">*x86_64*</span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载</span></span><br><span class="line">wget <span class="symbol">http:</span>/<span class="regexp">/vorboss.dl.sourceforge.net/project</span><span class="regexp">/bowtie-bio/bowtie</span>2/<span class="number">2.2</span>.<span class="number">5</span>/bowtie2-<span class="number">2.2</span>.<span class="number">5</span>-linux-x86_64.zip</span><br><span class="line">wget <span class="symbol">http:</span>/<span class="regexp">/ccb.jhu.edu/software</span><span class="regexp">/tophat/downloads</span><span class="regexp">/tophat-2.1.0.Linux_x86_64.tar.gz</span></span><br></pre></td></tr></table></figure>
+<h4 id="修改环境变量">修改环境变量</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ vi ~/.bash_profile</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加下面一行</span></span><br><span class="line"><span class="built_in">export</span> PATH=/abs_path/tophat-<span class="number">2.1</span>.<span class="number">0</span>.Linux_x86_64:/abs_path/bowtie2-<span class="number">2.2</span>.<span class="number">5</span>:<span class="variable">$PATH</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 环境变量生效</span></span><br><span class="line">$ <span class="built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure>
+<h4 id="下载测试用数据，用_bowtie2_做_index，测试_tophat:">下载测试用数据，用 bowtie2 做 index，测试 tophat:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ wget http://ccb.jhu.edu/software/tophat/downloads/<span class="built_in">test</span>_data.zip</span><br><span class="line">$ unzip <span class="built_in">test</span>_data.zip</span><br><span class="line">$ <span class="built_in">cd</span> <span class="built_in">test</span>_data</span><br><span class="line">$ bowtie2-build /abs_path/<span class="built_in">test</span>_ref.fa /abs_path/<span class="built_in">test</span>_ref</span><br><span class="line">$ tophat /abs_path/<span class="built_in">test</span>_ref <span class="built_in">test</span>_reads.fq</span><br></pre></td></tr></table></figure>
+<h4 id="Reference">Reference</h4><ul>
+<li><a href="http://www.umassmed.edu/uploadedFiles/nemo/Landing_Pages/Indexing%20and%20Barcoding%20for%20Illumina%20NextGen%20Sequencing.pdf" target="_blank" rel="external">Indexing and Barcoding for Illumina NextGen Sequencing</a></li>
+</ul>
+<h4 id="Software">Software</h4><ul>
+<li><a href="http://ccb.jhu.edu/software/tophat/index.shtml" target="_blank" rel="external">tophat</a>: <a href="http://ccb.jhu.edu/software/tophat/downloads/test_data.zip" target="_blank" rel="external">test_data_set</a></li>
+<li><a href="http://bowtie-bio.sourceforge.net/index.shtml" target="_blank" rel="external">bowtie</a></li>
+</ul>
+<p><br><br><img src="http://daweih.github.io/images/wechat_small_black.jpg" alt="wechat"></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="install_and_test_bowtie_and_tophat">install and test bowtie and tophat</h3><p>注意 <code>abs_path/filename</code> 表示存放 <code>filename<]]>
+    </summary>
+    
+      <category term="NGS" scheme="http://daweih.github.io/tags/NGS/"/>
+    
+      <category term="baby step" scheme="http://daweih.github.io/tags/baby-step/"/>
+    
+      <category term="bioinformatics" scheme="http://daweih.github.io/tags/bioinformatics/"/>
+    
+      <category term="profession" scheme="http://daweih.github.io/categories/profession/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[UNIPROT How-To series]]></title>
