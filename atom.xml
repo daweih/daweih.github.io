@@ -62,7 +62,7 @@
 <p>其他上述参数沿用。</p>
 <p>最后，请欣赏华丽丽的下载速度。</p>
 <p>  <img src="http://daweih.github.io/images/ascp.png" alt="ascp"></p>
-<p><br><br><br></p>
+<p><br></p>
 <div align="center"><br><img src="http://daweih.github.io/images/wechat_small_black.jpg"><br></div>]]></content>
     <summary type="html">
     <![CDATA[<h4 id="背景">背景</h4><ul>
@@ -99,7 +99,7 @@
 <li><a href="http://ccb.jhu.edu/software/tophat/index.shtml" target="_blank" rel="external">tophat</a>: <a href="http://ccb.jhu.edu/software/tophat/downloads/test_data.zip" target="_blank" rel="external">test_data_set</a></li>
 <li><a href="http://bowtie-bio.sourceforge.net/index.shtml" target="_blank" rel="external">bowtie</a></li>
 </ul>
-<p><br><br><br></p>
+<p><br></p>
 <div align="center"><br><img src="http://daweih.github.io/images/wechat_small_black.jpg"><br></div>
 ]]></content>
     <summary type="html">
@@ -144,7 +144,7 @@
 <p>uniprot 的最大亮点还在于 research literature 的文献挖掘。这点让大量的文献标准化，从而可以被标准化地分析利用。</p>
 <p><br></p>
 <h4 id="UNIPROT_的数据格式">UNIPROT 的数据格式</h4><p><br><br><center>–To be continued–</center></p>
-<p><br><br><br></p>
+<p><br></p>
 <div align="center"><br><img src="http://daweih.github.io/images/wechat_small_black.jpg"><br></div>]]></content>
     <summary type="html">
     <![CDATA[<p>今天师弟问了一个问题：</p>
@@ -235,7 +235,7 @@
 <h4 id="Other">Other</h4><ul>
 <li>SVG::Convert</li>
 </ul>
-<p><br><br><br></p>
+<p><br></p>
 <div align="center"><br><img src="http://daweih.github.io/images/wechat_small_black.jpg"><br></div>]]></content>
     <summary type="html">
     <![CDATA[<p>收集我用过的 Perl module，写一些简单的用法。</p>
@@ -302,7 +302,7 @@
 <li><a href="http://www.luanxiang.org/blog/" target="_blank" rel="external">乱象，印迹</a></li>
 <li><a href="http://blog.youxu.info" target="_blank" rel="external">徐宥</a></li>
 </ul>
-<p><br><br><br></p>
+<p><br></p>
 <div align="center"><br><img src="http://daweih.github.io/images/wechat_small_black.jpg"><br></div>]]></content>
     <summary type="html">
     <![CDATA[<h4 id="Database">Database</h4><ul>
@@ -359,14 +359,14 @@
     <link href="http://daweih.github.io/2015/07/20/orthomcl-note/"/>
     <id>http://daweih.github.io/2015/07/20/orthomcl-note/</id>
     <published>2015-07-20T05:30:30.000Z</published>
-    <updated>2015-07-25T02:49:30.000Z</updated>
+    <updated>2015-07-25T02:56:38.000Z</updated>
     <content type="html"><![CDATA[<h4 id="BLAST">BLAST</h4><h4 id="配置_MCL_的_MySQL_数据库">配置 MCL 的 MySQL 数据库</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ create database orthomcl;</span><br><span class="line">$ DROP TABLE BestHit, BestInterTaxonScore, BestQueryTaxonScore, BetterHit, CoOrthNotOrtholog, CoOrtholog, CoOrthologAvgScore, CoOrthologCandidate, CoOrthologTaxon, CoOrthologTemp, InParalog, InParalog2Way, InParalogAvgScore, InParalogOrtholog, InParalogTaxonAvg, InParalogTemp, InplgOrthTaxonAvg, InplgOrthoInplg, InterTaxonMatch, Ortholog, Ortholog2Way, OrthologAvgScore, OrthologTaxon, OrthologTemp, OrthologUniqueId, SimilarSequences, UniqSimSeqsQueryId;</span><br><span class="line">$ DROP TABLE BestQueryTaxonScore;</span><br><span class="line">$ orthomclInstallSchema orthomcl.config.template</span><br></pre></td></tr></table></figure>
 <h4 id="载入数据到_MySQL">载入数据到 MySQL</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ orthomclLoadBlast orthomcl.config.template similarSequences.txt</span><br><span class="line">$ orthomclLoadBlast orthomcl.config.template similarSequences.txt.rmisoform</span><br><span class="line">$ orthomclPairs orthomcl.config.template orthomcl_pairs.log cleanup=no</span><br><span class="line">$ orthomclDumpPairsFiles orthomcl.config.template</span><br></pre></td></tr></table></figure>
 <h4 id="运行_OrthoMCL">运行 OrthoMCL</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mcl mclInput --abc -I <span class="number">1.1</span> -o mclOutput11</span><br><span class="line">$ orthomclMclToGroups ORYSA <span class="number">1</span> &lt; mclOutput11 &gt; groups11x.txt</span><br></pre></td></tr></table></figure>
 <h4 id="结果文件的使用">结果文件的使用</h4><h4 id="Reference">Reference</h4><ul>
 <li><a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=12952885" target="_blank" rel="external">Li,L. et al. (2003) OrthoMCL: identification of ortholog groups for eukaryotic genomes. Genome Res., 13, 2178–2189.</a></li>
 </ul>
-<p><br><br><br></p>
+<p><br></p>
 <div align="center"><br><img src="http://daweih.github.io/images/wechat_small_black.jpg"><br></div>]]></content>
     <summary type="html">
     <![CDATA[<h4 id="BLAST">BLAST</h4><h4 id="配置_MCL_的_MySQL_数据库">配置 MCL 的 MySQL 数据库</h4><figure class="highlight bash"><table><tr><td class="gutter"><pr]]>
@@ -398,7 +398,7 @@
 <h4 id="参考文献">参考文献</h4><ul>
 <li><a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=23034647" target="_blank" rel="external">Huang,X. et al. (2012) A map of rice genome variation reveals the origin of cultivated rice. Nature, 490, 497–501.</a></li>
 </ul>
-<p><br><br><br></p>
+<p><br></p>
 <div align="center"><br><img src="http://daweih.github.io/images/wechat_small_black.jpg"><br></div>]]></content>
     <summary type="html">
     <![CDATA[<p>升级：增加了画着丝粒的功能。</p>
@@ -469,7 +469,7 @@
     <link href="http://daweih.github.io/2011/11/17/How-to-install-circos-on-Mac-OS-X-lion-10-7-x/"/>
     <id>http://daweih.github.io/2011/11/17/How-to-install-circos-on-Mac-OS-X-lion-10-7-x/</id>
     <published>2011-11-17T12:02:24.000Z</published>
-    <updated>2015-07-25T02:48:32.000Z</updated>
+    <updated>2015-07-25T02:56:53.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>原载于<a href="https://daweimhuang.wordpress.com/" target="_blank" rel="external">我的 wordpress 博客</a></p>
 </blockquote>
@@ -493,7 +493,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /Applications/Bioinformatics/circos-<span class="number">0.55</span>/example/</span><br><span class="line">/Applications/Bioinformatics/circos-<span class="number">0.55</span>/bin/circos -conf ./circos.conf</span><br></pre></td></tr></table></figure>
 <p>circos 提供的 tutorials 需要跳转到 tutorials 这个文件夹而不是 data 下运行，这个在官方的手册里是错误的。</p>
 <p>搞定。</p>
-<p><br><br><br></p>
+<p><br></p>
 <div align="center"><br><img src="http://daweih.github.io/images/wechat_small_black.jpg"><br></div>]]></content>
     <summary type="html">
     <![CDATA[<blockquote>
@@ -517,7 +517,7 @@
     <link href="http://daweih.github.io/2011/09/09/How-to-use-BLAT-to-annotate-a-new-sequenced-genome/"/>
     <id>http://daweih.github.io/2011/09/09/How-to-use-BLAT-to-annotate-a-new-sequenced-genome/</id>
     <published>2011-09-09T13:37:05.000Z</published>
-    <updated>2015-07-25T02:48:27.000Z</updated>
+    <updated>2015-07-25T02:56:46.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>原载于<a href="https://daweimhuang.wordpress.com/" target="_blank" rel="external">我的 wordpress 博客</a></p>
 </blockquote>
@@ -533,7 +533,7 @@
 <p>So the first step of annotation is to convert the anti-sense cDNA to sense strand sequence, the the mapping results will remain only two types, the positive strand gene and negative strand gene.</p>
 <p>There are several source of the strand information, splice signal, transcriptome data form solid strand specific experiment, CDS prediction data and alignment-based annotation of cDNA.</p>
 <p>Splice signal is the first 2 and last two base of intron sequence. cDNA is sequenced from mRNA which only consist exons of gene. When mapped back to genome, the alignment region of cDNA will consist multiple alignment blocks. Blocks of cDNA sequence are usually continuous whereas blocks of genome is separated by unaligned sequence blocks, usually introns.</p>
-<p><br><br><br></p>
+<p><br></p>
 <div align="center"><br><img src="http://daweih.github.io/images/wechat_small_black.jpg"><br></div>]]></content>
     <summary type="html">
     <![CDATA[<blockquote>
@@ -599,7 +599,7 @@
     <link href="http://daweih.github.io/2011/07/20/batch-BLAT/"/>
     <id>http://daweih.github.io/2011/07/20/batch-BLAT/</id>
     <published>2011-07-20T14:04:18.000Z</published>
-    <updated>2015-07-25T02:49:38.000Z</updated>
+    <updated>2015-07-25T02:56:42.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>原载于<a href="https://daweimhuang.wordpress.com/" target="_blank" rel="external">我的 wordpress 博客</a></p>
 </blockquote>
@@ -624,7 +624,8 @@
 </ol>
 <p>经过测试，单个基因组水平（使用人，小鼠，水稻测试）的cDNA注释可以在20分钟内完成。<br>cpuinfo:<br>Intel(R) Xeon(R)  Processor (Intel64 Harpertown)<br>=====  Processor composition  =====<br>Processors(CPUs)  : 8<br>Packages(sockets) : 2<br>Cores per package : 4<br>Threads per core  : 1</p>
 <p>memory: 16G</p>
-<p><a href="https://github.com/daweih/d3_bioviz/blob/master/batch_blat/package_blat.pl" target="_blank" rel="external">下载</a><br><br><br><br></p>
+<p><a href="https://github.com/daweih/d3_bioviz/blob/master/batch_blat/package_blat.pl" target="_blank" rel="external">下载</a></p>
+<p><br></p>
 <div align="center"><br><img src="http://daweih.github.io/images/wechat_small_black.jpg"><br></div>]]></content>
     <summary type="html">
     <![CDATA[<blockquote>
