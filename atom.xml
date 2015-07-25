@@ -99,7 +99,8 @@
 <li><a href="http://ccb.jhu.edu/software/tophat/index.shtml" target="_blank" rel="external">tophat</a>: <a href="http://ccb.jhu.edu/software/tophat/downloads/test_data.zip" target="_blank" rel="external">test_data_set</a></li>
 <li><a href="http://bowtie-bio.sourceforge.net/index.shtml" target="_blank" rel="external">bowtie</a></li>
 </ul>
-<p><br><br><img src="http://daweih.github.io/images/wechat_small_black.jpg" alt="wechat"></p>
+<p><br><br><br></p>
+<div align="center"><br><img src="http://daweih.github.io/images/wechat_small_black.jpg"><br></div>
 ]]></content>
     <summary type="html">
     <![CDATA[<h3 id="Install_and_test_bowtie_and_tophat">Install and test bowtie and tophat</h3><p>注意 <code>/abs_path/filename</code> 表示存放 <code>filename]]>
@@ -143,8 +144,8 @@
 <p>uniprot 的最大亮点还在于 research literature 的文献挖掘。这点让大量的文献标准化，从而可以被标准化地分析利用。</p>
 <p><br></p>
 <h4 id="UNIPROT_的数据格式">UNIPROT 的数据格式</h4><p><br><br><center>–To be continued–</center></p>
-<p><br><br><img src="http://daweih.github.io/images/wechat_small_black.jpg" alt="wechat"></p>
-]]></content>
+<p><br><br><br></p>
+<div align="center"><br><img src="http://daweih.github.io/images/wechat_small_black.jpg"><br></div>]]></content>
     <summary type="html">
     <![CDATA[<p>今天师弟问了一个问题：</p>
 <blockquote>
@@ -234,8 +235,8 @@
 <h4 id="Other">Other</h4><ul>
 <li>SVG::Convert</li>
 </ul>
-<p><img src="http://daweih.github.io/images/wechat_small_black.jpg" alt="wechat"></p>
-]]></content>
+<p><br><br><br></p>
+<div align="center"><br><img src="http://daweih.github.io/images/wechat_small_black.jpg"><br></div>]]></content>
     <summary type="html">
     <![CDATA[<p>收集我用过的 Perl module，写一些简单的用法。</p>
 <p>对比较有趣的包，有复杂的用法会单独写文章。</p>
@@ -301,8 +302,8 @@
 <li><a href="http://www.luanxiang.org/blog/" target="_blank" rel="external">乱象，印迹</a></li>
 <li><a href="http://blog.youxu.info" target="_blank" rel="external">徐宥</a></li>
 </ul>
-<p><img src="http://daweih.github.io/images/wechat_small_black.jpg" alt="wechat"></p>
-]]></content>
+<p><br><br><br></p>
+<div align="center"><br><img src="http://daweih.github.io/images/wechat_small_black.jpg"><br></div>]]></content>
     <summary type="html">
     <![CDATA[<h4 id="Database">Database</h4><ul>
 <li><a href="http://ncbi.nlm.nih.gov/" target="_blank" rel="external">NCBI</a>: <code>PubMed</code> <cod]]>
