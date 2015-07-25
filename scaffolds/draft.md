@@ -4,7 +4,7 @@ updated: {{ date }}
 tags: 
 categories: 
 ---
-tags: [bioinformatics, life, reading, visualization, writting, perl, javascript, NGS]
+tags: [baby step, bioinformatics, biocuration, NGS, SRA, visualization, d3, database, evolution, gene annotation, module, parser, perl, uniprot, OS X, web, javascript, hexo, node.js, ruby, ruby on rails, life, blog, memory, Saudi Arabia, popular science, reading, swimming, writting]
 categories: profession
 
 
