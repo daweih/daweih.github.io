@@ -60,6 +60,7 @@
 <h4 id="OS_X_如何使用？">OS X 如何使用？</h4><p>在 OS X 下，可以直接从官网下载 dmg 的安装包。安装之后，注意：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 程序的可执行文件路径</span></span><br><span class="line">/Users/your_user_name/Applications/Aspera\ Connect.app/Contents/Resources/ascp</span><br><span class="line"></span><br><span class="line"><span class="comment"># PRIVATE-KEY-FILE 文件位置</span></span><br><span class="line">/Users/your_user_name/Applications/Aspera\ Connect.app/Contents/Resources/asperaweb_id_dsa.openssh</span><br></pre></td></tr></table></figure>
 <p>其他上述参数沿用。</p>
+<p><br></p>
 <p>最后，请欣赏华丽丽的下载速度。</p>
 <p>  <img src="http://daweih.github.io/images/ascp.png" alt="ascp"></p>
 <p><br></p>
