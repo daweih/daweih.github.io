@@ -5,8 +5,9 @@ categories: profession
 ---
 > 原载于[我的 wordpress 博客](https://daweimhuang.wordpress.com/)
 
-
-![circos](http://daweih.github.io/images/cancer-genome-challenge.jpg)
+<div align=center>
+<img src="http://daweih.github.io/images/cancer-genome-challenge.jpg">
+</div>
 
 
 Circos 是个画圈图的好工具。在基因组相关文章里展示基因排列，同源性区段，duplication 等，效果很好。由于现在高对平文章对图表的美观程度都有了更高的要求，所以转移到 circos 下来绘制圈图很有必要了（虽然有很多其他的软件和工具）。
