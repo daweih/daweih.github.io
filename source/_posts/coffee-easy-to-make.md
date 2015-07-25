@@ -18,7 +18,6 @@ categories: life
 <div align=center>
 <img src="http://daweih.github.io/images/coffee_qdan1.jpg">
 </div>
-<br>
 
 #### 摩卡壶
 
@@ -30,7 +29,6 @@ categories: life
 <div align=center>
 <img src="http://daweih.github.io/images/coffee_qdan2.jpg">
 </div>
-<br>
 
 #### 不锈钢过滤器
 
@@ -42,7 +40,6 @@ categories: life
 <div align=center>
 <img src="http://daweih.github.io/images/coffee_qdan3.jpg">
 </div>
-<br>
 
 #### 越南咖啡过滤器
 
@@ -54,5 +51,3 @@ categories: life
 <div align=center>
 <img src="http://daweih.github.io/images/coffee_qdan4.jpg">
 </div>
-<br>
-
