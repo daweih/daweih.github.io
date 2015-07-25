@@ -16,4 +16,8 @@ sra_list.txt:
 ```
 /sra/sra-instant/reads/ByRun/sra/ERR/ERR009/ERR009428/ERR009428.sra
 ```
-![wechat](http://daweih.github.io/images/wechat_small_black.jpg)
+<br>
+<br>
+<div align=center>
+<img src="http://daweih.github.io/images/wechat_small_black.jpg">
+</div>

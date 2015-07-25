@@ -33,4 +33,8 @@ categories: profession
 
 
 
-![wechat](http://daweih.github.io/images/wechat_small_black.jpg)
+<br>
+<br>
+<div align=center>
+<img src="http://daweih.github.io/images/wechat_small_black.jpg">
+</div>

@@ -131,4 +131,6 @@ Usage: ascp [OPTION] SRC... DEST
 
 <br>
 <br>
-![wechat](http://daweih.github.io/images/wechat_small_black.jpg)
+<div align=center>
+<img src="http://daweih.github.io/images/wechat_small_black.jpg">
+</div>

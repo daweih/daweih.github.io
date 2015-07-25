@@ -84,4 +84,8 @@ circos 提供的 tutorials 需要跳转到 tutorials 这个文件夹而不是 da
 搞定。
 
 
-![wechat](http://daweih.github.io/images/wechat_small_black.jpg)
+<br>
+<br>
+<div align=center>
+<img src="http://daweih.github.io/images/wechat_small_black.jpg">
+</div>

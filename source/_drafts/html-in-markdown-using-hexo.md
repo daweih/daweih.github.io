@@ -23,5 +23,17 @@ categories: life
 
 <div align=left style="color:steelblue;font-family:Georgia;"><font size="2">大维</div>
 
+让图片居中：
+
+```
+<div align=center>
+<img src="http://daweih.github.io/images/default_avatar.jpg">
+</div>
+
+```
+
+<div align=center>
+<img src="http://daweih.github.io/images/default_avatar.jpg">
+</div>
 
 ![wechat](http://daweih.github.io/images/wechat_small_black.jpg)
