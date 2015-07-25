@@ -29,6 +29,16 @@ comments: false
 ---
 
 ```
+
+统计访问次数
+
+如果在footer中显示，可以修改 `themes/next/layout/_partials/footer.swig` 后添加：
+```
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+
+```
+
 #### 相关资源
 - [Hexo 官网](http://hexo.io)
 - [next theme](http://notes.iissnan.com)
