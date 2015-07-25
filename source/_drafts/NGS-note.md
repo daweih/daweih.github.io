@@ -115,7 +115,6 @@ $ tophat /abs_path/test_ref test_reads.fq
 - [bowtie](http://bowtie-bio.sourceforge.net/index.shtml)
 
 <br>
-<br>
 <div align=center>
 <img src="http://daweih.github.io/images/wechat_small_black.jpg">
 </div>

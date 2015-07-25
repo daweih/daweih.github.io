@@ -13,4 +13,8 @@ categories: profession
 ```
 $ perl -le 'print "hello world!";'
 ```
-![wechat](http://daweih.github.io/images/wechat_small_black.jpg)
+
+<br>
+<div align=center>
+<img src="http://daweih.github.io/images/wechat_small_black.jpg">
+</div>

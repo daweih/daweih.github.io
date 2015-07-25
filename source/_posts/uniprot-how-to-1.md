@@ -31,4 +31,6 @@ uniprot 的最大亮点还在于 research literature 的文献挖掘。这点让
 
 
 <br>
-![wechat](http://daweih.github.io/images/wechat_small_black.jpg)
+<div align=center>
+<img src="http://daweih.github.io/images/wechat_small_black.jpg">
+</div>

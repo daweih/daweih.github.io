@@ -47,4 +47,8 @@ categories: profession
 - [徐宥](http://blog.youxu.info)
 
 
-![wechat](http://daweih.github.io/images/wechat_small_black.jpg)
+
+<br>
+<div align=center>
+<img src="http://daweih.github.io/images/wechat_small_black.jpg">
+</div>

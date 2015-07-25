@@ -129,7 +129,7 @@ Usage: ascp [OPTION] SRC... DEST
 
   ![ascp](http://daweih.github.io/images/ascp.png)
 
-<br>
+
 <br>
 <div align=center>
 <img src="http://daweih.github.io/images/wechat_small_black.jpg">

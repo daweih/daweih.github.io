@@ -36,4 +36,7 @@ categories: life
 <img src="http://daweih.github.io/images/default_avatar.jpg">
 </div>
 
-![wechat](http://daweih.github.io/images/wechat_small_black.jpg)
+<br>
+<div align=center>
+<img src="http://daweih.github.io/images/wechat_small_black.jpg">
+</div>

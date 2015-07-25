@@ -33,7 +33,7 @@ categories: profession
 
 
 
-<br>
+
 <br>
 <div align=center>
 <img src="http://daweih.github.io/images/wechat_small_black.jpg">

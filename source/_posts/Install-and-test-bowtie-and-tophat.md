@@ -50,7 +50,8 @@ $ tophat /abs_path/test_ref test_reads.fq
 - [tophat](http://ccb.jhu.edu/software/tophat/index.shtml): [test_data_set](http://ccb.jhu.edu/software/tophat/downloads/test_data.zip)
 - [bowtie](http://bowtie-bio.sourceforge.net/index.shtml)
 
+
 <br>
-![wechat](http://daweih.github.io/images/wechat_small_black.jpg)
-
-
+<div align=center>
+<img src="http://daweih.github.io/images/wechat_small_black.jpg">
+</div>
