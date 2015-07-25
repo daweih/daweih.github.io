@@ -5,6 +5,25 @@ tags: [bioinformatics, NGS, SRA]
 categories: profession
 ---
 
+#### 背景
+
+- 为什么要使用 aspera？
+  - 因为测序数据迈入 NGS 时代后，通亮增长很快，尤其是 NCBI SRA 的数据，需要使用更快速的传输工具。
+  - aspera 提供命令行的交互，便于管理
+
+- aspera 比传统的 scp, wget 速度更快，同时具有命令行程序的纯文本输出特性。
+
+- aspera 还有图形界面版本，适合多种偏好的用户。
+
+[博耘生物说](http://boyun.sh.cn/bio/?p=1933):
+> 速铂Aspera是一套商业的高速文件传输解决方案，随着高通量数据的大量产生，从而对于大文件快速传输的需求，开始应用到生物领域，目前NCBI、EBI的SRA库都提供这样的服务。
+...
+一句话，远距离，大文件，Aspera优势巨大。
+
+我说：
+> 你如果经历过使用 `wget` 下载 sra 数据要等几天几个星期，还可能断掉，就知道用下面这个黑科技有多爽了。
+
+
 #### 安装 aspera-connect：
 
 ``` bash
@@ -52,7 +71,7 @@ $ source ~/.bash_profile
 
 
 # 下载用的命令
-ascp  -i asperaweb_id_dsa.openssh --mode recv --host ftp-private.ncbi.nlm.nih.gov --user anonftp   --file-list  sra_list.txt  -k 1 -QT -l 200m  /path_to_save_download/
+$ ascp  -i asperaweb_id_dsa.openssh --mode recv --host ftp-private.ncbi.nlm.nih.gov --user anonftp   --file-list  sra_list.txt  -k 1 -QT -l 200m  /path_to_save_download/
 
 
 # 对参数的解释
@@ -91,9 +110,24 @@ Usage: ascp [OPTION] SRC... DEST
 
   ![地址栏里显示了地址，然后按照上文的 `sra_list.txt` 模式编写](http://daweih.github.io/images/sra2.png)
  
+
+#### OS X 如何使用？
+
+在 OS X 下，可以直接从官网下载 dmg 的安装包。安装之后，注意：
+
+``` bash
+# 程序的可执行文件路径
+/Users/your_user_name/Applications/Aspera\ Connect.app/Contents/Resources/ascp
+
+# PRIVATE-KEY-FILE 文件位置
+/Users/your_user_name/Applications/Aspera\ Connect.app/Contents/Resources/asperaweb_id_dsa.openssh
+```
+
+其他上述参数沿用。
+
 最后，请欣赏华丽丽的下载速度。
 
-![ascp](http://daweih.github.io/images/ascp.png)
+  ![ascp](http://daweih.github.io/images/ascp.png)
 
 <br>
 <br>
