@@ -1,4 +1,4 @@
-title: "懒人常用咖啡具"
+title: "懒人适用的咖啡具"
 date: 2015-07-25 14:06:27
 updated: 2015-07-25 14:06:27
 tags: [baby step, life, coffee]
@@ -6,6 +6,8 @@ categories: life
 ---
 
 原文发表于[轻单](https://qdan.me/list/VUyyEZpuJz48iJfh?from=mylists)，由于它濒死，于是转载于此。
+
+作为一个咖啡爱好者，偶尔也发点非专业类的文章在这个博客。生活若完全没有了情调，人也会变得无聊吧。
 
 --------
 
