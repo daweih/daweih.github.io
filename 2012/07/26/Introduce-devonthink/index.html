@@ -1,0 +1,720 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+    
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+  <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.4"/>
+
+
+    <meta name="description" content="Dawei 的记事本" />
+
+
+
+  <meta name="keywords" content="OS X,app,baby step,database," />
+
+
+
+  <link rel="alternate" href="/atom.xml" title="东隅" type="application/atom+xml" />
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.4" />
+
+
+<meta name="description" content="DEVONthink是很强大的个人数据库软件。我计划写一个系列的帖子来介绍。
+由于最近比较忙，所以先按部分来写，逐步发出来。
+今天介绍一下用DEVONthink搭建个人web数据服务，类似个人wiki。
+当然，更常用的方法是用MediaWiki来搭建个人wiki，同样在Mac下，也很简单。这是题外话，我以后单独写个帖子介绍。
+使用DEVONthink搭建个人wiki的好处就在于简单——开箱即用。下">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用DEVONthink搭建个人wiki＋Safari使用技巧">
+<meta property="og:url" content="http://daweih.github.io/2012/07/26/Introduce-devonthink/index.html">
+<meta property="og:site_name" content="东隅">
+<meta property="og:description" content="DEVONthink是很强大的个人数据库软件。我计划写一个系列的帖子来介绍。
+由于最近比较忙，所以先按部分来写，逐步发出来。
+今天介绍一下用DEVONthink搭建个人web数据服务，类似个人wiki。
+当然，更常用的方法是用MediaWiki来搭建个人wiki，同样在Mac下，也很简单。这是题外话，我以后单独写个帖子介绍。
+使用DEVONthink搭建个人wiki的好处就在于简单——开箱即用。下">
+<meta property="og:image" content="http://daweih.github.io/images/devonthink1.jpg">
+<meta property="og:updated_time" content="2012-07-26T02:37:41.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用DEVONthink搭建个人wiki＋Safari使用技巧">
+<meta name="twitter:description" content="DEVONthink是很强大的个人数据库软件。我计划写一个系列的帖子来介绍。
+由于最近比较忙，所以先按部分来写，逐步发出来。
+今天介绍一下用DEVONthink搭建个人web数据服务，类似个人wiki。
+当然，更常用的方法是用MediaWiki来搭建个人wiki，同样在Mac下，也很简单。这是题外话，我以后单独写个帖子介绍。
+使用DEVONthink搭建个人wiki的好处就在于简单——开箱即用。下">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post'
+  };
+</script>
+
+    <title> 使用DEVONthink搭建个人wiki＋Safari使用技巧 // 东隅 </title>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+<!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+
+
+
+
+<div class="container one-column page-post-detail">
+    <div class="headband"></div>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-logo"></i>
+      </span>
+      <span class="site-title">东隅</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-home"></i> <br />
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-tags"></i> <br />
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-categories"></i> <br />
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-archives"></i> <br />
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/About" rel="section">
+            <i class="menu-item-icon icon-about"></i> <br />
+            About
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+<form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'ricZEzHT8MphMSw7Mx1g','2.0.0');
+</script>
+
+<div class="site-search-toggle"></div>
+    </div>
+  
+</nav>
+
+
+        </div>
+    </header>
+
+    <main id="main" class="main">
+        <div class="main-inner">
+            <div id="content" class="content">
+                
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              使用DEVONthink搭建个人wiki＋Safari使用技巧
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2012-07-26T10:37:41+08:00" content="2012-07-26">
+            2012-07-26
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/profession/" itemprop="url" rel="index"><span itemprop="name">profession</span></a></span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2012/07/26/Introduce-devonthink/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2012/07/26/Introduce-devonthink/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p><br></p>
+<div align="center"><br><img src="http://daweih.github.io/images/devonthink1.jpg"><br></div>
+
+<p>DEVONthink是很强大的个人数据库软件。我计划写一个系列的帖子来介绍。</p>
+<p>由于最近比较忙，所以先按部分来写，逐步发出来。</p>
+<p>今天介绍一下用DEVONthink搭建个人web数据服务，类似个人wiki。</p>
+<p>当然，更常用的方法是用MediaWiki来搭建个人wiki，同样在Mac下，也很简单。这是题外话，我以后单独写个帖子介绍。</p>
+<p>使用DEVONthink搭建个人wiki的好处就在于简单——开箱即用。下载了DEVONthink Office之后，就可以将你的个人数据导入了。</p>
+<p>这个软件的好处之一还在于它支持AppleScript，是个深度脚本化的程序，继承了Mac系统下好的软件编写风格。以此，它是个专业级别的软件。如果你懂这种和英语差不多的Apple自带的编程语言，完全可以写一些脚本来配合你特定的工作。当然，DEVONthink自己也带了很多脚本。比如图1中所演示的导入UNIX下man和perldoc两个命令的输出结果的脚本。你完全可以使用这两个脚本将自己常用的命令保存后，方便日后检索。之前也看过帖子介绍如何让Preview来导入man命令的输出结果。显然在DEVONthink中，自带了管理和检索的工具，日后反复使用中要更方便。</p>
+<p>图1，DEVONthink自带的AppleScript，可以导入man和perldoc的帮助文档。</p>
+<p>点击图片，在新窗口显示原始尺寸</p>
+<p>你的数据积累了一些之后，就可以启动DEVONthink的web server服务了。使用[ Command⌘ + , ] 启动Preference…，在server这个选项卡中，键入需要的信息，如Port（使用固定值，方便访问）、用户名、密码等。如果你可以为你的Mac server分配固定的ip，那么就可以随时随地通过外网访问。之后点击启动，这按钮变为stop之后，服务就启动了。可以通过stop按钮后面的任何一个网址来访问。为了方便，你可以将这些网址保存在你笔记本、手机或iPad浏览器的收藏夹中。</p>
+<p>图2，启动Web server服务。</p>
+<p>点击图片，在新窗口显示原始尺寸</p>
+<p>之后，就可以通过其他设备上的浏览器来访问了：在地址栏中输入图2中stop按钮后面你设置的地址，如果设置了用户名和密码，会要求你输入，如图3:</p>
+<p>图3，使用浏览器访问数据库。</p>
+<p>点击图片，在新窗口显示原始尺寸</p>
+<p>登陆之后，就可以进行常规的浏览，检索，如图4.1，2，3。</p>
+<p>图4.1，Safari登陆后的显示情况。</p>
+<p>点击图片，在新窗口显示原始尺寸</p>
+<p>图4.2，Chrome 在IOS下的登陆</p>
+<p>图4.3，Chrome 在IOS下的浏览</p>
+<p>在web浏览模式下，也可以向数据库中添加文件，支持大多数文档、图片甚至音乐、影片的文件格式。</p>
+<p>图5，上传一个图片。</p>
+<p>点击图片，在新窗口显示原始尺寸</p>
+<p>图6，图片上传后的效果。</p>
+<p>点击图片，在新窗口显示原始尺寸</p>
+<p>也可以在数据库中进行搜索。搜索功能其实是DEVONthink作为数据库软件擅长的，不过对中文搜索要用波浪线“~”间隔关键词。</p>
+<p>图7，搜索的界面。</p>
+<p>点击图片，在新窗口显示原始尺寸</p>
+<p>图8，搜索的结果。</p>
+<p>点击图片，在新窗口显示原始尺寸</p>
+<p>其中比较好的一点是，可以采用浏览器内置的搜索。使用Safari内置的高亮搜索效果，看man和perldoc的结果，实在是一种享受。</p>
+<p>图9，使用浏览器内置的搜索功能。</p>
+<p>点击图片，在新窗口显示原始尺寸</p>
+<p>下面介绍一个Safari的小技巧。</p>
+<p>有时候，我们需要一次性打开多个网页，当一个一个点击或输入麻烦又耗时。这时候，可以利用一个Safari文件夹，将需要打开的连接都放进去，如图10，之后选中那个Auto-Click的选项。此时在Bookmark bar中的文件夹图标的右侧会出现一个小方块。这时，点击这个就可以打开里面保存的所有链接。如果想点击其中的单个链接，按住command⌘同时点击即可。</p>
+<p>图10，建立自动打开多个链接的文件夹。</p>
+<p>点击图片，在新窗口显示原始尺寸</p>
+<p>图11，打开后的效果。</p>
+<p>点击图片，在新窗口显示原始尺寸</p>
+<p>好了。说了这么多，个人wiki的方法先介绍到这里吧。DEVONthink提供一个月的试用期。虽然价格稍贵，但确实是很好用的跟人数据库软件。Enjoy!</p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/OS-X/" rel="tag">#OS X</a>
+          
+            <a href="/tags/app/" rel="tag">#app</a>
+          
+            <a href="/tags/baby-step/" rel="tag">#baby step</a>
+          
+            <a href="/tags/database/" rel="tag">#database</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/07/20/hello-world/" rel="prev">Hello World</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2011/11/17/How-to-install-circos-on-Mac-OS-X-lion-10-7-x/" rel="next">How to install circos on Mac OS X lion (10.7.x)</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+            </div>
+
+            
+
+            
+              <div class="comments" id="comments">
+                
+                  <div class="ds-thread" data-thread-key="2012/07/26/Introduce-devonthink/"
+                       data-title="使用DEVONthink搭建个人wiki＋Safari使用技巧" data-url="http://daweih.github.io/2012/07/26/Introduce-devonthink/">
+                  </div>
+                
+              </div>
+            
+        </div>
+
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table Of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="Dawei Huang" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Dawei Huang</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">Dawei 的记事本</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">20</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">categories</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-name">tags</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="menu-item-icon icon-feed"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/daweih" target="_blank">github</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com/daweimhuang" target="_blank">facebook</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/daweihuang" target="_blank">twitter</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.douban.com/people/4878302/" target="_blank">douban</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <p class="post-toc-empty">This post does not have a Table Of Contents</p>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="copyright" >
+  
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Dawei Huang</span>
+</div>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="powered-by">
+<span id="busuanzi_container_site_pv">Accessed <span id="busuanzi_value_site_pv"></span> times. </span>
+
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+</div>
+
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"dawei"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+  	  <script type="text/javascript">
+  		var duoshuo_user_ID = dawei
+  	  </script>
+     
+  	<script src="/js/ua-parser.min.js"></script>
+  	<script src="/js/hook-duoshuo.js"></script>
+  
+
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.4"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.4"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.4" id="motion.global"></script>
+
+
+
+  <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.4" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+          var self = this;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      $(indicator).velocity('stop').velocity({
+        opacity: action === 'show' ? 0.4 : 0
+      }, { duration: 100 });
+    }
+
+  });
+</script>
+
+
+  <script type="text/javascript" id="sidebar.nav">
+    $(document).ready(function () {
+      var html = $('html');
+
+      $('.sidebar-nav li').on('click', function () {
+        var item = $(this);
+        var activeTabClassName = 'sidebar-nav-active';
+        var activePanelClassName = 'sidebar-panel-active';
+        if (item.hasClass(activeTabClassName)) {
+          return;
+        }
+
+        var currentTarget = $('.' + activePanelClassName);
+        var target = $('.' + item.data('target'));
+
+        currentTarget.velocity('transition.slideUpOut', 200, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', 200)
+            .addClass(activePanelClassName);
+        });
+
+        item.siblings().removeClass(activeTabClassName);
+        item.addClass(activeTabClassName);
+      });
+
+      $('.post-toc a').on('click', function (e) {
+        e.preventDefault();
+        var offset = $(escapeSelector(this.getAttribute('href'))).offset().top;
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        });
+      });
+
+      // Expand sidebar on post detail page by default, when post has a toc.
+      var $tocContent = $('.post-toc-content');
+      if (isDesktop() && CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    });
+  </script>
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        if (CONFIG.sidebar === 'always') {
+            displaySidebar();
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+<!-- lazyload -->
+<script type="text/javascript" src="/js/lazyload.js"></script>
+<script type="text/javascript">
+    jQuery(function () {
+        jQuery("#posts img").lazyload({
+            placeholder: "/images/loading.gif",
+            effect: "fadeIn"
+        });
+    });
+</script>
+</body>
+</html>
