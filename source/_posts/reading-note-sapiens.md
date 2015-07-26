@@ -5,7 +5,9 @@ tags: [reading]
 categories: reading
 ---
 
-![sapiens](http://daweih.github.io/images/sapiens.jpg)
+<div align=center>
+<img src="http://daweih.github.io/images/sapiens.jpg">
+</div>
 
 已经不记得从来里看到的这本书的介绍。后来这本书成了我和爱人一起读的第一本书，却也是在我们最忙的时候（搬到新的城市，换工作，开始城铁通勤生活）读的一本。我陆陆续续的批注，攒成这个札记。
 

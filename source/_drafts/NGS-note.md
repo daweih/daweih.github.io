@@ -102,11 +102,73 @@ $ tophat /abs_path/test_ref test_reads.fq
 
 #### FASTAQ QC
 
+下载:
+- [fastx_toolkit](http://hannonlab.cshl.edu/fastx_toolkit/download.html) 做质控 (QC)。
+- [skewer]()
+``` bash
+$ fastq_quality_trimmer -t 20 -l 40 -Q 33 -i ERR1_1.fastq -o 1_1_trimmer.fastq -v
+
+usage: fastq_quality_trimmer [-h] [-v] [-t N] [-l N] [-z] [-i INFILE] [-o OUTFILE]
+Part of FASTX Toolkit 0.0.13 by A. Gordon (gordon@cshl.edu)
+   [-h]         = This helpful help screen.
+*  [-t N]       = Quality threshold - nucleotides with lower 
+                  quality will be trimmed (from the end of the sequence).
+*  [-l N]       = Minimum length - sequences shorter than this (after trimming)
+                  will be discarded. Default = 0 = no minimum length. 
+   [-z]         = Compress output with GZIP.
+   [-i INFILE]  = FASTQ input file. default is STDIN.
+   [-o OUTFILE] = FASTQ output file. default is STDOUT.
+   [-v]         = Verbose - report number of sequences.
+                  If [-o] is specified,  report will be printed to STDOUT.
+                  If [-o] is not specified (and output goes to STDOUT),
+                  report will be printed to STDERR.
+
+
+$ fastq_quality_filter  -q 20 –p 50 –Q 33 –i 1_1_trimmer.fastq  -o 1_1_1.fastq –v
+
+usage: fastq_quality_filter [-h] [-v] [-q N] [-p N] [-z] [-i INFILE] [-o OUTFILE]
+Part of FASTX Toolkit 0.0.13 by A. Gordon (gordon@cshl.edu)
+   [-h]         = This helpful help screen.
+*  [-q N]       = Minimum quality score to keep.
+*  [-p N]       = Minimum percent of bases that must have [-q] quality.
+   [-z]         = Compress output with GZIP.
+   [-i INFILE]  = FASTA/Q input file. default is STDIN.
+   [-o OUTFILE] = FASTA/Q output file. default is STDOUT.
+   [-v]         = Verbose - report number of sequences.
+                  If [-o] is specified,  report will be printed to STDOUT.
+                  If [-o] is not specified (and output goes to STDOUT),
+                  report will be printed to STDERR.
+
+
+$ pairmate.pl
+```
 ##### Remove adaptor
 
 ##### Filtering
 
+##### mapping by tophat
 
+``` bash
+$ tophat -o <output path> -p <# cpu> </path-to-ref/genome *.fastaq
+
+# e.g.
+$ tophat -o TophatOutput/ -p 8 </path-to-ref/genome *.fastq
+
+# Paired-end e.g.
+$ tophat -o TophatOutput/ -p 8 </path-to-ref/genome *.r1.fastq *.r2.fastq
+```
+
+参数：
+
+``` bash
+    --no-convert-bam                           (Do not output bam format.
+                                                Output is <output_dir>/accepted_hits.sam)
+    --transcriptome-index          <bwtidx>    (transcriptome bowtie index)
+    --library-type                 <string>    (fr-unstranded, fr-firststrand,
+                                                fr-secondstrand)
+# 用于生成RNA-seq的library。最常见的是使用fr-unstranded，两条链都考虑。
+    -G/--GTF                       <filename>  (GTF/GFF with known transcripts)
+```
 #### Reference
 - [Indexing and Barcoding for Illumina NextGen Sequencing](http://www.umassmed.edu/uploadedFiles/nemo/Landing_Pages/Indexing%20and%20Barcoding%20for%20Illumina%20NextGen%20Sequencing.pdf)
 
