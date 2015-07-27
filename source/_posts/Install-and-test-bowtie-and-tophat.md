@@ -31,6 +31,10 @@ export PATH=/abs_path/tophat-2.1.0.Linux_x86_64:/abs_path/bowtie2-2.2.5:$PATH
 
 # 环境变量生效
 $ source ~/.bash_profile
+
+chmod 755 tophat
+chmod 755 bowtie2
+# 注意，所有的可执行程序，都要改为 755。否则，可能会导致 PBS 无法找到该文件
 ```
 
 #### 下载测试用数据，用 bowtie2 做 index，测试 tophat:
