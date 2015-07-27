@@ -1,4 +1,4 @@
-title: FASTAQ format
+title: NGS 数据处理的简单流程
 date: 2015-07-21 17:02:19
 updated: 
 tags: [bioinformatics, NGS] 
@@ -102,9 +102,24 @@ $ tophat /abs_path/test_ref test_reads.fq
 
 #### FASTAQ QC
 
+Illumina 关于 adapter 和 index 的技术文档
+- [Illumina customer sequence letter](http://support.illumina.com/content/dam/illumina-support/documents/documentation/chemistry_documentation/experiment-design/illumina-customer-sequence-letter.pdf)
+
+``` bash
+# Oligonucleotide sequences for Paired End DNA
+# PE Adapters
+5' P-GATCGGAAGAGCGGTTCAGCAGGAATGCCGAG
+5' ACACTCTTTCCCTACACGACGCTCTTCCGATCT
+
+```
 下载:
 - [fastx_toolkit](http://hannonlab.cshl.edu/fastx_toolkit/download.html) 做质控 (QC)。
-- [skewer]()
+- [skewer](http://sourceforge.net/projects/skewer/files/) by [Hongshan Jiang](https://www.linkedin.com/pub/hongshan-jiang/16/6a2/229)
+
+
+##### Filtering
+
+
 ``` bash
 $ fastq_quality_trimmer -t 20 -l 40 -Q 33 -i ERR1_1.fastq -o 1_1_trimmer.fastq -v
 
@@ -142,9 +157,35 @@ Part of FASTX Toolkit 0.0.13 by A. Gordon (gordon@cshl.edu)
 
 $ pairmate.pl
 ```
+
 ##### Remove adaptor
 
-##### Filtering
+skewer:
+> The Skewer program implements a novel dynamic programming algorithm dedicated to the task of adapter trimming and it is specially designed for processsing Illumina paired-end sequences. 
+
+``` bash
+$ skewer [options] <reads-pair1.fastq> [<reads-pair2.fastq>]
+# EXAMPLES:
+          skewer -Q 9 -t 2 -x adapters.fa sample.fastq -o trimmed
+          skewer -x AGATCGGAAGAGC -q 3 sample-pair1.fq.gz sample-pair2.fq.gz
+          skewer -x TCGTATGCCGTCTTCTGCTTGT -l 16 -L 30 -d 0 srna.fastq
+          skewer -m mp -i lmp-pair1.fastq lmp-pair2.fastq
+          skewer -m ap --cut 0,6 --qiime -x forward-primers.fa -y reverse-primers.fa mix-pair1.fastq mix-pair2.fastq
+
+          -x <str> Adapter sequence/file (AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC)
+          -y <str> Adapter sequence/file for pair-end reads (AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA),
+
+          -m, --mode <str> trimming mode; 1) single-end -- head: 5' end; tail: 3' end; any: anywhere (tail)
+                           2) paired-end -- pe: paired-end; mp: mate-pair; ap: amplicon (pe)
+        
+          -m pe
+          
+$ skewer -x "P-GATCGGAAGAGCGGTTCAGCAGGAATGCCGAG" -y "ACACTCTTTCCCTACACGACGCTCTTCCGATCT" -m pe lmp-pair1.fastq lmp-pair2.fastq
+
+# output
+lmp-pair1-trimmed-pair1.fastq
+lmp-pair1-trimmed-pair2.fastq
+```
 
 ##### mapping by tophat
 
@@ -166,16 +207,27 @@ $ tophat -o TophatOutput/ -p 8 </path-to-ref/genome *.r1.fastq *.r2.fastq
     --transcriptome-index          <bwtidx>    (transcriptome bowtie index)
     --library-type                 <string>    (fr-unstranded, fr-firststrand,
                                                 fr-secondstrand)
-# 用于生成RNA-seq的library。最常见的是使用fr-unstranded，两条链都考虑。
+# 用于生成RNA-seq的library。最常见的是使用 fr-unstranded，两条链都考虑。
     -G/--GTF                       <filename>  (GTF/GFF with known transcripts)
 ```
+
 #### Reference
+
 - [Indexing and Barcoding for Illumina NextGen Sequencing](http://www.umassmed.edu/uploadedFiles/nemo/Landing_Pages/Indexing%20and%20Barcoding%20for%20Illumina%20NextGen%20Sequencing.pdf)
+- [ensembl ftp](ftp://ftp.ensemblgenomes.org/)
+
+``` bash
+# 用 wget 下载 ensembl 数据
+wget -nH -m –ftp-user=anonymous –ftp-password=anonymous ftp://ftp.ensemblgenomes.org/pub/release-27/
+```
 
 #### Software
 - [tophat](http://ccb.jhu.edu/software/tophat/index.shtml): [test_data_set](http://ccb.jhu.edu/software/tophat/downloads/test_data.zip)
 - [bowtie](http://bowtie-bio.sourceforge.net/index.shtml)
 
+#### Reference 
+- [Fastq格式详解](http://boyun.sh.cn/bio/?p=1901)
+- [Jiang, H., Lei, R., Ding, S.W. and Zhu, S. (2014) Skewer: a fast and accurate adapter trimmer for next-generation sequencing paired-end reads. BMC Bioinformatics, 15, 182.](http://www.ncbi.nlm.nih.gov/pubmed/?term=24925680)
 <br>
 <div align=center>
 <img src="http://daweih.github.io/images/wechat_small_black.jpg">
