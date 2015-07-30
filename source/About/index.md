@@ -4,13 +4,17 @@ tags: [about]
 categories: profession
 comments: false
 ---
-#### 关于我
+### 关于我
 
-<div align=right style="color:steelblue;font-family:Georgia;font-style: italic;"><font size="2">דוד</div>
+<div align=center>
+<img src="http://daweih.github.io/images/avatar4.jpg">
+</div>
 
-<div align=right style="color:steelblue;font-family:Georgia;font-style: italic;"><font size="2">David&#160;&#160;&#160;&#160;&#160;&#160;</div>
+<div align=right style="color:steelblue;font-family:Georgia;font-style: italic;"><font size="4">דוד</div>
 
-<div align=right style="color:steelblue;font-family:Georgia;"><font size="2">大维&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</div>
+<div align=right style="color:steelblue;font-family:Georgia;font-style: italic;"><font size="4">David&#160;&#160;&#160;&#160;&#160;&#160;</div>
+
+<div align=right style="color:steelblue;font-family:Georgia;"><font size="4">大维&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</div>
 
 祖籍**东北**，生于**热河**。我本科时候在**山东**折腾了 4 年，研究生考到**帝都**。
 
