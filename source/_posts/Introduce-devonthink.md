@@ -126,3 +126,4 @@ DEVONthink是很强大的个人数据库软件。我计划写一个系列的帖�
 
 #### 更多帖子
 - [读书笔记、读书卡片与DEVONthink](http://kangjian.net/blog/1260/)
+- [资料和知识管理的iTunes——DEVONThink Pro](http://www.wendayuan.com/?p=2254)
