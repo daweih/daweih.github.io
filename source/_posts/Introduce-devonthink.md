@@ -1,7 +1,7 @@
 title: "使用DEVONthink搭建个人wiki＋Safari使用技巧"
 date: 2012-07-26 10:37:41
 updated: 2012-07-26 10:37:41
-tags: [baby step, database, OS X, app]
+tags: [baby step, database, OS X, app, DEVONthink]
 categories: profession
 ---
 
