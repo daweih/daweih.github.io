@@ -15,31 +15,31 @@ categories: "籟風"
 
  Forest made reservation at Ritz-Carlton with a good bargain. Ritz-Carlton TJ was located close to Haihe River. 
  
-<center>![window-side](http://noir1.github.io/images/fromwindow.jpg)
+<center>![window-side](http://daweih.github.io/images/fromwindow.jpg)
  
  The interior decoration of the hotel was hardly called refined, personally. Walls were papered in China blue with portraits, which reminded me of a washbowl in a common faked-antique Chinese food restaurant. Shelves were dotted with **faked-books**, some cardboards indeed, and they were golden printed like "My University", "The Count of Monte Cristo"into the spines of books.
  
-<center>![wallpaper](http://noir1.github.io/images/wallpaper.jpg) 
-<center>![Book?shelf](http://noir1.github.io/images/shelf.jpg)
+<center>![wallpaper](http://daweih.github.io/images/wallpaper.jpg) 
+<center>![Book?shelf](http://daweih.github.io/images/shelf.jpg)
  
  But, frankly, the bedding was excellent, soft yet supportive. It was truly a relax. Curtains opened when door was unlocked. Ambient light was soft and cozy. Bathtub, shower room and the toilet were separate in space. Thus there would be no concerns for 2 persons at a time.
  
-<center>![bedding](http://noir1.github.io/images/bedding.jpg)
+<center>![bedding](http://daweih.github.io/images/bedding.jpg)
  
 ### Astor
 
 
  Astor Hotel, established from 1863, was still run in business and also opened to public as a museum. It was no bother to move from Ritz to Astor for just a park lane. The old-fashioned wooden revolving door allowed only one man once. The first elevator in China, glass dome and corridors with mirror at the end across were definitely worth a look.
 
-<center>![Lunch](http://noir1.github.io/images/lunch.jpg)
+<center>![Lunch](http://daweih.github.io/images/lunch.jpg)
 
-<center>![1863](http://noir1.github.io/images/1863.jpg) 
+<center>![1863](http://daweih.github.io/images/1863.jpg) 
 
-<center>![Old telephone](http://noir1.github.io/images/phone.jpg)
+<center>![Old telephone](http://daweih.github.io/images/phone.jpg)
 
-<center>![Dome](http://noir1.github.io/images/dome.jpg)
+<center>![Dome](http://daweih.github.io/images/dome.jpg)
 
-<center>![Corridor](http://noir1.github.io/images/corridor.jpg)
+<center>![Corridor](http://daweih.github.io/images/corridor.jpg)
  
 ### Lunch
 
@@ -50,12 +50,12 @@ categories: "籟風"
 
  It was absolutely worthy of my ground transportations and 2 day stay at TJ! Funny! Burst into laughter! 
 
-<center>![Repartee](http://noir1.github.io/images/repartee.jpg)
+<center>![Repartee](http://daweih.github.io/images/repartee.jpg)
  
 ### Porcelain House
 
  I would leave no comment here. I, WTF, was scared at the entrance of the house. I bet it was haunted at night! 
 
-<center>![house](http://noir1.github.io/images/house.jpg)
+<center>![house](http://daweih.github.io/images/house.jpg)
  
  
