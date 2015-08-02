@@ -30,10 +30,6 @@ categories: profession
 - [Huang,X. et al. (2012) A map of rice genome variation reveals the origin of cultivated rice. Nature, 490, 497–501.](http://www.ncbi.nlm.nih.gov/pubmed/?term=23034647)
 
 
-
-
-
-
 <br>
 <div align=center>
 <img src="http://daweih.github.io/images/wechat_small_black.jpg">
