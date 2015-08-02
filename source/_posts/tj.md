@@ -33,6 +33,10 @@ categories: "籟風"
 
 <center>![Lunch](http://daweih.github.io/images/lunch.jpg)
 
+<div align=center>
+<img src="http://daweih.github.io/images/lunch.jpg">
+</div>
+
 <center>![1863](http://daweih.github.io/images/1863.jpg) 
 
 <center>![Old telephone](http://daweih.github.io/images/phone.jpg)
