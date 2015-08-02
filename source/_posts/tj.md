@@ -1,11 +1,12 @@
 title: Tianjin - 1
 date: 2015-08-02 20:11:05
-tags: [Tianjin, Trip, Forest, Larry, David, Vincent]
-categories: "籟風"
-thumbnailImage: img.jpg
+tags: [Tianjin, travel, Forest, Larry, ,Vincent]
+categories: Life
 ---
 
-##Day 1
+[转载](http://noir1.github.io)
+
+--------
 ### By train
 
  Although planned to meet at Peking South Station (SouS) before 9a.m. with Forest and Larry, I still insisted in hurrying David up early in the morning. I had almost packed up, while Dave was still under shower. I went to TJ two days ago for business, and thus had a rough idea of the tube route, where was a transition and which was the shortcut. I chose a tote bag for casual, and suggested Dav my Yoshida Porter shoulder bag for holding.
