@@ -17,30 +17,6 @@ categories: "籟風"
  
 <center>![window-side](http://daweih.github.io/images/fromwindow.jpg "From the window, look through the fanned buildings You can see Haihe River.")
  
- 
-<center>![window-side](http://daweih.github.io/images/fromwindow.jpg "From the window, look through the fanned buildings You can see Haihe River.")
- 
- 
-<center>![window-side](http://daweih.github.io/images/fromwindow.jpg "From the window, look through the fanned buildings You can see Haihe River.")
- 
- 
-<center>![window-side](http://daweih.github.io/images/fromwindow.jpg "From the window, look through the fanned buildings You can see Haihe River.")
- 
- 
-<center>![window-side](http://daweih.github.io/images/fromwindow.jpg "From the window, look through the fanned buildings You can see Haihe River.")
- 
- 
-<center>![window-side](http://daweih.github.io/images/fromwindow.jpg "From the window, look through the fanned buildings You can see Haihe River.")
- 
- 
-<center>![window-side](http://daweih.github.io/images/fromwindow.jpg "From the window, look through the fanned buildings You can see Haihe River.")
- 
- 
-<center>![window-side](http://daweih.github.io/images/fromwindow.jpg "From the window, look through the fanned buildings You can see Haihe River.")
- 
- 
-<center>![window-side](http://daweih.github.io/images/fromwindow.jpg "From the window, look through the fanned buildings You can see Haihe River.")
- 
  The interior decoration of the hotel was hardly called refined, personally. Walls were papered in China blue with portraits, which reminded me of a washbowl in a common faked-antique Chinese food restaurant. Shelves were dotted with **faked-books**, some cardboards indeed, and they were golden printed like "My University", "The Count of Monte Cristo"into the spines of books.
  
 <center>![wallpaper](http://daweih.github.io/images/wallpaper.jpg "It reminded me of a washbowl in a common faked-antique Chinese food restaurant") 
