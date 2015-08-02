@@ -28,18 +28,23 @@ categories: "籟風"
  
 ### Astor
 
+
  Astor Hotel, established from 1863, was still run in business and also opened to public as a museum. It was no bother to move from Ritz to Astor for just a park lane. The old-fashioned wooden revolving door allowed only one man once. The first elevator in China, glass dome and corridors with mirror at the end across were definitely worth a look.
 
+<center>![Lunch](http://noir1.github.io/images/lunch.jpg)
+
 <center>![1863](http://noir1.github.io/images/1863.jpg) 
+
 <center>![Old telephone](http://noir1.github.io/images/phone.jpg)
+
 <center>![Dome](http://noir1.github.io/images/dome.jpg)
+
 <center>![Corridor](http://noir1.github.io/images/corridor.jpg)
  
 ### Lunch
 
  We had lunch at Tianjin No.1 Restaurant. Forest, a northwestern toughie, ordered a table of carbohydrates. TJ was famous for fresh seafood, and daily dishes were likely seasoned with small shrimp rather than MSG. Generally it was heavily flavoured and if you preferred to a fishy taste please tried some TJ food out.
  
-<center>![Lunch](http://noir1.github.io/images/lunch.jpg)
  
 ### Talk show/Repartee 
 
