@@ -1,14 +1,15 @@
-title: Looing for data at SRA
+title: Looing for publicly available NGS data
 date: 2015-08-01 04:24:05
 updated: 2015-08-03 03:24:05
 tags: [baby step, bioinformatics, NGS, SRA]
 categories: profession
 ---
+
+最近 2 年，NGS 的成本越来越低，让研究者可以产生大量的数据，其中有很多优秀的工作，发表了高水平文章。
+
 <div align=center>
 <img src="http://daweih.github.io/images/sra.jpg">
 </div>
-
-最近 2 年，NGS 的成本越来越低，让研究者可以产生大量的数据，其中有很多优秀的工作，发表了高水平文章。
 
 ### 主要的 NGS 原始数据库
 
