@@ -1,6 +1,6 @@
 title: Looing for data at SRA
 date: 2015-08-01 04:24:05
-updated: 2015-08-01 04:24:05
+updated: 2015-08-03 03:24:05
 tags: [baby step, bioinformatics, NGS, SRA]
 categories: profession
 ---
@@ -63,7 +63,7 @@ SRA 数据的下载方法，推荐使用 Aspera。用法请参考[旧时博文](
 
 #### Reference
 1. [Huang, X. et al. A map of rice genome variation reveals the origin of cultivated rice. Nature 490, 497–501 (2012).](http://www.ncbi.nlm.nih.gov/pubmed/?term=23034647)
-2. [1.	Huang, X. et al. Genome-wide association studies of 14 agronomic traits in rice landraces. Nat. Genet. 42, 961–967 (2010).](http://www.ncbi.nlm.nih.gov/pubmed/?term=20972439)
+2. [Huang, X. et al. Genome-wide association studies of 14 agronomic traits in rice landraces. Nat. Genet. 42, 961–967 (2010).](http://www.ncbi.nlm.nih.gov/pubmed/?term=20972439)
 3. [Pfeifer, M. et al. Genome interplay in the grain transcriptome of hexaploid bread wheat. Science 345, 1250091–1250091 (2014).](http://www.ncbi.nlm.nih.gov/pubmed/?term=25035498)
 
 <br>
