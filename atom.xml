@@ -58,14 +58,14 @@
   </entry>
   
   <entry>
-    <title><![CDATA[Looing for data at SRA]]></title>
+    <title><![CDATA[Looing for publicly available NGS data]]></title>
     <link href="http://daweih.github.io/2015/08/01/Looing-for-data-at-SRA/"/>
     <id>http://daweih.github.io/2015/08/01/Looing-for-data-at-SRA/</id>
     <published>2015-07-31T20:24:05.000Z</published>
     <updated>2015-08-02T19:24:05.000Z</updated>
-    <content type="html"><![CDATA[<div align="center"><br><img src="http://daweih.github.io/images/sra.jpg"><br></div>
+    <content type="html"><![CDATA[<p>最近 2 年，NGS 的成本越来越低，让研究者可以产生大量的数据，其中有很多优秀的工作，发表了高水平文章。</p>
+<div align="center"><br><img src="http://daweih.github.io/images/sra.jpg"><br></div>
 
-<p>最近 2 年，NGS 的成本越来越低，让研究者可以产生大量的数据，其中有很多优秀的工作，发表了高水平文章。</p>
 <h3 id="主要的_NGS_原始数据库">主要的 NGS 原始数据库</h3><p>按照学术期刊的要求（比如CNS），NGS 的原始数据，在发表前一般会被上传到几个主要的数据库，包括：</p>
 <ul>
 <li><a href="http://www.ncbi.nlm.nih.gov/sra" target="_blank" rel="external">NCBI European Nucleotide Archive (SRA)</a></li>
@@ -117,9 +117,8 @@
 <p><br></p>
 <div align="center"><br><img src="http://daweih.github.io/images/wechat_small_black.jpg"><br></div>]]></content>
     <summary type="html">
-    <![CDATA[<div align="center"><br><img src="http://daweih.github.io/images/sra.jpg"><br></div>
-
-<p>最近 2 年，NGS 的成本越来越低，让研究者可以产生大量的数据，其中有很多优秀的工作，发表了高水平文]]>
+    <![CDATA[<p>最近 2 年，NGS 的成本越来越低，让研究者可以产生大量的数据，其中有很多优秀的工作，发表了高水平文章。</p>
+<div align="center"><br><img src="http://daweih.github.io/images/sra.jpg"><br><]]>
     </summary>
     
       <category term="NGS" scheme="http://daweih.github.io/tags/NGS/"/>
