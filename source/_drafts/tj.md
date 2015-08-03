@@ -1,7 +1,8 @@
-title: Tianjin - 1
-date: 2015-08-02 20:11:05
-tags: [Tianjin, travel, Forest, Larry, ,Vincent]
-categories: Life
+title: "Tianjin - 1"
+date: 2015-08-03 09:20:33
+updated: 2015-08-03 09:20:33
+tags: [Tianjin, travel, Forest, Larry, Vincent] 
+categories: life
 ---
 
 [转载](http://noir1.github.io)
@@ -17,34 +18,42 @@ categories: Life
 
  Forest made reservation at Ritz-Carlton with a good bargain. Ritz-Carlton TJ was located close to Haihe River. 
  
- <center> ![window-side](http://daweih.github.io/images/fromwindow.jpg "From the window, look through the fanned buildings You can see Haihe River.")
+<center>![window-side](http://daweih.github.io/images/fromwindow.jpg "From the window, look through the fanned buildings You can see Haihe River.")
+
  
  The interior decoration of the hotel was hardly called refined, personally. Walls were papered in China blue with portraits, which reminded me of a washbowl in a common faked-antique Chinese food restaurant. Shelves were dotted with **faked-books**, some cardboards indeed, and they were golden printed like "My University", "The Count of Monte Cristo"into the spines of books.
  
- <center> ![wallpaper](http://daweih.github.io/images/wallpaper.jpg "It reminded me of a washbowl in a common faked-antique Chinese food restaurant") ![Book?shelf](http://daweih.github.io/images/shelf.jpg "dotted with faked-books")
+<center>![wallpaper](http://daweih.github.io/images/wallpaper.jpg "It reminded me of a washbowl in a common faked-antique Chinese food restaurant") ![Book?shelf](http://daweih.github.io/images/shelf.jpg "dotted with faked-books")
+
  
  But, frankly, the bedding was excellent, soft yet supportive. It was truly a relax. Curtains opened when door was unlocked. Ambient light was soft and cozy. Bathtub, shower room and the toilet were separate in space. Thus there would be no concerns for 2 persons at a time.
  
- <center> ![bedding](http://daweih.github.io/images/bedding.jpg "bedding was excellent, soft yet supportive.")
- 
+<center>![bedding](http://daweih.github.io/images/bedding.jpg "bedding was excellent, soft yet supportive.")
+
+  
 ### Astor
 
  Astor Hotel, established from 1863, was still run in business and also opened to public as a museum. It was no bother to move from Ritz to Astor for just a park lane. The old-fashioned wooden revolving door allowed only one man once. The first elevator in China, glass dome and corridors with mirror at the end across were definitely worth a look.
 
-<center> ![1863](http://daweih.github.io/images/1863.jpg "Established ever since 1863") ![Old telephone](http://daweih.github.io/images/phone.jpg "Oldie")
-<center> ![Dome](http://daweih.github.io/images/dome.jpg "Glass Dome") ![Corridor](http://daweih.github.io/images/corridor.jpg "Corridor with mirror at the end across")
+<center>![1863](http://daweih.github.io/images/1863.jpg "Established ever since 1863") 
+
+
+<center>![Old telephone](http://daweih.github.io/images/phone.jpg "Oldie")
+
+
+<center>![Dome](http://daweih.github.io/images/dome.jpg "Glass Dome") ![Corridor](http://daweih.github.io/images/corridor.jpg "Corridor with mirror at the end across")
  
 ### Lunch
 
  We had lunch at Tianjin No.1 Restaurant. Forest, a northwestern toughie, ordered a table of carbohydrates. TJ was famous for fresh seafood, and daily dishes were likely seasoned with small shrimp rather than MSG. Generally it was heavily flavoured and if you preferred to a fishy taste please tried some TJ food out.
  
-<center> ![Lunch](http://daweih.github.io/images/lunch.jpg "Pork dish with pancake")
+<center>![Lunch](http://daweih.github.io/images/lunch.jpg "Pork dish with pancake")
  
 ### Talk show/Repartee 
 
  It was absolutely worthy of my ground transportations and 2 day stay at TJ! Funny! Burst into laughter! 
 
-<center> ![Repartee](http://daweih.github.io/images/repartee.jpg "rolling on the floor")
+<center>![Repartee](http://daweih.github.io/images/repartee.jpg "rolling on the floor")
  
 ### Porcelain House
 
@@ -52,7 +61,7 @@ categories: Life
 
  I would leave no comment here. I, WTF, was scared at the entrance of the house. I bet it was haunted at night! 
 
- <center> ![house](http://daweih.github.io/images/house.jpg "Scary")
+<center>![house](http://daweih.github.io/images/house.jpg "Scary")
  
  
  
