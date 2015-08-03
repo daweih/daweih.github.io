@@ -30,7 +30,7 @@
 
 
 
-  <meta name="keywords" content="bioinformatics,gene annotation," />
+  <meta name="keywords" content="NGS,SRA,baby step,bioinformatics," />
 
 
 
@@ -41,29 +41,42 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.4" />
 
 
-<meta name="description" content="原载于我的 wordpress 博客
+<meta name="description" content="主要数据存储的位置第二代测序的原始数据，一般会按照学术期刊的要求，在发表前，上到几个主要的数据库，包括：
 
-原文
-I am in charge of Date Palm genome annotation recently. In fact, there is only one person doing this, me.
-UCSC and Ensembl are the most famous genome sequence databases and both">
+NCBI European Nucleotide Archive (SRA)
+EBI European Nucleotide Archive (ENA)
+
+通常，我们需要下载某些数据，无非是基于以下一些原因：
+
+数据的物种 / 组织是研究对象，通过下载公共数据，来节约研究的开支
+对研究者发表">
 <meta property="og:type" content="article">
-<meta property="og:title" content="How to use BLAT to annotate a new sequenced genome">
-<meta property="og:url" content="http://daweih.github.io/2011/09/09/How-to-use-BLAT-to-annotate-a-new-sequenced-genome/index.html">
+<meta property="og:title" content="Looing for data at SRA">
+<meta property="og:url" content="http://daweih.github.io/2015/08/01/Looing-for-data-at-SRA/index.html">
 <meta property="og:site_name" content="东隅">
-<meta property="og:description" content="原载于我的 wordpress 博客
+<meta property="og:description" content="主要数据存储的位置第二代测序的原始数据，一般会按照学术期刊的要求，在发表前，上到几个主要的数据库，包括：
 
-原文
-I am in charge of Date Palm genome annotation recently. In fact, there is only one person doing this, me.
-UCSC and Ensembl are the most famous genome sequence databases and both">
+NCBI European Nucleotide Archive (SRA)
+EBI European Nucleotide Archive (ENA)
+
+通常，我们需要下载某些数据，无非是基于以下一些原因：
+
+数据的物种 / 组织是研究对象，通过下载公共数据，来节约研究的开支
+对研究者发表">
+<meta property="og:image" content="http://daweih.github.io/images/sra.jpg">
 <meta property="og:image" content="http://daweih.github.io/images/wechat_small_black.jpg">
-<meta property="og:updated_time" content="2015-07-25T02:56:46.000Z">
+<meta property="og:updated_time" content="2015-08-02T19:24:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="How to use BLAT to annotate a new sequenced genome">
-<meta name="twitter:description" content="原载于我的 wordpress 博客
+<meta name="twitter:title" content="Looing for data at SRA">
+<meta name="twitter:description" content="主要数据存储的位置第二代测序的原始数据，一般会按照学术期刊的要求，在发表前，上到几个主要的数据库，包括：
 
-原文
-I am in charge of Date Palm genome annotation recently. In fact, there is only one person doing this, me.
-UCSC and Ensembl are the most famous genome sequence databases and both">
+NCBI European Nucleotide Archive (SRA)
+EBI European Nucleotide Archive (ENA)
+
+通常，我们需要下载某些数据，无非是基于以下一些原因：
+
+数据的物种 / 组织是研究对象，通过下载公共数据，来节约研究的开支
+对研究者发表">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -73,7 +86,7 @@ UCSC and Ensembl are the most famous genome sequence databases and both">
   };
 </script>
 
-    <title> How to use BLAT to annotate a new sequenced genome // 东隅 </title>
+    <title> Looing for data at SRA // 东隅 </title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
 <!--[if lte IE 8]>
@@ -202,7 +215,7 @@ UCSC and Ensembl are the most famous genome sequence databases and both">
           
           
             
-              How to use BLAT to annotate a new sequenced genome
+              Looing for data at SRA
             
           
         </h1>
@@ -211,8 +224,8 @@ UCSC and Ensembl are the most famous genome sequence databases and both">
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2011-09-09T21:37:05+08:00" content="2011-09-09">
-            2011-09-09
+          <time itemprop="dateCreated" datetime="2015-08-01T04:24:05+08:00" content="2015-08-01">
+            2015-08-01
           </time>
         </span>
 
@@ -233,8 +246,8 @@ UCSC and Ensembl are the most famous genome sequence databases and both">
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2011/09/09/How-to-use-BLAT-to-annotate-a-new-sequenced-genome/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2011/09/09/How-to-use-BLAT-to-annotate-a-new-sequenced-genome/" itemprop="commentsCount"></span>
+              <a href="/2015/08/01/Looing-for-data-at-SRA/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/01/Looing-for-data-at-SRA/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -248,21 +261,51 @@ UCSC and Ensembl are the most famous genome sequence databases and both">
       
 
       
-        <span itemprop="articleBody"><blockquote>
-<p>原载于<a href="https://daweimhuang.wordpress.com/" target="_blank" rel="external">我的 wordpress 博客</a></p>
+        <span itemprop="articleBody"><p><br></p>
+<div align="center"><br><img src="http://daweih.github.io/images/sra.jpg"><br></div>
+
+<h4 id="主要数据存储的位置">主要数据存储的位置</h4><p>第二代测序的原始数据，一般会按照学术期刊的要求，在发表前，上到几个主要的数据库，包括：</p>
+<ul>
+<li><a href="http://www.ncbi.nlm.nih.gov/sra" target="_blank" rel="external">NCBI European Nucleotide Archive (SRA)</a></li>
+<li><a href="http://www.ebi.ac.uk/ena" target="_blank" rel="external">EBI European Nucleotide Archive (ENA)</a></li>
+</ul>
+<p>通常，我们需要下载某些数据，无非是基于以下一些原因：</p>
+<ul>
+<li>数据的物种 / 组织是研究对象，通过下载公共数据，来节约研究的开支</li>
+<li>对研究者发表的结果感兴趣，想进行重复或深入的研究；认为发表数据的研究者有遗漏或没有关注的研究方向，对其数据进入深入的挖掘</li>
+<li>想用数据来练手（这个动机在学生中很普遍）</li>
+</ul>
+<h4 id="通过文章正文内的线索来寻找">通过文章正文内的线索来寻找</h4><p>这种情况下，发表的文章会直接给出数据提交到的数据库，数据的 accession。比如：</p>
+<blockquote>
+<p>Author Information DNA sequencing data are deposited in the <code>European Nucleotide Archive</code> (<a href="http://www.ebi.ac.uk/ena/" target="_blank" rel="external">http://www.ebi.ac.uk/ena/</a>) under <u style="color:darkred"><code>accession numbers</code> ERP001143, ERP000729 and ERP000106.</u> De novo assembly and genome annotation of wild rice W1943, the genotype dataset of 1,529 rice accessions and the imputed dataset of 446 O. rufipogon accessions for GWAS are available at the Rice Haplotype Map Project database (<a href="http://www.ncgr.ac.cn/RiceHap3" target="_blank" rel="external">http://www.ncgr.ac.cn/RiceHap3</a>). [1]</p>
+<p>Accession codes. Raw sequences have been deposited in the EBI European Nucleotide Archive with <u style="color:darkred">accession number ERP000729 for worldwide rice germplasm (330 worldwide rice accessions: ERS037511–ERS037840)</u> and with accession number ERP000106 for Chinese rice landraces (100 newly added Chinese rice landraces: ERS039279–ERS039378). [2]</p>
 </blockquote>
-<p><a href="https://daweimhuang.wordpress.com/2011/09/09/how-to-use-blat-to-annotate-a-new-sequenced-genome/" target="_blank" rel="external">原文</a></p>
-<p>I am in charge of Date Palm genome annotation recently. In fact, there is only one person doing this, me.</p>
-<p>UCSC and Ensembl are the most famous genome sequence databases and both developed effective tool, BLAT from UCSC and pMatch from Ensembl, to do this.</p>
-<p>pMatch need input of protein sequence. So it is suitable for use rich datasets to annotate a similar species’ genome without lots of sequence proteins.</p>
-<p>BLAT is good at cDNA to genome alignment. So we choose BLAT because we got Newbler assembled cDNA sequence from 454.</p>
-<p>The Data Palm Genome sequence assembly based on two data source, the 454 newbler assembled contig and solid mate pair reads.</p>
-<p>Newbler assemble the 454 data of genome to contigs which provide the main structure of genome assembly.</p>
-<p>Solid mate pair data provide the information of relationship between contigs, including order, gap length, etc.</p>
-<p>454 can not provide sequence strand information. After assembly, the cDNA can be sense strand or anti-sense strand. Since both of the genome strand have the ability to encode genes as we defined as positive strand gene and negative strand gene, the BLAT mapping data can provide 4 kinds of mapping results due to the complexity discussed before.</p>
-<p>So the first step of annotation is to convert the anti-sense cDNA to sense strand sequence, the the mapping results will remain only two types, the positive strand gene and negative strand gene.</p>
-<p>There are several source of the strand information, splice signal, transcriptome data form solid strand specific experiment, CDS prediction data and alignment-based annotation of cDNA.</p>
-<p>Splice signal is the first 2 and last two base of intron sequence. cDNA is sequenced from mRNA which only consist exons of gene. When mapped back to genome, the alignment region of cDNA will consist multiple alignment blocks. Blocks of cDNA sequence are usually continuous whereas blocks of genome is separated by unaligned sequence blocks, usually introns.</p>
+<h4 id="通过数据库的分类系统来寻找，筛选">通过数据库的分类系统来寻找，筛选</h4><p>通过关键词系统、分类系统，你可以在一个数据库，整合所有符合你研究兴趣的数据。</p>
+<h4 id="通过其他信息定位">通过其他信息定位</h4><p>但很多时候，文章的作者并没有给出数据具体的存放位置，或者没有给出数据的ID。我们无法很简单地确定数据的位置，这样就要通过多方面的信息来判断。比如参考文献 [3] 就是如此。在这篇文献里，虽然没有给出具体的位置和数据的 accession，但可以参考的信息还有很多，比如：</p>
+<ol>
+<li>物种是 <em>Triticum aestivum</em> L. cv Chinese Spring</li>
+<li>发表日期：Published 18 July 2014</li>
+<li>作者单位：Department of Plant Sciences/Centre for Integrative Genetics,The Norwegian University of Life Sciences (NMBU)</li>
+<li>Paired end (PE) sequencing libraries</li>
+<li>HiSeq2000 (Illumina, San Diego, USA)</li>
+<li>RNA was isolated and prepared for RNA-seq by using paired-end libraries with <u style="color:darkred">200–base pair inserts for 30 samples</u> with four biological replicates per cell type and time point (two replicates per room) and two additional technical replicates. Total RNA was extracted from frozen plant material using the RNeasy Lipid Tissue Mini kit (QIAGEN, Hilden, Germany; <a href="http://www.qiagen.com/applications/plant" target="_blank" rel="external">http://www.qiagen.com/applications/plant</a>). </li>
+</ol>
+<p>通过和潜在的数据的<a href="http://www.ncbi.nlm.nih.gov/bioproject/?term=%22Genome+interplay+in+the+grain+transcriptome+of+hexaploid+bread+wheat%22" target="_blank" rel="external">基本信息</a>的比较，发现支持此数据为文章的数据：</p>
+<ol>
+<li>Organism:    <em>Triticum aestivum</em>, cultivar: Chinese Spring</li>
+<li>Registration date: 19-Jul-2014</li>
+<li>Submitted by: Department of Plant and Environmental Sciences/CIGENE, Norwegian University of Life Sciences</li>
+<li>Paired end (PE) sequencing libraries</li>
+<li>Illumina HiSeq 2000</li>
+<li>30 samples. Total RNA was extracted from frozen plant material using the RNeasy Lipid Tissue Mini kit (QIAGEN, Hilden, Germany; <a href="http://www.qiagen.com/applications/plant" target="_blank" rel="external">http://www.qiagen.com/applications/plant</a>). Illumina TruSeq RNA Sample Preparation Kits v2</li>
+</ol>
+<p>上面的信息的排列，我按照一一对应做了总结。比对之后，确信需要下载这个数据。</p>
+<h4 id="下载方法">下载方法</h4><p>SRA 数据的下载方法，推荐使用 Aspera。用法请参考<a href="http://daweih.github.io/2015/07/24/aspera-download-data-from-sra/">旧时博文</a>。对于数据量较少的，也可以使用 wget 等命令下载，但耗时较长。</p>
+<h4 id="Reference">Reference</h4><ol>
+<li><a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=23034647" target="_blank" rel="external">Huang, X. et al. A map of rice genome variation reveals the origin of cultivated rice. Nature 490, 497–501 (2012).</a></li>
+<li><a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=20972439" target="_blank" rel="external">Huang, X. et al. Genome-wide association studies of 14 agronomic traits in rice landraces. Nat. Genet. 42, 961–967 (2010).</a></li>
+<li><a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=25035498" target="_blank" rel="external">Pfeifer, M. et al. Genome interplay in the grain transcriptome of hexaploid bread wheat. Science 345, 1250091–1250091 (2014).</a></li>
+</ol>
 <p><br></p>
 <div align="center"><br><img src="http://daweih.github.io/images/wechat_small_black.jpg"><br></div></span>
       
@@ -272,9 +315,13 @@ UCSC and Ensembl are the most famous genome sequence databases and both">
       
         <div class="post-tags">
           
-            <a href="/tags/bioinformatics/" rel="tag">#bioinformatics</a>
+            <a href="/tags/NGS/" rel="tag">#NGS</a>
           
-            <a href="/tags/gene-annotation/" rel="tag">#gene annotation</a>
+            <a href="/tags/SRA/" rel="tag">#SRA</a>
+          
+            <a href="/tags/baby-step/" rel="tag">#baby step</a>
+          
+            <a href="/tags/bioinformatics/" rel="tag">#bioinformatics</a>
           
         </div>
       
@@ -283,13 +330,13 @@ UCSC and Ensembl are the most famous genome sequence databases and both">
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2011/11/17/How-to-install-circos-on-Mac-OS-X-lion-10-7-x/" rel="prev">How to install circos on Mac OS X lion (10.7.x)</a>
+              <a href="/2015/08/02/tianjin-2-day/" rel="prev">津门非主流游玩</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2011/08/31/swimming-day/" rel="next">游泳归来</a>
+              <a href="/2015/07/25/coffee-easy-to-make/" rel="next">懒人适用的咖啡具</a>
             
           </div>
         </div>
@@ -315,8 +362,8 @@ UCSC and Ensembl are the most famous genome sequence databases and both">
             
               <div class="comments" id="comments">
                 
-                  <div class="ds-thread" data-thread-key="2011/09/09/How-to-use-BLAT-to-annotate-a-new-sequenced-genome/"
-                       data-title="How to use BLAT to annotate a new sequenced genome" data-url="http://daweih.github.io/2011/09/09/How-to-use-BLAT-to-annotate-a-new-sequenced-genome/">
+                  <div class="ds-thread" data-thread-key="2015/08/01/Looing-for-data-at-SRA/"
+                       data-title="Looing for data at SRA" data-url="http://daweih.github.io/2015/08/01/Looing-for-data-at-SRA/">
                   </div>
                 
               </div>
@@ -423,7 +470,7 @@ UCSC and Ensembl are the most famous genome sequence databases and both">
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">This post does not have a Table Of Contents</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#主要数据存储的位置"><span class="nav-number">1.</span> <span class="nav-text">主要数据存储的位置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过文章正文内的线索来寻找"><span class="nav-number">2.</span> <span class="nav-text">通过文章正文内的线索来寻找</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过数据库的分类系统来寻找，筛选"><span class="nav-number">3.</span> <span class="nav-text">通过数据库的分类系统来寻找，筛选</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过其他信息定位"><span class="nav-number">4.</span> <span class="nav-text">通过其他信息定位</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下载方法"><span class="nav-number">5.</span> <span class="nav-text">下载方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Reference"><span class="nav-number">6.</span> <span class="nav-text">Reference</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

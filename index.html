@@ -280,6 +280,131 @@
           
           
             
+              <a class="post-title-link" href="/2015/08/01/Looing-for-data-at-SRA/" itemprop="url">
+                Looing for data at SRA
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2015-08-01T04:24:05+08:00" content="2015-08-01">
+            2015-08-01
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/profession/" itemprop="url" rel="index"><span itemprop="name">profession</span></a></span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/08/01/Looing-for-data-at-SRA/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/01/Looing-for-data-at-SRA/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><p><br></p>
+<div align="center"><br><img src="http://daweih.github.io/images/sra.jpg"><br></div>
+
+<h4 id="主要数据存储的位置">主要数据存储的位置</h4><p>第二代测序的原始数据，一般会按照学术期刊的要求，在发表前，上到几个主要的数据库，包括：</p>
+<ul>
+<li><a href="http://www.ncbi.nlm.nih.gov/sra" target="_blank" rel="external">NCBI European Nucleotide Archive (SRA)</a></li>
+<li><a href="http://www.ebi.ac.uk/ena" target="_blank" rel="external">EBI European Nucleotide Archive (ENA)</a></li>
+</ul>
+<p>通常，我们需要下载某些数据，无非是基于以下一些原因：</p>
+<ul>
+<li>数据的物种 / 组织是研究对象，通过下载公共数据，来节约研究的开支</li>
+<li>对研究者发表的结果感兴趣，想进行重复或深入的研究；认为发表数据的研究者有遗漏或没有关注的研究方向，对其数据进入深入的挖掘</li>
+<li>想用数据来练手（这个动机在学生中很普遍）</li>
+</ul>
+<h4 id="通过文章正文内的线索来寻找">通过文章正文内的线索来寻找</h4><p>这种情况下，发表的文章会直接给出数据提交到的数据库，数据的 accession。比如：</p>
+<blockquote>
+<p>Author Information DNA sequencing data are deposited in the <code>European Nucleotide Archive</code> (<a href="http://www.ebi.ac.uk/ena/" target="_blank" rel="external">http://www.ebi.ac.uk/ena/</a>) under <u style="color:darkred"><code>accession numbers</code> ERP001143, ERP000729 and ERP000106.</u> De novo assembly and genome annotation of wild rice W1943, the genotype dataset of 1,529 rice accessions and the imputed dataset of 446 O. rufipogon accessions for GWAS are available at the Rice Haplotype Map Project database (<a href="http://www.ncgr.ac.cn/RiceHap3" target="_blank" rel="external">http://www.ncgr.ac.cn/RiceHap3</a>). [1]</p>
+<p>Accession codes. Raw sequences have been deposited in the EBI European Nucleotide Archive with <u style="color:darkred">accession number ERP000729 for worldwide rice germplasm (330 worldwide rice accessions: ERS037511–ERS037840)</u> and with accession number ERP000106 for Chinese rice landraces (100 newly added Chinese rice landraces: ERS039279–ERS039378). [2]</p>
+</blockquote>
+<h4 id="通过数据库的分类系统来寻找，筛选">通过数据库的分类系统来寻找，筛选</h4><p>通过关键词系统、分类系统，你可以在一个数据库，整合所有符合你研究兴趣的数据。</p>
+<h4 id="通过其他信息定位">通过其他信息定位</h4><p>但很多时候，文章的作者并没有给出数据具体的存放位置，或者没有给出数据的ID。我们无法很简单地确定数据的位置，这样就要通过多方面的信息来判断。比如参考文献 [3] 就是如此。在这篇文献里，虽然没有给出具体的位置和数据的 accession，但可以参考的信息还有很多，比如：</p>
+<ol>
+<li>物种是 <em>Triticum aestivum</em> L. cv Chinese Spring</li>
+<li>发表日期：Published 18 July 2014</li>
+<li>作者单位：Department of Plant Sciences/Centre for Integrative Genetics,The Norwegian University of Life Sciences (NMBU)</li>
+<li>Paired end (PE) sequencing libraries</li>
+<li>HiSeq2000 (Illumina, San Diego, USA)</li>
+<li>RNA was isolated and prepared for RNA-seq by using paired-end libraries with <u style="color:darkred">200–base pair inserts for 30 samples</u> with four biological replicates per cell type and time point (two replicates per room) and two additional technical replicates. Total RNA was extracted from frozen plant material using the RNeasy Lipid Tissue Mini kit (QIAGEN, Hilden, Germany; <a href="http://www.qiagen.com/applications/plant" target="_blank" rel="external">http://www.qiagen.com/applications/plant</a>). </li>
+</ol>
+<p>通过和潜在的数据的<a href="http://www.ncbi.nlm.nih.gov/bioproject/?term=%22Genome+interplay+in+the+grain+transcriptome+of+hexaploid+bread+wheat%22" target="_blank" rel="external">基本信息</a>的比较，发现支持此数据为文章的数据：</p>
+<ol>
+<li>Organism:    <em>Triticum aestivum</em>, cultivar: Chinese Spring</li>
+<li>Registration date: 19-Jul-2014</li>
+<li>Submitted by: Department of Plant and Environmental Sciences/CIGENE, Norwegian University of Life Sciences</li>
+<li>Paired end (PE) sequencing libraries</li>
+<li>Illumina HiSeq 2000</li>
+<li>30 samples. Total RNA was extracted from frozen plant material using the RNeasy Lipid Tissue Mini kit (QIAGEN, Hilden, Germany; <a href="http://www.qiagen.com/applications/plant" target="_blank" rel="external">http://www.qiagen.com/applications/plant</a>). Illumina TruSeq RNA Sample Preparation Kits v2</li>
+</ol>
+<p>上面的信息的排列，我按照一一对应做了总结。比对之后，确信需要下载这个数据。</p>
+<h4 id="下载方法">下载方法</h4><p>SRA 数据的下载方法，推荐使用 Aspera。用法请参考<a href="http://daweih.github.io/2015/07/24/aspera-download-data-from-sra/">旧时博文</a>。对于数据量较少的，也可以使用 wget 等命令下载，但耗时较长。</p>
+<h4 id="Reference">Reference</h4><ol>
+<li><a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=23034647" target="_blank" rel="external">Huang, X. et al. A map of rice genome variation reveals the origin of cultivated rice. Nature 490, 497–501 (2012).</a></li>
+<li><a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=20972439" target="_blank" rel="external">Huang, X. et al. Genome-wide association studies of 14 agronomic traits in rice landraces. Nat. Genet. 42, 961–967 (2010).</a></li>
+<li><a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=25035498" target="_blank" rel="external">Pfeifer, M. et al. Genome interplay in the grain transcriptome of hexaploid bread wheat. Science 345, 1250091–1250091 (2014).</a></li>
+</ol>
+<p><br></p>
+<div align="center"><br><img src="http://daweih.github.io/images/wechat_small_black.jpg"><br></div></span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2015/07/25/coffee-easy-to-make/" itemprop="url">
                 懒人适用的咖啡具
               </a>
@@ -1114,92 +1239,6 @@
 
 
     
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/07/20/orthomcl-note/" itemprop="url">
-                OrthoMCL 使用笔记
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on
-          <time itemprop="dateCreated" datetime="2015-07-20T13:30:30+08:00" content="2015-07-20">
-            2015-07-20
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; In
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/profession/" itemprop="url" rel="index"><span itemprop="name">profession</span></a></span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/07/20/orthomcl-note/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/20/orthomcl-note/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody"><h4 id="BLAST">BLAST</h4><h4 id="配置_MCL_的_MySQL_数据库">配置 MCL 的 MySQL 数据库</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ create database orthomcl;</span><br><span class="line">$ DROP TABLE BestHit, BestInterTaxonScore, BestQueryTaxonScore, BetterHit, CoOrthNotOrtholog, CoOrtholog, CoOrthologAvgScore, CoOrthologCandidate, CoOrthologTaxon, CoOrthologTemp, InParalog, InParalog2Way, InParalogAvgScore, InParalogOrtholog, InParalogTaxonAvg, InParalogTemp, InplgOrthTaxonAvg, InplgOrthoInplg, InterTaxonMatch, Ortholog, Ortholog2Way, OrthologAvgScore, OrthologTaxon, OrthologTemp, OrthologUniqueId, SimilarSequences, UniqSimSeqsQueryId;</span><br><span class="line">$ DROP TABLE BestQueryTaxonScore;</span><br><span class="line">$ orthomclInstallSchema orthomcl.config.template</span><br></pre></td></tr></table></figure>
-<h4 id="载入数据到_MySQL">载入数据到 MySQL</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ orthomclLoadBlast orthomcl.config.template similarSequences.txt</span><br><span class="line">$ orthomclLoadBlast orthomcl.config.template similarSequences.txt.rmisoform</span><br><span class="line">$ orthomclPairs orthomcl.config.template orthomcl_pairs.log cleanup=no</span><br><span class="line">$ orthomclDumpPairsFiles orthomcl.config.template</span><br></pre></td></tr></table></figure>
-<h4 id="运行_OrthoMCL">运行 OrthoMCL</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mcl mclInput --abc -I <span class="number">1.1</span> -o mclOutput11</span><br><span class="line">$ orthomclMclToGroups ORYSA <span class="number">1</span> &lt; mclOutput11 &gt; groups11x.txt</span><br></pre></td></tr></table></figure>
-<h4 id="结果文件的使用">结果文件的使用</h4><h4 id="Reference">Reference</h4><ul>
-<li><a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=12952885" target="_blank" rel="external">Li,L. et al. (2003) OrthoMCL: identification of ortholog groups for eukaryotic genomes. Genome Res., 13, 2178–2189.</a></li>
-</ul>
-<p><br></p>
-<div align="center"><br><img src="http://daweih.github.io/images/wechat_small_black.jpg"><br></div></span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1239,7 +1278,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
