@@ -32,6 +32,9 @@ comments: false
 
 ![wechat](http://daweih.github.io/images/wechat_small.jpg)
 
+![wechat](https://www.icloud.com/sharedalbum/#B03GtnIORJPT1Lg;73CEAA3F-D0E4-4D66-8C7F-CF1829CDA6C7)
+
+
 #### 更多
 
 - [我的 github 页面](https://github.com/daweih)
