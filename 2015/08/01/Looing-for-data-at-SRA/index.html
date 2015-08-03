@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="theme-next  ">
+<html class="theme-next use-motion theme-next-mist">
 <head>
     
 
@@ -16,10 +16,14 @@
 
 
 
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
 
 
 
-<link rel="stylesheet" type="text/css" href="//main.css?v="/>
+  <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.4"/>
 
 
     <meta name="description" content="Dawei 的记事本" />
@@ -33,6 +37,8 @@
   <link rel="alternate" href="/atom.xml" title="东隅" type="application/atom+xml" />
 
 
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.4" />
 
 
 <meta name="description" content="主要数据存储的位置第二代测序的原始数据，一般会按照学术期刊的要求，在发表前，上到几个主要的数据库，包括：
@@ -75,8 +81,8 @@ EBI European Nucleotide Archive (ENA)
 
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
-    scheme: '',
-    sidebar: ''
+    scheme: 'Mist',
+    sidebar: 'post'
   };
 </script>
 
@@ -121,6 +127,50 @@ EBI European Nucleotide Archive (ENA)
 <nav class="site-nav">
   
 
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-home"></i> <br />
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-tags"></i> <br />
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-categories"></i> <br />
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-archives"></i> <br />
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/About" rel="section">
+            <i class="menu-item-icon icon-about"></i> <br />
+            About
+          </a>
+        </li>
+      
+    </ul>
   
 
   
@@ -345,30 +395,30 @@ EBI European Nucleotide Archive (ENA)
 
       <section class="site-overview">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="//default_avatar.jpg" alt="Dawei Huang" itemprop="image"/>
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="Dawei Huang" itemprop="image"/>
           <p class="site-author-name" itemprop="name">Dawei Huang</p>
         </div>
         <p class="site-description motion-element" itemprop="description">Dawei 的记事本</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
-            <a href="/">
+            <a href="/archives">
               <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
-            
+            <a href="/categories">
               <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">categories</span>
-              
+              </a>
           </div>
 
           <div class="site-state-item site-state-tags">
-            
+            <a href="/tags">
               <span class="site-state-item-count">40</span>
               <span class="site-state-item-name">tags</span>
-              
+              </a>
           </div>
 
         </nav>
@@ -419,7 +469,7 @@ EBI European Nucleotide Archive (ENA)
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#主要数据存储的位置"><span class="nav-text">主要数据存储的位置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过文章正文内的线索来寻找"><span class="nav-text">通过文章正文内的线索来寻找</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过数据库的分类系统来寻找，筛选"><span class="nav-text">通过数据库的分类系统来寻找，筛选</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过其他信息定位"><span class="nav-text">通过其他信息定位</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下载方法"><span class="nav-text">下载方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Reference"><span class="nav-text">Reference</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#主要数据存储的位置"><span class="nav-number">1.</span> <span class="nav-text">主要数据存储的位置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过文章正文内的线索来寻找"><span class="nav-number">2.</span> <span class="nav-text">通过文章正文内的线索来寻找</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过数据库的分类系统来寻找，筛选"><span class="nav-number">3.</span> <span class="nav-text">通过数据库的分类系统来寻找，筛选</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过其他信息定位"><span class="nav-number">4.</span> <span class="nav-text">通过其他信息定位</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下载方法"><span class="nav-number">5.</span> <span class="nav-text">下载方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Reference"><span class="nav-number">6.</span> <span class="nav-text">Reference</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
@@ -455,7 +505,7 @@ EBI European Nucleotide Archive (ENA)
 <div class="theme-info">
   Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT
+    NexT.Mist
   </a>
 </div>
 
@@ -466,7 +516,7 @@ EBI European Nucleotide Archive (ENA)
     <div class="back-to-top"></div>
 </div>
 
-<script type="text/javascript" src="//jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
   
@@ -489,23 +539,37 @@ EBI European Nucleotide Archive (ENA)
     })();
   </script>
     
+     
+  	  <script type="text/javascript">
+  		var duoshuo_user_ID = daweih
+  	  </script>
+     
+  	<script src="/js/ua-parser.min.js"></script>
+  	<script src="/js/hook-duoshuo.js"></script>
+  
 
     
   
   
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.4"></script>
 
-  <script type="text/javascript" src="//helpers.js?v="></script>
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.4"></script>
   
 
-  <script type="text/javascript" src="//motion_fallback.js?v=" id="motion.fallback"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.4" id="motion.global"></script>
 
 
 
-  <script type="text/javascript" src="//search-toggle.js"></script>
+  <script type="text/javascript" src="/js/search-toggle.js"></script>
 
 
   
-<script type="text/javascript" src="//bootstrap.scrollspy.js?v=" id="bootstrap.scrollspy.custom"></script>
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.4" id="bootstrap.scrollspy.custom"></script>
 
 
 <script type="text/javascript" id="sidebar.toc.highlight">
@@ -595,6 +659,51 @@ EBI European Nucleotide Archive (ENA)
 </script>
 
 
+  <script type="text/javascript" id="sidebar.nav">
+    $(document).ready(function () {
+      var html = $('html');
+
+      $('.sidebar-nav li').on('click', function () {
+        var item = $(this);
+        var activeTabClassName = 'sidebar-nav-active';
+        var activePanelClassName = 'sidebar-panel-active';
+        if (item.hasClass(activeTabClassName)) {
+          return;
+        }
+
+        var currentTarget = $('.' + activePanelClassName);
+        var target = $('.' + item.data('target'));
+
+        currentTarget.velocity('transition.slideUpOut', 200, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', 200)
+            .addClass(activePanelClassName);
+        });
+
+        item.siblings().removeClass(activeTabClassName);
+        item.addClass(activeTabClassName);
+      });
+
+      $('.post-toc a').on('click', function (e) {
+        e.preventDefault();
+        var offset = $(escapeSelector(this.getAttribute('href'))).offset().top;
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        });
+      });
+
+      // Expand sidebar on post detail page by default, when post has a toc.
+      var $tocContent = $('.post-toc-content');
+      if (isDesktop() && CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    });
+  </script>
+
 
 
 
@@ -614,11 +723,11 @@ EBI European Nucleotide Archive (ENA)
 
 
 <!-- lazyload -->
-<script type="text/javascript" src="//lazyload.js"></script>
+<script type="text/javascript" src="/js/lazyload.js"></script>
 <script type="text/javascript">
     jQuery(function () {
         jQuery("#posts img").lazyload({
-            placeholder: "//loading.gif",
+            placeholder: "/images/loading.gif",
             effect: "fadeIn"
         });
     });
