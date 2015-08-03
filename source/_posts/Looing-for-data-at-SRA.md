@@ -5,7 +5,6 @@ tags: [baby step, bioinformatics, NGS, SRA]
 categories: profession
 ---
 
-<br>
 <div align=center>
 <img src="http://daweih.github.io/images/sra.jpg">
 </div>
@@ -27,9 +26,11 @@ categories: profession
 
 这种情况下，发表的文章会直接给出数据提交到的数据库，数据的 accession。比如：
 
-> Author Information DNA sequencing data are deposited in the `European Nucleotide Archive` (http://www.ebi.ac.uk/ena/) under <u style="color:darkred">`accession numbers` ERP001143, ERP000729 and ERP000106.</u> De novo assembly and genome annotation of wild rice W1943, the genotype dataset of 1,529 rice accessions and the imputed dataset of 446 O. rufipogon accessions for GWAS are available at the Rice Haplotype Map Project database (http://www.ncgr.ac.cn/RiceHap3). [1]
+>DNA sequencing data are deposited in the `European Nucleotide Archive` (http://www.ebi.ac.uk/ena/) under <u style="color:darkred">`accession numbers` ERP001143, ERP000729 and ERP000106.</u> De novo assembly and genome annotation of wild rice W1943, the genotype dataset of 1,529 rice accessions and the imputed dataset of 446 O. rufipogon accessions for GWAS are available at the Rice Haplotype Map Project database (http://www.ncgr.ac.cn/RiceHap3). [1]
 
-> Accession codes. Raw sequences have been deposited in the EBI European Nucleotide Archive with <u style="color:darkred">accession number ERP000729 for worldwide rice germplasm (330 worldwide rice accessions: ERS037511–ERS037840)</u> and with accession number ERP000106 for Chinese rice landraces (100 newly added Chinese rice landraces: ERS039279–ERS039378). [2]
+再比如：
+
+>Accession codes. Raw sequences have been deposited in the EBI European Nucleotide Archive with <u style="color:darkred">accession number ERP000729 for worldwide rice germplasm (330 worldwide rice accessions: ERS037511–ERS037840)</u> and with accession number ERP000106 for Chinese rice landraces (100 newly added Chinese rice landraces: ERS039279–ERS039378). [2]
 
 #### 通过数据库的分类系统来寻找，筛选
 
@@ -54,7 +55,9 @@ categories: profession
  5. Illumina HiSeq 2000
  6. 30 samples. Total RNA was extracted from frozen plant material using the RNeasy Lipid Tissue Mini kit (QIAGEN, Hilden, Germany; http://www.qiagen.com/applications/plant). Illumina TruSeq RNA Sample Preparation Kits v2
 
-上面的信息的排列，我按照一一对应做了总结。比对之后，确信需要下载这个数据。
+上面的信息的排列，我按照一一对应做了总结。比对之后，确信这个数据和文章的对应关系。
+
+之后就可以把每个 SRA 文件的取样和实验信息整理成表，和发表的文章的信息做对照（这里就开始细活了）。
 
 #### 下载方法
 
