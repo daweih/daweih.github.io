@@ -16,14 +16,14 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[Test inframe]]></title>
-    <link href="http://daweih.github.io/2015/08/03/Test-inframe/"/>
-    <id>http://daweih.github.io/2015/08/03/Test-inframe/</id>
+    <title><![CDATA[Test iframe]]></title>
+    <link href="http://daweih.github.io/2015/08/03/Test-iframe/"/>
+    <id>http://daweih.github.io/2015/08/03/Test-iframe/</id>
     <published>2015-08-03T08:50:17.000Z</published>
     <updated>2015-08-03T08:50:17.000Z</updated>
-    <content type="html"><![CDATA[<iframe src="http://cat.big.ac.cn/lab_note/install_intermine_on_OSX10.9.html/index.html" style="border-color: rgb(221,221,221);border-width: 1px;border-style: solid;" width="1220" height="920" frameborder="0" scrolling="yes"></iframe>]]></content>
+    <content type="html"><![CDATA[<iframe src="http://cat.big.ac.cn/" style="border-color: rgb(221,221,221);border-width: 1px;border-style: solid;" width="1220" height="920" frameborder="0" scrolling="yes"></iframe>]]></content>
     <summary type="html">
-    <![CDATA[<iframe src="http://cat.big.ac.cn/lab_note/install_intermine_on_OSX10.9.html/index.html" style="border-color: rgb(221,221,221);border-width:]]>
+    <![CDATA[<iframe src="http://cat.big.ac.cn/" style="border-color: rgb(221,221,221);border-width: 1px;border-style: solid;" width="1220" height="920" ]]>
     </summary>
     
       <category term="baby step" scheme="http://daweih.github.io/tags/baby-step/"/>
