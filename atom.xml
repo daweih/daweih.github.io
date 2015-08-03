@@ -63,8 +63,7 @@
     <id>http://daweih.github.io/2015/08/01/Looing-for-data-at-SRA/</id>
     <published>2015-07-31T20:24:05.000Z</published>
     <updated>2015-08-02T19:24:05.000Z</updated>
-    <content type="html"><![CDATA[<p><br></p>
-<div align="center"><br><img src="http://daweih.github.io/images/sra.jpg"><br></div>
+    <content type="html"><![CDATA[<div align="center"><br><img src="http://daweih.github.io/images/sra.jpg"><br></div>
 
 <h4 id="主要数据存储的位置">主要数据存储的位置</h4><p>第二代测序的原始数据，一般会按照学术期刊的要求，在发表前，上到几个主要的数据库，包括：</p>
 <ul>
@@ -111,10 +110,9 @@
 <p><br></p>
 <div align="center"><br><img src="http://daweih.github.io/images/wechat_small_black.jpg"><br></div>]]></content>
     <summary type="html">
-    <![CDATA[<p><br></p>
-<div align="center"><br><img src="http://daweih.github.io/images/sra.jpg"><br></div>
+    <![CDATA[<div align="center"><br><img src="http://daweih.github.io/images/sra.jpg"><br></div>
 
-<h4 id="主要数据存储的位置">主要数据存储的位置</h4><p>第二代测序的]]>
+<h4 id="主要数据存储的位置">主要数据存储的位置</h4><p>第二代测序的原始数据，一般会按照学术]]>
     </summary>
     
       <category term="NGS" scheme="http://daweih.github.io/tags/NGS/"/>
