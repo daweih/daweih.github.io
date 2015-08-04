@@ -5,11 +5,6 @@ tags: [life, travel, tianjin, Friends, Forest, Larry, Vincent]
 categories: life
 ---
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
-<input type="range" name="test" id="loginCodonTable1" min="1" max="10" value="1">
-<div class="canvas" id="canvas"></div>
-<script src="(http://daweih.github.io/js/test.js" charset="utf-8"></script>
-
 周末去天津玩，按工作日通勤时间起床，一个小时的地铁，半个小时的火车，抵达。
 
 上一次去还是去欣赏`废 (háng) 铁 (mû`)，瞻仰`先贤祠堂`，间隔数年，心态大不同。
