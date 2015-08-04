@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9251e2a4ed312107c0b4ecc1857323ba5c502c81
 /* normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif; /* 1 */
@@ -186,8 +189,13 @@ th {
 }
 body {
   position: relative;
+<<<<<<< HEAD
   font-family:  Lato, "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   font-size: 18px;
+=======
+  font-family: Lato, "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 16px;
+>>>>>>> 9251e2a4ed312107c0b4ecc1857323ba5c502c81
   line-height: 1.8;
   color: #555;
   background: #fff;
@@ -1149,7 +1157,11 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
+<<<<<<< HEAD
   background: #40ddb5;
+=======
+  background: #54ffff;
+>>>>>>> 9251e2a4ed312107c0b4ecc1857323ba5c502c81
 }
 .sidebar-nav {
   margin: 0;
@@ -2285,5 +2297,8 @@ ul li {
   width: auto;
   margin: 0;
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 5185764e884506df4953e1f0e882bbc2e3bbb614
+=======
+>>>>>>> 9251e2a4ed312107c0b4ecc1857323ba5c502c81
