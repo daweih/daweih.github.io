@@ -21,11 +21,17 @@
     <id>http://daweih.github.io/2015/08/04/Coffee-Flavour-Wheel/</id>
     <published>2015-08-04T13:09:31.000Z</published>
     <updated>2015-08-04T13:09:31.000Z</updated>
-    <content type="html"><![CDATA[<p><script src="(http://daweih.github.io/js/coffee_flavour_wheel.js" charset="utf-8"></script></p>
-<div id="vis"></div>]]></content>
+    <content type="html"><![CDATA[<p>测试 D3 在 markdown 正文中是否正常使用。</p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+<div id="vis"></div>
+<script src="(http://daweih.github.io/js/coffee_flavour_wheel.js" charset="utf-8"></script>
+
+<p>本文结束。</p>
+]]></content>
     <summary type="html">
-    <![CDATA[<p><script src="(http://daweih.github.io/js/coffee_flavour_wheel.js" charset="utf-8"></script></p>
-<div id="vis"></div>]]>
+    <![CDATA[<p>测试 D3 在 markdown 正文中是否正常使用。</p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+<div id]]>
     </summary>
     
       <category term="baby step" scheme="http://daweih.github.io/tags/baby-step/"/>
