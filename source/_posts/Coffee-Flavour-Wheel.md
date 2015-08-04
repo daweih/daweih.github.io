@@ -9,7 +9,7 @@ categories: life
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
 
-<div align=center id="vis" style="font-size:14pt;font-family:helvetica;zoom:0.4;"></div>
+<div align=center id="vis" style="font-size:13pt;font-family:helvetica;zoom:0.4;"></div>
 
 <script src="http://daweih.github.io/js/coffee_flavour_wheel.js" charset="utf-8"></script>
 
