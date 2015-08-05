@@ -41,43 +41,41 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.4" />
 
 
-<meta name="description" content="为了测试 D3 在 markdown 正文中是否正常使用，移植了一个对咖啡风味轮的可视化，如下：
+<meta name="description" content="为了在 Hexo 系统的 markdown 正文中测试 D3 的可用性，移植了一个咖啡风味轮的可视化，如下：
+Coffee Flavour Wheel: Click to zoom.
 
 
 
+//    d3.select(&quot;div#vis&quot;).remove();
 
 
-
-目前，本地的 CSS 还是无法直接嵌入。需要 D3 直接写入 DOM。
-D3 在本站嵌入成功后，我会开始做一些可视化的学习笔记上来。这样，在笔记里面，就可以添加实时的演示了。
-本次嵌入的可视化来自这里。">
+123456&amp;lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/d3/3.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="移植可视化来测试本地嵌入 D3: Coffee Flavour Wheel">
 <meta property="og:url" content="http://daweih.github.io/2015/08/04/Coffee-Flavour-Wheel/index.html">
 <meta property="og:site_name" content="东隅">
-<meta property="og:description" content="为了测试 D3 在 markdown 正文中是否正常使用，移植了一个对咖啡风味轮的可视化，如下：
+<meta property="og:description" content="为了在 Hexo 系统的 markdown 正文中测试 D3 的可用性，移植了一个咖啡风味轮的可视化，如下：
+Coffee Flavour Wheel: Click to zoom.
 
 
 
+//    d3.select(&quot;div#vis&quot;).remove();
 
 
-
-目前，本地的 CSS 还是无法直接嵌入。需要 D3 直接写入 DOM。
-D3 在本站嵌入成功后，我会开始做一些可视化的学习笔记上来。这样，在笔记里面，就可以添加实时的演示了。
-本次嵌入的可视化来自这里。">
+123456&amp;lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/d3/3.">
+<meta property="og:image" content="http://daweih.github.io/images/wechat_small_black.jpg">
 <meta property="og:updated_time" content="2015-08-04T13:09:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="移植可视化来测试本地嵌入 D3: Coffee Flavour Wheel">
-<meta name="twitter:description" content="为了测试 D3 在 markdown 正文中是否正常使用，移植了一个对咖啡风味轮的可视化，如下：
+<meta name="twitter:description" content="为了在 Hexo 系统的 markdown 正文中测试 D3 的可用性，移植了一个咖啡风味轮的可视化，如下：
+Coffee Flavour Wheel: Click to zoom.
 
 
 
+//    d3.select(&quot;div#vis&quot;).remove();
 
 
-
-目前，本地的 CSS 还是无法直接嵌入。需要 D3 直接写入 DOM。
-D3 在本站嵌入成功后，我会开始做一些可视化的学习笔记上来。这样，在笔记里面，就可以添加实时的演示了。
-本次嵌入的可视化来自这里。">
+123456&amp;lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/d3/3.">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -234,7 +232,7 @@ D3 在本站嵌入成功后，我会开始做一些可视化的学习笔记上�
           <span class="post-category" >
             &nbsp; | &nbsp; In
             
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/life/" itemprop="url" rel="index"><span itemprop="name">life</span></a></span>
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/profession/" itemprop="url" rel="index"><span itemprop="name">profession</span></a></span>
 
               
               
@@ -262,16 +260,30 @@ D3 在本站嵌入成功后，我会开始做一些可视化的学习笔记上�
       
 
       
-        <span itemprop="articleBody"><p>为了测试 <code>D3</code> 在 <code>markdown</code> 正文中是否正常使用，移植了一个对咖啡风味轮的可视化，如下：</p>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
-
+        <span itemprop="articleBody"><p>为了在 Hexo 系统的 <code>markdown</code> 正文中测试 <code>D3</code> 的可用性，移植了一个<code>咖啡风味轮</code>的可视化，如下：</p>
+<h4 id="Coffee_Flavour_Wheel:_Click_to_zoom-">Coffee Flavour Wheel: Click to zoom.</h4><script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
 <div align="center" id="vis" style="font-size:13pt;font-family:helvetica;zoom:0.4;"></div>
-
 <script src="http://daweih.github.io/js/coffee_flavour_wheel.js" charset="utf-8"></script>
+<script>
+//    d3.select("div#vis").remove();
+</script>
 
-<p>目前，本地的 <code>CSS</code> 还是无法直接嵌入。需要 D3 直接写入 <code>DOM</code>。</p>
-<p><code>D3</code> 在本站嵌入成功后，我会开始做一些可视化的学习笔记上来。这样，在笔记里面，就可以添加实时的演示了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;script src=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"</span> charset=<span class="string">"utf-8"</span>&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;div align=center id=<span class="string">"vis"</span> style=<span class="string">"font-size:13pt;font-family:helvetica;zoom:0.4;"</span>&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;script src=<span class="string">"http://daweih.github.io/js/coffee_flavour_wheel.js"</span> charset=<span class="string">"utf-8"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="代码注释：">代码注释：</h4><ul>
+<li>第一行装载 <code>D3</code> 包。</li>
+<li>第二行，插入绘图区域，这里的绘图区域是用 <code>div#viz</code> 来定位并操作</li>
+<li>第三行，引用绘图用代码，保存在 <code>Hexo</code> 博客系统的 <code>js</code> 文件夹下，会被同步到 github。当然你也可以通过用 <code>&lt;script&gt;&lt;/script&gt;</code> 直接嵌入本页。个人更推荐单独存放，避免 markdown 页面太长。</li>
+</ul>
+<h4 id="编写小贴士">编写小贴士</h4><ul>
+<li>对 DOM 的 <code>attr</code> 和 <code>style</code> 编写，更改无需 <code>hexo d</code>, <code>hexo d</code>，就可以在 <code>hexo s</code> 开启状态的浏览器中查看。对于写可视化代码需要经常看变化的情况，可以省去前述的两步。</li>
+<li>使用 <code>hexo s</code> 测试中，代码需要写在页面内测试。因为 gihub 处的代码改动需要 <code>git commit</code>, <code>git push</code> 之后才会生效。如果每次改动后都进行前面 2 项操作，则无妨。这里的问题在于，<code>hexo s</code> 状态下，无法引用本地的文件。这个问题在图片的引用代码中，也是让人不爽。</li>
+<li>重复使用的 js 代码，尽量放在一处，引用到每个页面，减少维护的复杂度。</li>
+</ul>
+<p>目前，文章页面的 <code>CSS</code> 还是无法通过嵌入正文生效。需要 D3 直接写入 <code>DOM</code> 的属性。</p>
+<p><code>D3</code> 在本站嵌入成功后，我就可以做一些可视化的学习笔记。这样，在笔记里面，就可以添加实时的演示了。</p>
 <p>本次嵌入的可视化来自<a href="http://www.jasondavies.com/coffee-wheel/" target="_blank" rel="external">这里</a>。</p>
+<p><br></p>
+<div align="center"><br><img src="http://daweih.github.io/images/wechat_small_black.jpg"><br></div>
 </span>
       
     </div>
@@ -433,7 +445,7 @@ D3 在本站嵌入成功后，我会开始做一些可视化的学习笔记上�
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">This post does not have a Table Of Contents</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Coffee_Flavour_Wheel:_Click_to_zoom-"><span class="nav-number">1.</span> <span class="nav-text">Coffee Flavour Wheel: Click to zoom.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码注释："><span class="nav-number">2.</span> <span class="nav-text">代码注释：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编写小贴士"><span class="nav-number">3.</span> <span class="nav-text">编写小贴士</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
