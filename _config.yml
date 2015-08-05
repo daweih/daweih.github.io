@@ -88,6 +88,12 @@ duoshuo_shortname: daweih
 plugins:
 - hexo-generator-feed
 
+feed:
+  type: atom
+  path: atom.xml
+  limit: 5
+
+
 plugins:
 - hexo-generator-sitemap
 
