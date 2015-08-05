@@ -86,8 +86,8 @@ social:
 duoshuo_shortname: daweih
 
 plugins:
-- hexo-generator-sitemap
+- hexo-generator-feed
 
 plugins:
-- hexo-generator-feed
+- hexo-generator-sitemap
 
