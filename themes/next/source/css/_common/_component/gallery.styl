@@ -1,14 +1,13 @@
 .post-gallery {
   display: table;
-  table-layout: fixed;
-  width: 100%;
+  border-spacing: 10px;
   border-collapse: separate;
 }
-
-.post-gallery-row { display: table-row; }
-
-.post-gallery .post-gallery-img {
+.post-gallery a {
   display: table-cell;
+  float: left;
+  width: 33%;
+  height: 130px;
   text-align: center;
   vertical-align: middle;
   border: none;
@@ -20,4 +19,6 @@
   border: none;
 }
 
-.fancybox-close, .fancybox-close:hover { border: none; }
+.fancybox-close, .fancybox-close:hover {
+  border: none;
+}
