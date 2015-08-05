@@ -84,3 +84,6 @@ social:
   douban: http://www.douban.com/people/4878302/  
   
 duoshuo_shortname: daweih
+
+plugins:
+- hexo-generator-sitemap
