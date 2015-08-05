@@ -97,3 +97,9 @@ feed:
 plugins:
 - hexo-generator-sitemap
 
+# title, chinese available
+links_title: Links
+# links
+links:
+  CBB: http://cbb.big.ac.cn
+  IC4R: http://ic4r.org
