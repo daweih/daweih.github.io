@@ -87,3 +87,5 @@ duoshuo_shortname: daweih
 
 plugins:
 - hexo-generator-sitemap
+- hexo-generator-feed
+
