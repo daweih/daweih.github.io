@@ -101,6 +101,6 @@ plugins:
 links_title: Links
 # links
 links:
-  IC4R: http://ic4r.org
+  IC4R: http://ic4r.org 水稻数据库
   Cloud CAT: http://cat.big.ac.cn
   
