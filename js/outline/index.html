@@ -1,0 +1,710 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title></title>
+<script type="text/javascript" src="http://daweih.github.io/js/outliner.js"></script><style type="text/css">
+			
+                        img.status {
+                        margin-left: 2px; margin-right: 2px; margin-top: 2px; height: 11px; width: 11px;
+                        }
+                        
+                        img.checkbox-column {
+                        height: 11px; width: 11px; vertical-align: top; margin-top: 3px;
+                        }
+                        
+                        img.leaf {
+                        margin-left: 3px; margin-right:3px; margin-top: 2px; margin-bottom: 3px; height: 6px; width 6px;
+                        }
+                        
+                        img.parent {
+                        margin-left: 3px; margin-right:3px; margin-top: 2px; height: 10px; width: 10px;
+                        }
+			
+			th {
+			vertical-align: bottom;
+			
+			}
+			
+			td {
+			vertical-align: top;
+			}
+			
+			td,th {
+			
+			empty-cells: show;
+			}
+			
+			.top-right-border {
+			
+			}
+			
+			.no-border {
+			border-bottom: 0px;
+			border-left: 0px;
+			}
+			
+			
+			
+			
+			table {
+			
+			font-family: Helvetica, sans-serif;
+			font-size: 12px;
+			font-family: "Helvetica Neue", sans-serif;  font-size: 13px;			
+			
+			}
+
+			
+			
+			.wholeDocument {
+			font-family: "Helvetica Neue", sans-serif;  font-size: 13px;
+	
+			}
+		
+			
+			td.subcell {
+			border: none;
+			}
+			
+			td.content {
+			padding-left: 4px;
+			padding-bottom: 2px;
+			padding-top: 1px;
+			padding-right: 3px;
+			}
+			
+			.full {
+			height: 100%;
+			}
+			
+			.heighthack {
+                        
+                            height: 25px;
+                            
+			}
+			
+			div.titlepadding { 
+			padding-right:3px;
+			padding-left:6px;
+			padding-bottom:3px;
+			padding-top: 2px;
+			}
+			
+			
+					.summary_node {
+						background: rgba(0,0,0,.12);
+						margin-bottom: 1px;
+					}
+				
+			
+			div.column {   
+			padding-right: 3px;
+			padding-left: 4px;
+			padding-top: 0px;
+			padding-bottom: 0px;
+			margin-right: 1px;
+			}
+			
+			.labelpadding {
+			padding-right: 3px;
+			padding-top: 1px;
+			padding-left: 2px;
+			}
+			
+			.indicator {
+			white-space: nowrap;
+			text-align:right;
+			margin-right: 0px;
+			vertical-align: top;
+			padding-top: 1px;
+			padding-left: 0px;
+			}
+			
+			.wholedocgutter {
+			
+			}
+			
+			div.row {
+			}
+			
+			div.headerRow {
+			}
+			
+			.expanded {
+			display: inline;
+			}
+			.collapsed {
+			display: none;
+			}
+			
+            div.palette-hit-zone {
+                position: fixed;
+                bottom: 0px;
+				height: 33%;
+                left:50%;
+                width: 66%;
+                margin-left: -33%;
+            }
+
+			div.floating-palette {
+                -webkit-border-radius: 5px;
+                -webkit-transition: opacity is fade-in-out;
+                -webkit-transition-duration: 1s;
+				background-color: rgb(64, 64, 64);
+                opacity:0.7;
+				width: 88px;
+				height: 44px;
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                margin-left: -44px;
+			}
+            
+            div.palette-cell {
+                opacity:1;
+                margin-top: 6px;
+                margin-bottom: 6px;
+                position: absolute;
+                height: 32px;
+                width: 32px;
+            }
+            
+            div.cell-divider {
+                position: absolute;
+                margin-top: 6px;
+                margin-bottom: 6px;
+                margin-left: 44px;
+                height: 32px;
+                width:0px;
+                position:absolute;
+                left:0px;
+                border-right:rgb(207, 207, 207) 2px solid;
+            }
+			
+			
+			
+			
+			.note { 
+			padding-left: 5px;
+			padding-right: 3px; 
+			border: none; 
+			color:rgb(84,84,84) ;  font-size: 11px;font-size: 11px;
+			}
+			
+			/* Total table width is 878
+			Adjusted table width is 930 */
+			
+			.wholething {
+				width: auto;
+			}
+			
+			
+			table.row {
+				
+						width: 878px;
+						
+			
+			}
+			
+			
+    .col_width1 { 
+        width: 878px;  /* Actual width is 878 */
+    }
+
+    .col1 { 
+        
+    }
+
+    .colbackground1 { 
+        
+    }
+
+			
+			/* Level Styles */
+			
+			
+    .columntitle { 
+        font-weight: 600;  
+    }
+
+    .ns-Heading-1 { 
+        color:rgb(50,50,50) ;  font-family: "Helvetica Neue", sans-serif;  font-weight: 300;  font-size: 30px;}
+
+    .ns-Heading-2 { 
+        color:rgb(50,50,50) ;  font-family: "Helvetica Neue", sans-serif;  font-size: 18px;}
+
+    .ns-Heading-3 { 
+        font-family: "Helvetica Neue", sans-serif;  font-weight: 600;  font-size: 13px;}
+
+    .ns-Highlight:-Yellow { 
+        }
+
+    .ns-Highlight:-Red { 
+        }
+
+    .ns-Highlight:-Green { 
+        }
+
+    .ns-Purple { 
+        color:rgb(150,97,207) ;  }
+
+    .ns-Blue { 
+        color:rgb(58,142,237) ;  }
+
+    .ns-Bondi { 
+        color:rgb(0,191,192) ;  }
+
+    .ns-Green { 
+        color:rgb(103,187,53) ;  }
+
+    .ns-Yellow { 
+        color:rgb(255,187,0) ;  }
+
+    .ns-Orange { 
+        color:rgb(255,144,77) ;  }
+
+    .ns-Red { 
+        color:rgb(242,96,119) ;  }
+
+    .ns-Graphite { 
+        color:rgb(107,124,165) ;  }
+
+    .ns-bg-Heading-1 { 
+        }
+
+    .ns-bg-Heading-2 { 
+        }
+
+    .ns-bg-Heading-3 { 
+        }
+
+    .ns-bg-Highlight:-Yellow { 
+        background-color:rgba(255,187,0,0.25) ;  }
+
+    .ns-bg-Highlight:-Red { 
+        background-color:rgba(242,96,119,0.25) ;  }
+
+    .ns-bg-Highlight:-Green { 
+        background-color:rgba(103,187,53,0.25) ;  }
+
+    .ns-bg-Purple { 
+        }
+
+    .ns-bg-Blue { 
+        }
+
+    .ns-bg-Bondi { 
+        }
+
+    .ns-bg-Green { 
+        }
+
+    .ns-bg-Yellow { 
+        }
+
+    .ns-bg-Orange { 
+        }
+
+    .ns-bg-Red { 
+        }
+
+    .ns-bg-Graphite { 
+        }
+
+    .ns-gutter-Heading-1 { 
+        }
+
+    .ns-gutter-Heading-2 { 
+        }
+
+    .ns-gutter-Heading-3 { 
+        }
+
+    .ns-gutter-Highlight:-Yellow { 
+        }
+
+    .ns-gutter-Highlight:-Red { 
+        }
+
+    .ns-gutter-Highlight:-Green { 
+        }
+
+    .ns-gutter-Purple { 
+        }
+
+    .ns-gutter-Blue { 
+        }
+
+    .ns-gutter-Bondi { 
+        }
+
+    .ns-gutter-Green { 
+        }
+
+    .ns-gutter-Yellow { 
+        }
+
+    .ns-gutter-Orange { 
+        }
+
+    .ns-gutter-Red { 
+        }
+
+    .ns-gutter-Graphite { 
+        }
+</style>
+</head>
+<body class="wholeDocument"><table cellspacing="0" cellpadding="0" class="top-right-border"><tr><td class="wholething no-border">
+<!--Column Titles--><table cellspacing="0" border="0" cellpadding="0" class="headerRow heighthack"><tr><td class=" colbackground1 col_width1"><div class="columntitle titlepadding">Topic<br>
+</div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1" style=" width: 1px; "></td>
+<td class=" content level1 subcell">Raw data download<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1" style="width: 15px;"><img onmousedown="ioSwitch('pn9Cr4BPjkMA', event.shiftKey)" id="in9Cr4BPjkMA" border="0" alt="&gt;" class="parent" src="Collapsed.png" title="expand"></td>
+<td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1" style=" width: 1px; "></td>
+<td class=" content level1 subcell">1 .sra-.fastq<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pn9Cr4BPjkMA" class="collapsed"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell"> fastq-dump  --split-3  1.sra<br>
+</td>
+</tr></table></div></td></tr></table></div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+<tr><td class=" col1 colbackground1 col_width1" style="border-bottom: none;"><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1" style="width: 15px;"><img onmousedown="ioSwitch('piRzLUn2Emkk', event.shiftKey)" id="iiRzLUn2Emkk" border="0" alt="&gt;" class="parent" src="Collapsed.png" title="expand"></td>
+<td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1" style=" width: 1px; "></td>
+<td class=" content level1 subcell">2 fastq quality filter: <span class="" style="font-weight: 900;  ">Fastx-toolkit</span><br>
+</td>
+</tr></table></div></td></tr>
+<tr><td class=" level1 colbackground1"><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="width:100%"><tr>
+<td style="width: 9px;" class=" subcell wholedocgutter levelguttercolor1"></td>
+<td class=" subcell wholedocgutter levelguttercolor1" style="width: 15px;"></td>
+<td class=" subcell labelpadding wholedocgutter levelguttercolor1 level1" style=" color: rgba(0,0,0,0); width: 1px; "></td>
+<td class=" subcell" style="width: 16px;"></td>
+<td class="note subcell"> <span><a href="http://hannonlab.cshl.edu/fastx_toolkit/">http://hannonlab.cshl.edu/fastx_toolkit/</a></span><br>
+</td>
+</tr></table></div></td></tr>
+</table>
+<div id="piRzLUn2Emkk" class="collapsed">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">usage: fastq_quality_trimmer [-h] [-v] [-t N] [-l N] [-z] [-i INFILE] [-o OUTFILE]<br>Part of FASTX Toolkit 0.0.13 by A. Gordon ( <span><a href="mailto:gordon@cshl.edu">gordon@cshl.edu</a></span>)<br><br>   [-h]         = This helpful help screen.<br>   [-t N]       = Quality threshold - nucleotides with lower <br>                  quality will be trimmed (from the end of the sequence).<br>   [-l N]       = <span class="" style="font-weight: 900;  ">Minimum length</span> - sequences shorter than this (after trimming)<br>                  will be discarded. Default = 0 = no minimum length. <br>   [-z]         = Compress output with GZIP.<br>   [-i INFILE]  = FASTQ input file. default is STDIN.<br>   [-o OUTFILE] = FASTQ output file. default is STDOUT.<br>   [-v]         = Verbose - report number of sequences.<br>                  If [-o] is specified,  report will be printed to STDOUT.<br>                  If [-o] is not specified (and output goes to STDOUT),<br>                  report will be printed to STDERR.<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">usage: fastq_quality_filter [-h] [-v] [-q N] [-p N] [-z] [-i INFILE] [-o OUTFILE]<br>Part of FASTX Toolkit 0.0.13 by A. Gordon ( <span><a href="mailto:gordon@cshl.edu">gordon@cshl.edu</a></span>)<br><br>   [-h]         = This helpful help screen.<br>   [-q N]       = Minimum quality score to keep.<br>   [-p N]       = Minimum percent of bases that must have [-q] quality.<br>   [-z]         = Compress output with GZIP.<br>   [-i INFILE]  = FASTA/Q input file. default is STDIN.<br>   [-o OUTFILE] = FASTA/Q output file. default is STDOUT.<br>   [-v]         = Verbose - report number of sequences.<br>                  If [-o] is specified,  report will be printed to STDOUT.<br>                  If [-o] is not specified (and output goes to STDOUT),<br>                  report will be printed to STDERR.<br><br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">fastq_quality_trimmer -t 20 -l 40 -Q 33 -i ERR1_1.fastq -o 1_1_trimmer.fastq -v<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">fastq_quality_filter  -q 20 -p 50 -Q 33 -i 1_1_trimmer.fastq  -o 1_1_1.fastq -v<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">pairmate.pl<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+<tr><td class=" col1 colbackground1 col_width1" style="border-bottom: none;"><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1" style="width: 15px;"><img onmousedown="ioSwitch('payIY4Ua4iXD', event.shiftKey)" id="iayIY4Ua4iXD" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1" style=" width: 1px; "></td>
+<td class=" content level1 subcell">3 ref index: <span class="" style="font-weight: 900;  ">BWA</span><br>
+</td>
+</tr></table></div></td></tr>
+<tr><td class=" level1 colbackground1"><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="width:100%"><tr>
+<td style="width: 9px;" class=" subcell wholedocgutter levelguttercolor1"></td>
+<td class=" subcell wholedocgutter levelguttercolor1" style="width: 15px;"></td>
+<td class=" subcell labelpadding wholedocgutter levelguttercolor1 level1" style=" color: rgba(0,0,0,0); width: 1px; "></td>
+<td class=" subcell" style="width: 16px;"></td>
+<td class="note subcell"> <span><a href="http://bio-bwa.sourceforge.net/">http://bio-bwa.sourceforge.net</a></span><br>paper: <span class="" style="color:rgb(0,0,0) ;  font-size: 13px;"> <span><a href="x-devonthink-item://40E5CEFF-7F6A-4C5B-9087-C8A3FD7A8D64">Fast and accurate long-read alignment with Burrows-Wheeler transform.pdf</a></span></span><span class="" style="color:rgb(0,0,0) ;  font-size: 13px;">, </span><span class="" style="color:rgb(0,0,0) ;  font-size: 13px;"> <span><a href="x-devonthink-item://69BDEA59-126D-42EC-8F3B-9442DEA50114">Fast and accurate short read alignment with Burrows-Wheeler transform.pdf</a></span></span><br>
+</td>
+</tr></table></div></td></tr>
+</table>
+<div id="payIY4Ua4iXD" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">bwa index -a bwtsw ref.fasta<br>
+</td>
+</tr></table></div></td></tr></table></div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1" style="width: 15px;"><img onmousedown="ioSwitch('pjMdbFh-bJYD', event.shiftKey)" id="ijMdbFh-bJYD" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1" style=" width: 1px; "></td>
+<td class=" content level1 subcell">4 aln (paired-end reads)<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pjMdbFh-bJYD" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">bwa aln -e 10 -t 4 ref.fasta 1_1_1.fastq -f 1_1_1.sai<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">bwa aln -e 10 -t 4 ref.fasta 1_1_2.fastq -f 1_1_2.sai <br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1" style="width: 15px;"><img onmousedown="ioSwitch('pdVyceWBO3SH', event.shiftKey)" id="idVyceWBO3SH" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1" style=" width: 1px; "></td>
+<td class=" content level1 subcell">5 .sai-.sam<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pdVyceWBO3SH" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">bwa sampe  -a 700 ref.fasta 1_1_1.sai 1_1_2.sai 1_1_1.fastq 1_1_2.fastq -f 1.sam<br>
+</td>
+</tr></table></div></td></tr></table></div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+<tr><td class=" col1 colbackground1 col_width1" style="border-bottom: none;"><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1" style="width: 15px;"><img onmousedown="ioSwitch('ph1846sAYoCj', event.shiftKey)" id="ih1846sAYoCj" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1" style=" width: 1px; "></td>
+<td class=" content level1 subcell">6 delete unmapped reads: <span class="" style="font-weight: 900;  ">SAMtools</span><br>
+</td>
+</tr></table></div></td></tr>
+<tr><td class=" level1 colbackground1"><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="width:100%"><tr>
+<td style="width: 9px;" class=" subcell wholedocgutter levelguttercolor1"></td>
+<td class=" subcell wholedocgutter levelguttercolor1" style="width: 15px;"></td>
+<td class=" subcell labelpadding wholedocgutter levelguttercolor1 level1" style=" color: rgba(0,0,0,0); width: 1px; "></td>
+<td class=" subcell" style="width: 16px;"></td>
+<td class="note subcell"> <span><a href="http://www.htslib.org/">http://www.htslib.org</a></span><br><span class="" style="color:rgb(0,0,0) ;  font-size: 13px;">paper: </span><span class="" style="color:rgb(0,0,0) ;  font-size: 13px;"> <span><a href="x-devonthink-item://F036287E-2023-478D-B31A-0E554C7A40FD">The Sequence Alignment/Map format and SAMtools.pdf</a></span></span><br><span class="" style="color:rgb(0,0,0) ;  font-size: 13px;">publications: </span><span class="" style="color:rgb(0,0,0) ;  font-size: 13px;"> <span><a href="http://www.htslib.org/doc/">http://www.htslib.org/doc/</a></span></span><br>
+</td>
+</tr></table></div></td></tr>
+</table>
+<div id="ph1846sAYoCj" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">samtools view -SF 4 1.sam &gt; 1.F.sam<br>
+</td>
+</tr></table></div></td></tr></table></div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+<tr><td class=" col1 colbackground1 col_width1" style="border-bottom: none;"><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1" style="width: 15px;"><img onmousedown="ioSwitch('plLVXocXqgHD', event.shiftKey)" id="ilLVXocXqgHD" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1" style=" width: 1px; "></td>
+<td class=" content level1 subcell">7 create dictionary of ref: <span class="" style="font-weight: 900;  ">Picard-tools</span><br>
+</td>
+</tr></table></div></td></tr>
+<tr><td class=" level1 colbackground1"><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="width:100%"><tr>
+<td style="width: 9px;" class=" subcell wholedocgutter levelguttercolor1"></td>
+<td class=" subcell wholedocgutter levelguttercolor1" style="width: 15px;"></td>
+<td class=" subcell labelpadding wholedocgutter levelguttercolor1 level1" style=" color: rgba(0,0,0,0); width: 1px; "></td>
+<td class=" subcell" style="width: 16px;"></td>
+<td class="note subcell"> <span><a href="http://broadinstitute.github.io/picard/">http://broadinstitute.github.io/picard/</a></span><br> <span><a href="https://github.com/broadinstitute/picard">https://github.com/broadinstitute/picard</a></span><br>
+</td>
+</tr></table></div></td></tr>
+</table>
+<div id="plLVXocXqgHD" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">java -jar picard.jar CreateSequenceDictionary OUTPUT=ref.sam R=ref.fasta<br>
+</td>
+</tr></table></div></td></tr></table></div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1" style="width: 15px;"><img onmousedown="ioSwitch('palHMJGsUs8y', event.shiftKey)" id="ialHMJGsUs8y" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1" style=" width: 1px; "></td>
+<td class=" content level1 subcell">8 unsorted_file.sam<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="palHMJGsUs8y" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">cat ref.sam &gt; unsorted_file.sam &amp;&amp; cat 1.F.sam &gt;&gt; unsorted_file.sam<br>
+</td>
+</tr></table></div></td></tr></table></div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1" style="width: 15px;"><img onmousedown="ioSwitch('ppzEFo7HblLA', event.shiftKey)" id="ipzEFo7HblLA" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1" style=" width: 1px; "></td>
+<td class=" content level1 subcell">9 sort<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="ppzEFo7HblLA" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">java -jar picard.jar SortSam INPUT= unsorted_file.sam OUTPUT=1.sorted.sam SO=coordinate<br>
+</td>
+</tr></table></div></td></tr></table></div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1" style="width: 15px;"><img onmousedown="ioSwitch('pcHX6abo7ZuV', event.shiftKey)" id="icHX6abo7ZuV" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1" style=" width: 1px; "></td>
+<td class=" content level1 subcell">10 .sam-.bam<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pcHX6abo7ZuV" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">samtools view -bS 1.sorted.sam -o 1.bam<br>
+</td>
+</tr></table></div></td></tr></table></div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1" style="width: 15px;"><img onmousedown="ioSwitch('peLLxEwYaiH6', event.shiftKey)" id="ieLLxEwYaiH6" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1" style=" width: 1px; "></td>
+<td class=" content level1 subcell">11 addhead<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="peLLxEwYaiH6" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">java -jar picard.jar AddOrReplaceReadGroups I=1.bam O=1.addhead.bam ID=i_1ID LB=i_1ID    PL=Illumina  PU=i_1PU SM=i_1<br>
+</td>
+</tr></table></div></td></tr></table></div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1" style="width: 15px;"><img onmousedown="ioSwitch('pdq2jktjpsp6', event.shiftKey)" id="idq2jktjpsp6" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1" style=" width: 1px; "></td>
+<td class=" content level1 subcell">12 merge <br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pdq2jktjpsp6" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">java -jar picard.jar MergeSamFiles INPUT=1.addhead.bam INPUT=2.addhead.bam OUTPUT=i_1.bam<br>
+</td>
+</tr></table></div></td></tr></table></div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1" style="width: 15px;"><img onmousedown="ioSwitch('pksFuzHfvLsy', event.shiftKey)" id="iksFuzHfvLsy" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1" style=" width: 1px; "></td>
+<td class=" content level1 subcell">13 deduplicate<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pksFuzHfvLsy" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">java -jar picard.jar MarkDuplicates MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 INPUT=i_1.bam     OUTPUT=i_1.dedup.bam METRICS_FILE=i_1.dedup.metrics<br>
+</td>
+</tr></table></div></td></tr></table></div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+<tr><td class=" col1 colbackground1 col_width1" style="border-bottom: none;"><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1" style="width: 15px;"><img onmousedown="ioSwitch('pey-YoHnQkbi', event.shiftKey)" id="iey-YoHnQkbi" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1" style=" width: 1px; "></td>
+<td class=" content level1 subcell">14 realign: <span class="" style="font-weight: 900;  ">GATK</span><br>
+</td>
+</tr></table></div></td></tr>
+<tr><td class=" level1 colbackground1"><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="width:100%"><tr>
+<td style="width: 9px;" class=" subcell wholedocgutter levelguttercolor1"></td>
+<td class=" subcell wholedocgutter levelguttercolor1" style="width: 15px;"></td>
+<td class=" subcell labelpadding wholedocgutter levelguttercolor1 level1" style=" color: rgba(0,0,0,0); width: 1px; "></td>
+<td class=" subcell" style="width: 16px;"></td>
+<td class="note subcell">
+<span class="" style="color:rgb(0,0,0) ;  font-size: 13px;">paper: </span><span class="" style="color:rgb(0,0,0) ;  font-size: 13px;"> <span><a href="x-devonthink-item://FE26030D-DAB8-404D-B16D-FCC8401F9347">The Genome Analysis Toolkit-A MapReduce framework for analyzing next-generation DNA sequencing data.pdf</a></span></span><br><span class="" style="color:rgb(0,0,0) ;  font-size: 13px;"> <span><a href="https://www.broadinstitute.org/gatk/">https://www.broadinstitute.org/gatk/</a></span></span><br>
+</td>
+</tr></table></div></td></tr>
+</table>
+<div id="pey-YoHnQkbi" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">samtools index i_1.dedup.bam;<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">java -jar GenomeAnalysisTK.jar -R ref.fasta -T RealignerTargetCreator -o i_1.realn.intervals -I i_1.dedup.bam;<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">java -jar GenomeAnalysisTK.jar -R ref.fasta -T IndelRealigner -targetIntervals i_1.realn.intervals -o i_1.realn.bam <br>    -I i_1.dedup.bam;<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1" style="width: 15px;"><img onmousedown="ioSwitch('pny9Ht51Owup', event.shiftKey)" id="iny9Ht51Owup" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1" style=" width: 1px; "></td>
+<td class=" content level1 subcell">15 variant calling<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pny9Ht51Owup" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">java -jar GenomeAnalysisTK.jar -glm SNP -l INFO -R ref.fasta -T UnifiedGenotyper -I i_1.dedup.bam -o i_1.vcf <br>    --output_mode EMIT_ALL_SITES -stand_emit_conf 10 -stand_call_conf 50<br>
+</td>
+</tr></table></div></td></tr></table></div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+<tr><td class=" col1 colbackground1 col_width1" style="border-bottom: none;"><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1" style="width: 15px;"><img onmousedown="ioSwitch('pjn8FUka_GcA', event.shiftKey)" id="ijn8FUka_GcA" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1" style=" width: 1px; "></td>
+<td class=" content level1 subcell">16 vcftools filter: <span class="" style="font-weight: 900;  ">vcftools</span><br>
+</td>
+</tr></table></div></td></tr>
+<tr><td class=" level1 colbackground1"><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="width:100%"><tr>
+<td style="width: 9px;" class=" subcell wholedocgutter levelguttercolor1"></td>
+<td class=" subcell wholedocgutter levelguttercolor1" style="width: 15px;"></td>
+<td class=" subcell labelpadding wholedocgutter levelguttercolor1 level1" style=" color: rgba(0,0,0,0); width: 1px; "></td>
+<td class=" subcell" style="width: 16px;"></td>
+<td class="note subcell">
+<span class="" style="color:rgb(0,0,0) ;  font-size: 13px;"> <span><a href="x-devonthink-item://B7B849AB-2E2F-45DB-957D-C065FACBB70D">VCF Manual</a></span></span><br><span class="" style="color:rgb(0,0,0) ;  font-size: 13px;"> <span><a href="http://vcftools.sourceforge.net/index.html">http://vcftools.sourceforge.net/index.html</a></span></span><br><span class="" style="color:rgb(0,0,0) ;  font-size: 13px;">paper: </span><span class="" style="color:rgb(0,0,0) ;  font-size: 13px;"> <span><a href="x-devonthink-item://76342EF0-F512-4222-872A-4CCCF164F948">The variant call format and VCFtools.pdf</a></span></span><br>
+</td>
+</tr></table></div></td></tr>
+</table>
+<div id="pjn8FUka_GcA" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">vcftools --vcf i_1.vcf --out SNPs_only --remove-indels --minQ 30 --thin 10 --min-alleles 2 --max-alleles 2  <br>    --kept-sites ;<br>
+</td>
+</tr></table></div></td></tr></table></div>
+</td></tr></table></body>
+</html>
