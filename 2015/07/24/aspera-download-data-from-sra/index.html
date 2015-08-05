@@ -1,0 +1,740 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+    
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+  <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.4"/>
+
+
+    <meta name="description" content="Dawei 的记事本" />
+
+
+
+  <meta name="keywords" content="NGS,SRA,bioinformatics," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.4" />
+
+
+<meta name="description" content="背景
+为什么要使用 aspera？
+
+因为测序数据迈入 NGS 时代后，通量增长很快，尤其是 NCBI SRA 的数据，单个压缩包很大，需要使用更快速的传输工具。
+aspera 提供命令行的交互，便于管理
+
+
+aspera 比传统的 scp, wget 速度更快，同时具有命令行程序的纯文本输出特性。
+
+aspera 还有图形界面版本，适合多种偏好的用户。
+
+
+博耘生物说:
+
+速铂Aspera是一套">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Aspera download data from SRA">
+<meta property="og:url" content="http://daweih.github.io/2015/07/24/aspera-download-data-from-sra/index.html">
+<meta property="og:site_name" content="东隅">
+<meta property="og:description" content="背景
+为什么要使用 aspera？
+
+因为测序数据迈入 NGS 时代后，通量增长很快，尤其是 NCBI SRA 的数据，单个压缩包很大，需要使用更快速的传输工具。
+aspera 提供命令行的交互，便于管理
+
+
+aspera 比传统的 scp, wget 速度更快，同时具有命令行程序的纯文本输出特性。
+
+aspera 还有图形界面版本，适合多种偏好的用户。
+
+
+博耘生物说:
+
+速铂Aspera是一套">
+<meta property="og:image" content="http://daweih.github.io/images/sra1.png">
+<meta property="og:image" content="http://daweih.github.io/images/sra2.png">
+<meta property="og:image" content="http://daweih.github.io/images/ascp.png">
+<meta property="og:image" content="http://daweih.github.io/images/wechat_small_black.jpg">
+<meta property="og:updated_time" content="2015-07-24T14:15:54.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Aspera download data from SRA">
+<meta name="twitter:description" content="背景
+为什么要使用 aspera？
+
+因为测序数据迈入 NGS 时代后，通量增长很快，尤其是 NCBI SRA 的数据，单个压缩包很大，需要使用更快速的传输工具。
+aspera 提供命令行的交互，便于管理
+
+
+aspera 比传统的 scp, wget 速度更快，同时具有命令行程序的纯文本输出特性。
+
+aspera 还有图形界面版本，适合多种偏好的用户。
+
+
+博耘生物说:
+
+速铂Aspera是一套">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post'
+  };
+</script>
+
+    <title> Aspera download data from SRA // 东隅 </title>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+<!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+
+
+
+
+<div class="container one-column page-post-detail">
+    <div class="headband"></div>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-logo"></i>
+      </span>
+      <span class="site-title">东隅</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-home"></i> <br />
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-tags"></i> <br />
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-categories"></i> <br />
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-archives"></i> <br />
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/About" rel="section">
+            <i class="menu-item-icon icon-about"></i> <br />
+            About
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+<form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'ricZEzHT8MphMSw7Mx1g','2.0.0');
+</script>
+
+<div class="site-search-toggle"></div>
+    </div>
+  
+</nav>
+
+
+        </div>
+    </header>
+
+    <main id="main" class="main">
+        <div class="main-inner">
+            <div id="content" class="content">
+                
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              Aspera download data from SRA
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2015-07-24T22:15:54+08:00" content="2015-07-24">
+            2015-07-24
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/profession/" itemprop="url" rel="index"><span itemprop="name">profession</span></a></span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/07/24/aspera-download-data-from-sra/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/24/aspera-download-data-from-sra/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><h4 id="背景">背景</h4><ul>
+<li><p>为什么要使用 aspera？</p>
+<ul>
+<li>因为测序数据迈入 NGS 时代后，通量增长很快，尤其是 NCBI SRA 的数据，单个压缩包很大，需要使用更快速的传输工具。</li>
+<li>aspera 提供命令行的交互，便于管理</li>
+</ul>
+</li>
+<li><p>aspera 比传统的 scp, wget 速度更快，同时具有命令行程序的纯文本输出特性。</p>
+</li>
+<li><p>aspera 还有图形界面版本，适合多种偏好的用户。</p>
+</li>
+</ul>
+<p><a href="http://boyun.sh.cn/bio/?p=1933" target="_blank" rel="external">博耘生物说</a>:</p>
+<blockquote>
+<p>速铂Aspera是一套商业的高速文件传输解决方案，随着高通量数据的大量产生，从而对于大文件快速传输的需求，开始应用到生物领域，目前 NCBI、EBI 的 SRA 库都提供这样的服务。<br>…<br>一句话，远距离，大文件，Aspera 优势巨大。</p>
+</blockquote>
+<p>我说：</p>
+<blockquote>
+<p>你如果经历过使用 <code>wget</code> 下载 sra 数据要等几天几个星期，还可能断掉，就知道用下面这个黑科技有多爽了。</p>
+</blockquote>
+<h4 id="安装_aspera-connect：">安装 aspera-connect：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看系统的版本</span></span><br><span class="line">$ uname <span class="operator">-a</span></span><br><span class="line">*x86_64*</span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载对应的版本（目前测试需要翻墙）</span></span><br><span class="line">$ wget http://download.asperasoft.com/download/sw/connect/<span class="number">3.6</span>.<span class="number">0</span>/aspera-connect-<span class="number">3.6</span>.<span class="number">0.106805</span>-linux-<span class="number">64</span>.tar.gz</span><br><span class="line"></span><br><span class="line">$ gunzip aspera-connect-<span class="number">3.6</span>.<span class="number">0.106805</span>-linux-<span class="number">64</span>.tar.gz</span><br><span class="line">$ tar -xvf aspera-connect-<span class="number">3.6</span>.<span class="number">0.106805</span>-linux-<span class="number">64</span>.tar</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装</span></span><br><span class="line">$ sh aspera-connect-<span class="number">3.6</span>.<span class="number">0.106805</span>-linux-<span class="number">64</span>.sh</span><br></pre></td></tr></table></figure>
+<p>安装输出结果</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Installing Aspera Connect</span><br><span class="line"></span><br><span class="line">Deploying Aspera Connect (/home/your_user_name/.aspera/connect) <span class="keyword">for</span> the current user only.</span><br><span class="line">Restart firefox manually to load the Aspera Connect plug-in</span><br><span class="line"></span><br><span class="line">Install complete.</span><br></pre></td></tr></table></figure>
+<h4 id="修改环境变量">修改环境变量</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ vi ~/.bash_profile</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加下面一行</span></span><br><span class="line"><span class="built_in">export</span> PATH=/home/your_user_name/.aspera/connect/bin:<span class="variable">$PATH</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 环境变量生效</span></span><br><span class="line">$ <span class="built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure>
+<h4 id="配置参数，测试下载">配置参数，测试下载</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># PRIVATE-KEY-FILE 文件位置</span></span><br><span class="line">~/.aspera/connect/etc/asperaweb_id_dsa.openssh</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载用的命令</span></span><br><span class="line">$ ascp  -i asperaweb_id_dsa.openssh --mode recv --host ftp-private.ncbi.nlm.nih.gov --user anonftp   --file-list  sra_list.txt  -k <span class="number">1</span> -QT <span class="operator">-l</span> <span class="number">200</span>m  /path_to_save_download/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 对参数的解释</span></span><br><span class="line">Usage: ascp [OPTION] SRC... DEST</span><br><span class="line">          SRC to DEST, or multiple SRC to DEST dir</span><br><span class="line">          SRC, DEST format: [[user@]host:]PATH</span><br><span class="line">  -h,--help                       Display usage</span><br><span class="line">  -A,--version                    Display version.</span><br><span class="line">  -i PRIVATE-KEY-FILE             Private-key file name (id_rsa)</span><br><span class="line">  --mode=MODE                     MODE: send, recv</span><br><span class="line">  --host=HOSTNAME</span><br><span class="line">  --user=USERNAME</span><br><span class="line">  --file-list=FILENAME            File with list of sources</span><br><span class="line">  -k RESUME-LEVEL                 Resume criterion: <span class="number">0</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span></span><br><span class="line">  <span class="operator">-l</span> MAX-RATE                     Max transfer rate</span><br><span class="line">  -q                              Disable progress display</span><br><span class="line">  -T                              Disable encryption</span><br><span class="line"><span class="comment"># 一般来说，你只要修改 `--file-list` `-i` 对因你自己的情况即可</span></span><br></pre></td></tr></table></figure>
+<h4 id="获取下载文件地址">获取下载文件地址</h4><p>一个 <code>sra_list.txt</code> 例子:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/sra/sra-instant/reads/ByRun/sra/ERR/ERR009/ERR009428/ERR009428.sra</span><br></pre></td></tr></table></figure>
+<p>如何获取此地址：</p>
+<ol>
+<li><p>找到 <code>sra</code> 文件的页面（发表的文章一般会提供这个页面的 ID），点击红框进入下一页</p>
+<p><img src="http://daweih.github.io/images/sra1.png" alt="找到sra文件的页面（发表的文章一般会提供这个页面的 ID），点击红框进入下一页"></p>
+</li>
+<li><p>地址栏里显示了地址，然后按照上文的 <code>sra_list.txt</code> 模式编写</p>
+<p><img src="http://daweih.github.io/images/sra2.png" alt="地址栏里显示了地址，然后按照上文的 `sra_list.txt` 模式编写"></p>
+</li>
+</ol>
+<h4 id="OS_X_如何使用？">OS X 如何使用？</h4><p>在 OS X 下，可以直接从官网下载 dmg 的安装包。安装之后，注意：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 程序的可执行文件路径</span></span><br><span class="line">/Users/your_user_name/Applications/Aspera\ Connect.app/Contents/Resources/ascp</span><br><span class="line"></span><br><span class="line"><span class="comment"># PRIVATE-KEY-FILE 文件位置</span></span><br><span class="line">/Users/your_user_name/Applications/Aspera\ Connect.app/Contents/Resources/asperaweb_id_dsa.openssh</span><br></pre></td></tr></table></figure>
+<p>其他上述参数沿用。</p>
+<p><br></p>
+<p>最后，请欣赏华丽丽的下载速度。</p>
+<p>  <img src="http://daweih.github.io/images/ascp.png" alt="ascp"></p>
+<p><br></p>
+<div align="center"><br><img src="http://daweih.github.io/images/wechat_small_black.jpg"><br></div></span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/NGS/" rel="tag">#NGS</a>
+          
+            <a href="/tags/SRA/" rel="tag">#SRA</a>
+          
+            <a href="/tags/bioinformatics/" rel="tag">#bioinformatics</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/07/25/coffee-easy-to-make/" rel="prev">懒人适用的咖啡具</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/07/24/Install-and-test-bowtie-and-tophat/" rel="next">Install and test bowtie and tophat</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+            </div>
+
+            
+
+            
+              <div class="comments" id="comments">
+                
+                  <div class="ds-thread" data-thread-key="2015/07/24/aspera-download-data-from-sra/"
+                       data-title="Aspera download data from SRA" data-url="http://daweih.github.io/2015/07/24/aspera-download-data-from-sra/">
+                  </div>
+                
+              </div>
+            
+        </div>
+
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table Of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="Dawei Huang" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Dawei Huang</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">Dawei 的记事本</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">24</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">categories</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">41</span>
+              <span class="site-state-item-name">tags</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/daweih" target="_blank">github</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com/daweimhuang" target="_blank">facebook</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/daweihuang" target="_blank">twitter</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.douban.com/people/4878302/" target="_blank">douban</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装_aspera-connect："><span class="nav-number">2.</span> <span class="nav-text">安装 aspera-connect：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改环境变量"><span class="nav-number">3.</span> <span class="nav-text">修改环境变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置参数，测试下载"><span class="nav-number">4.</span> <span class="nav-text">配置参数，测试下载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#获取下载文件地址"><span class="nav-number">5.</span> <span class="nav-text">获取下载文件地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#OS_X_如何使用？"><span class="nav-number">6.</span> <span class="nav-text">OS X 如何使用？</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="copyright" >
+  
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Dawei Huang</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+        </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+</div>
+
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"daweih"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+  	  <script type="text/javascript">
+  		var duoshuo_user_ID = daweih
+  	  </script>
+     
+  	<script src="/js/ua-parser.min.js"></script>
+  	<script src="/js/hook-duoshuo.js"></script>
+  
+
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.4"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.4"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.4" id="motion.global"></script>
+
+
+
+  <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.4" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+          var self = this;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      $(indicator).velocity('stop').velocity({
+        opacity: action === 'show' ? 0.4 : 0
+      }, { duration: 100 });
+    }
+
+  });
+</script>
+
+
+  <script type="text/javascript" id="sidebar.nav">
+    $(document).ready(function () {
+      var html = $('html');
+
+      $('.sidebar-nav li').on('click', function () {
+        var item = $(this);
+        var activeTabClassName = 'sidebar-nav-active';
+        var activePanelClassName = 'sidebar-panel-active';
+        if (item.hasClass(activeTabClassName)) {
+          return;
+        }
+
+        var currentTarget = $('.' + activePanelClassName);
+        var target = $('.' + item.data('target'));
+
+        currentTarget.velocity('transition.slideUpOut', 200, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', 200)
+            .addClass(activePanelClassName);
+        });
+
+        item.siblings().removeClass(activeTabClassName);
+        item.addClass(activeTabClassName);
+      });
+
+      $('.post-toc a').on('click', function (e) {
+        e.preventDefault();
+        var offset = $(escapeSelector(this.getAttribute('href'))).offset().top;
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        });
+      });
+
+      // Expand sidebar on post detail page by default, when post has a toc.
+      var $tocContent = $('.post-toc-content');
+      if (isDesktop() && CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    });
+  </script>
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        if (CONFIG.sidebar === 'always') {
+            displaySidebar();
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+<!-- lazyload -->
+<script type="text/javascript" src="/js/lazyload.js"></script>
+<script type="text/javascript">
+    jQuery(function () {
+        jQuery("#posts img").lazyload({
+            placeholder: "/images/loading.gif",
+            effect: "fadeIn"
+        });
+    });
+</script>
+</body>
+</html>
