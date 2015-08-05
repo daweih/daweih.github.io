@@ -101,5 +101,6 @@ plugins:
 links_title: Links
 # links
 links:
-  CBB: http://cbb.big.ac.cn
   IC4R: http://ic4r.org
+  Cloud CAT: http://cat.big.ac.cn
+  
