@@ -40,6 +40,11 @@ categories: profession
 
 本次嵌入的可视化来自[这里](http://www.jasondavies.com/coffee-wheel/)。
 
+
+> 测试 iframe
+<iframe src="http://daweih.github.io/js/outline/index.html" width="420" height="320" frameborder="0" scrolling="yes"></iframe>
+
+
 #### 其他相关博文
 
 - [一个染色体的可视化](http://daweih.github.io/2015/07/20/viz-of-chromosome/)
