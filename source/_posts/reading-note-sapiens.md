@@ -1,6 +1,6 @@
 title: 'Reading note: Sapiens'
 date: 2015-07-22 20:09:06
-updated: 2015-07-22 20:09:06
+updated: 2015-08-09 20:09:06
 tags: [reading, V] 
 categories: reading
 ---

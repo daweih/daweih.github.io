@@ -1,6 +1,6 @@
 title: 'Reading note 1: Becoming a technical leader'
 date: 2015-08-04 18:17:05
-updated: 2015-08-08 18:17:05
+updated: 2015-08-09 18:17:05
 tags: [reading, OmniOutliner, iframe, SOP] 
 categories: reading
 ---
