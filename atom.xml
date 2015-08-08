@@ -5,7 +5,7 @@
   <subtitle><![CDATA[桑榆]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://daweih.github.io//"/>
-  <updated>2015-08-07T08:51:17.000Z</updated>
+  <updated>2015-08-04T13:09:31.000Z</updated>
   <id>http://daweih.github.io//</id>
   
   <author>
@@ -14,23 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title><![CDATA[test]]></title>
-    <link href="http://daweih.github.io/2015/08/07/test/"/>
-    <id>http://daweih.github.io/2015/08/07/test/</id>
-    <published>2015-08-07T08:51:17.000Z</published>
-    <updated>2015-08-07T08:51:17.000Z</updated>
-    <content type="html"><![CDATA[<p>tags: [baby step, bioinformatics, biocuration, NGS, SRA, visualization, d3, database, evolution, gene annotation, module, parser, perl, uniprot, OS X, web, javascript, hexo, node.js, ruby, ruby on rails, life, blog, memory, Saudi Arabia, popular science, reading, swimming, writting]<br>categories: profession</p>
-<h4 id="Reference">Reference</h4><ol>
-<li><a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=" target="_blank" rel="external">title</a><br><br><div align="center"><br><img src="http://daweih.github.io/images/wechat_small_black.jpg"><br></div></li>
-</ol>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>tags: [baby step, bioinformatics, biocuration, NGS, SRA, visualization, d3, database, evolution, gene annotation, module, parser, perl, u]]>
-    </summary>
-    
-  </entry>
   
   <entry>
     <title><![CDATA[移植，测试嵌入的 D3: Coffee Flavour Wheel]]></title>
@@ -60,12 +43,6 @@
 <p>目前，文章页面的 <code>CSS</code> 还是无法通过嵌入正文生效。需要 D3 直接写入 <code>DOM</code> 的属性。</p>
 <p><code>D3</code> 在本站嵌入成功后，我就可以做一些可视化的学习笔记。这样，在笔记里面，就可以添加实时的演示了。</p>
 <p>本次嵌入的可视化来自<a href="http://www.jasondavies.com/coffee-wheel/" target="_blank" rel="external">这里</a>。</p>
-<blockquote>
-<p>测试 iframe</p>
-<iframe src="http://daweih.github.io/js/outline/index.html" width="420" height="320" frameborder="0" scrolling="yes"></iframe>
-
-
-</blockquote>
 <h4 id="其他相关博文">其他相关博文</h4><ul>
 <li><a href="http://daweih.github.io/2015/07/20/viz-of-chromosome/">一个染色体的可视化</a></li>
 </ul>
@@ -232,6 +209,55 @@
       <category term="bioinformatics" scheme="http://daweih.github.io/tags/bioinformatics/"/>
     
       <category term="profession" scheme="http://daweih.github.io/categories/profession/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[懒人适用的咖啡具]]></title>
+    <link href="http://daweih.github.io/2015/07/25/coffee-easy-to-make/"/>
+    <id>http://daweih.github.io/2015/07/25/coffee-easy-to-make/</id>
+    <published>2015-07-25T06:06:27.000Z</published>
+    <updated>2015-07-25T06:06:27.000Z</updated>
+    <content type="html"><![CDATA[<p>原文发表于<a href="https://qdan.me/list/VUyyEZpuJz48iJfh?from=mylists" target="_blank" rel="external">轻单</a>，由于它濒死，于是转载于此。</p>
+<p>作为一个咖啡爱好者，偶尔也发点非专业类的文章在这个博客。生活若完全没有了情调，人也会变得无聊吧。</p>
+<hr>
+<p>想享受咖啡又 (xiâng) 犯 (shêng) 懒 (qián) ？请看。</p>
+<h4 id="法压壶">法压壶</h4><p>使用金属滤网。放入磨好的粉，泡上热水，压下，倒出。丢弃咖啡渣，热水冲干净即可。</p>
+<div align="center"><br><img src="http://daweih.github.io/images/coffee_qdan1.jpg"><br></div>
+
+<h4 id="摩卡壶">摩卡壶</h4><p>爱咖啡的油脂？用摩卡壶。</p>
+<ul>
+<li>装粉，装水，组装壶。加热，出咖啡后拆开壶清洗。</li>
+<li>优点：使用金属滤网，好清洗；缺点：需要热源。</li>
+</ul>
+<div align="center"><br><img src="http://daweih.github.io/images/coffee_qdan2.jpg"><br></div>
+
+<h4 id="不锈钢过滤器">不锈钢过滤器</h4><ul>
+<li>优点：金属滤网好清洗；</li>
+<li>缺点：萃取不能一次完成（需要多次注水来萃取），需要有个注水的壶。</li>
+</ul>
+<p>配一把手冲壶，还是有必要的。可有做出优秀的单品咖啡。</p>
+<div align="center"><br><img src="http://daweih.github.io/images/coffee_qdan3.jpg"><br></div>
+
+<h4 id="越南咖啡过滤器">越南咖啡过滤器</h4><p>嫌单品太苦，试试越南咖啡，配炼乳。</p>
+<ul>
+<li>优点：注水后等着就行了。</li>
+<li>缺点：需要滤纸。</li>
+</ul>
+<div align="center"><br><img src="http://daweih.github.io/images/coffee_qdan4.jpg"><br></div>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>原文发表于<a href="https://qdan.me/list/VUyyEZpuJz48iJfh?from=mylists" target="_blank" rel="external">轻单</a>，由于它濒死，于是转载于此。</p>
+<p>作为一个咖啡爱好者，偶尔]]>
+    </summary>
+    
+      <category term="baby step" scheme="http://daweih.github.io/tags/baby-step/"/>
+    
+      <category term="coffee" scheme="http://daweih.github.io/tags/coffee/"/>
+    
+      <category term="life" scheme="http://daweih.github.io/tags/life/"/>
+    
+      <category term="life" scheme="http://daweih.github.io/categories/life/"/>
     
   </entry>
   
