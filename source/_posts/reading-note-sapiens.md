@@ -1,7 +1,7 @@
 title: 'Reading note: Sapiens'
 date: 2015-07-22 20:09:06
 updated: 2015-07-22 20:09:06
-tags: [reading] 
+tags: [reading, V] 
 categories: reading
 ---
 
@@ -12,7 +12,7 @@ categories: reading
 已经不记得从来里看到的这本书的介绍。后来这本书成了我和爱人一起读的第一本书，却也是在我们最忙的时候（搬到新的城市，换工作，开始城铁通勤生活）读的一本。我陆陆续续的批注，攒成这个札记。
 
 <div align=center>
-<iframe scrolling="value" src="http://daweih.github.io/js/sapiens.html/index.html" width=90% height=450px frameborder="0" scrolling="yes"></iframe>
+<iframe scrolling="value" src="http://daweih.github.io/js/sapiens.html/index.html" width=90% height=550px frameborder="0" scrolling="yes"></iframe>
 </div>
 
 ### 第一部 分认知革命
