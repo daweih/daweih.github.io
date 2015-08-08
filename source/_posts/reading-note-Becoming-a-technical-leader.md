@@ -1,4 +1,4 @@
-title: 'Reading note: Becoming a technical leader'
+title: 'Reading note 1: Becoming a technical leader'
 date: 2015-08-04 18:17:05
 updated: 2015-08-08 18:17:05
 tags: [reading, OmniOutliner, iframe, SOP] 
@@ -7,6 +7,10 @@ categories: reading
 <div align=center>
 <img src="http://daweih.github.io/images/leader.jpg">
 </div>
+
+本书的好处，不再多说。可以看[这里](http://book.douban.com/review/6789847/)和[这里](http://blog.youxu.info/2015/05/17/tech-lead-1/)。
+
+作为一个重度强迫症患者和整理狂人，读书要做的第一件事不言自明。
 
 ### 优化博客的笔记系统
 
