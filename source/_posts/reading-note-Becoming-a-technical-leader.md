@@ -8,7 +8,9 @@ categories: reading
 <img src="http://daweih.github.io/images/leader.jpg">
 </div>
 
-<iframe src="http://daweih.github.io/js/becoming_a_technical_leader.html/index.html" width="420" height="320" frameborder="0" scrolling="yes" align=center></iframe>
+<div align=center>
+<iframe src="http://daweih.github.io/js/becoming_a_technical_leader.html/index.html" width="420" height="320" frameborder="0" scrolling="yes"></iframe>
+</div>
 
 
 #### Reference
