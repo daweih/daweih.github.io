@@ -21,7 +21,7 @@ categories: reading
 使用了 `OmniOutliner` 来整理笔记，所以想直接嵌入到博客系统里。于是采用了 `iframe` 。
 
 <div align=center>
-<img src="http://daweih.github.io/images/omnioutliner.png">
+<img src="http://daweih.github.io/images/omnioutliner.jpg">
 </div>
 
 ``` bash
