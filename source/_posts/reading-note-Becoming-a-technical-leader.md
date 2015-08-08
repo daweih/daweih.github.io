@@ -14,11 +14,15 @@ categories: reading
 
 ### 优化博客的笔记系统
 
-是我第一本认真去读的管理类书籍。本着不作就不会死的精神，配置个让自己舒坦的笔记系统。
+本书是我第一本认真去读的管理类书籍。本着不作就不会死的精神，配置个让自己舒坦的笔记系统。
 
 #### 植入目录
 
 使用了 `OmniOutliner` 来整理笔记，所以想直接嵌入到博客系统里。于是采用了 `iframe` 。
+
+<div align=center>
+<img src="http://daweih.github.io/images/omnioutliner.png">
+</div>
 
 ``` bash
 <div align=center>
@@ -88,3 +92,12 @@ table.row {
 ### Reference
 1. [Becoming a Technical Leader](http://book.douban.com/subject/1807715/) by Gerald M. Weinberg
 2. [成为技术领导者](http://book.douban.com/subject/26419762/) by Gerald M. Weinberg, 译者: 余晟
+
+### 题外话：在 OmniOutliner 中使用正则表达式
+
+犯懒了，如图：
+
+<div align=center>
+<img src="http://daweih.github.io/images/omni_find.png">
+</div>
+

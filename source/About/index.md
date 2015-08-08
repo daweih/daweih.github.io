@@ -38,3 +38,9 @@ comments: false
 - [豆瓣主页](http://www.douban.com/people/4878302/)
 - wechat: daweih
 
+#### 为什么写博客
+- [为什么你应该（从现在开始就）写博客](http://mindhacks.cn/2009/02/15/why-you-should-start-blogging-now/) by [刘未鹏](http://mindhacks.cn)
+- [为什么要写Blog？](http://www.ruanyifeng.com/blog/2006/12/why_i_keep_blogging.html) by [阮一峰](http://www.ruanyifeng.com/blog/)
+- [为什么写博客？（图灵访谈）](http://www.ituring.com.cn/article/111023) by [阮一峰](http://www.ruanyifeng.com/blog/)
+
+
