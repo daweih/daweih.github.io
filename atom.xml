@@ -97,7 +97,7 @@
     <updated>2015-08-04T10:17:05.000Z</updated>
     <content type="html"><![CDATA[<div align="center"><br><img src="http://daweih.github.io/images/leader.jpg"><br></div>
 
-<iframe src="http://daweih.github.io/js/becoming_a_technical_leader.html/index.html" width="420" height="320" frameborder="0" scrolling="yes" align="center"></iframe>
+<div align="center"><br><iframe src="http://daweih.github.io/js/becoming_a_technical_leader.html/index.html" width="420" height="320" frameborder="0" scrolling="yes"></iframe><br></div>
 
 
 <h4 id="Reference">Reference</h4><ol>
@@ -108,7 +108,7 @@
     <summary type="html">
     <![CDATA[<div align="center"><br><img src="http://daweih.github.io/images/leader.jpg"><br></div>
 
-<iframe src="http://daweih.github.io/js/becoming_a_]]>
+<div align="center"><br><iframe src="http://daweih.]]>
     </summary>
     
       <category term="reading" scheme="http://daweih.github.io/tags/reading/"/>
