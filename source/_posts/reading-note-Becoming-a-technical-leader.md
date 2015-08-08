@@ -9,7 +9,7 @@ categories: reading
 </div>
 
 <div align=center>
-<iframe src="http://daweih.github.io/js/becoming_a_technical_leader.html/index.html" width="320" height="450" frameborder="0" scrolling="yes"></iframe>
+<iframe scrolling="value" src="http://daweih.github.io/js/becoming_a_technical_leader.html/index.html" width=90% height="450" frameborder="0" scrolling="yes"></iframe>
 </div>
 
 
