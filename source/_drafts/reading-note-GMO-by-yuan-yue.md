@@ -10,7 +10,7 @@ categories: profession
 </div>
 
 <div align=center>
-<iframe scrolling="value" src="http://daweih.github.io/js/GMO_china.html/index.html" width=90% height=460px frameborder="0" scrolling="yes"></iframe>
+<iframe scrolling="value" src="http://daweih.github.io/js/GMO_china.html/index.html" width=90% height=640px frameborder="0" scrolling="yes"></iframe>
 </div>
 
 

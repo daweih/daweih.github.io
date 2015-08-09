@@ -13,7 +13,7 @@ categories: life
 准备在这里写写读书笔记。欢迎抬杠。
 
 #### 在读
-7. [技术领导之路（中英文对照）](https://book.douban.com/subject/4187478/) by Gerald M.Weinberg, [余晟](http://www.luanxiang.org/blog/)译
+7. [技术领导之路](https://book.douban.com/subject/4187478/) by Gerald M.Weinberg, [余晟](http://www.luanxiang.org/blog/)译
 6. [Sapiens: A Brief History of Humankind](http://book.douban.com/subject/25904521/) by Yuval Noah Harari 
 5. [人造恐慌](http://book.douban.com/subject/26140658/) by 袁越
 
@@ -23,3 +23,6 @@ categories: life
 2. [The elements of style](http://book.douban.com/subject/1433835/) by William Strunk Jr. and E. B. White
 1. [Pro Git](http://book.douban.com/subject/3420144/) by Scott Chacon 
 
+#### 笔记
+- [Sapiens](http://daweih.github.io/2015/07/22/reading-note-sapiens/)
+- [技术领导之路](http://daweih.github.io/2015/08/04/reading-note-Becoming-a-technical-leader/)

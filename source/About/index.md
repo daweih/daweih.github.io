@@ -43,4 +43,5 @@ comments: false
 - [为什么要写Blog？](http://www.ruanyifeng.com/blog/2006/12/why_i_keep_blogging.html) by [阮一峰](http://www.ruanyifeng.com/blog/)
 - [为什么写博客？（图灵访谈）](http://www.ituring.com.cn/article/111023) by [阮一峰](http://www.ruanyifeng.com/blog/)
 
-
+#### 书单
+- [2015 年读书单](http://daweih.github.io/2015/07/22/reading-list-2015/)
