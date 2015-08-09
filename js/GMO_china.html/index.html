@@ -1,0 +1,1045 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title></title>
+<script type="text/javascript" src="outliner.js"></script><style type="text/css">
+			
+                        img.status {
+                        margin-left: 2px; margin-right: 2px; margin-top: 2px; height: 11px; width: 11px;
+                        }
+                        
+                        img.checkbox-column {
+                        height: 11px; width: 11px; vertical-align: top; margin-top: 3px;
+                        }
+                        
+                        img.leaf {
+                        margin-left: 3px; margin-right:3px; margin-top: 2px; margin-bottom: 3px; height: 6px; width 6px;
+                        }
+                        
+                        img.parent {
+                        margin-left: 3px; margin-right:3px; margin-top: 2px; height: 10px; width: 10px;
+                        }
+			
+			th {
+			vertical-align: bottom;
+			
+			}
+			
+			td {
+			vertical-align: top;
+			}
+			
+			td,th {
+			
+			empty-cells: show;
+			}
+			
+			.top-right-border {
+			
+			}
+			
+			.no-border {
+			border-bottom: 0px;
+			border-left: 0px;
+			}
+			
+			
+			
+			
+			table {
+			
+			font-family: Helvetica, sans-serif;
+			font-size: 12px;
+			font-family: "American Typewriter", sans-serif;  font-size: 14px;			
+			
+			}
+
+			
+			
+			.wholeDocument {
+			color:rgb(66,66,66) ;  font-family: "American Typewriter", sans-serif;  font-size: 14px;background-color:rgb(255,255,255) ;  
+	
+			}
+		
+			
+			td.subcell {
+			border: none;
+			}
+			
+			td.content {
+			padding-left: 4px;
+			padding-bottom: 2px;
+			padding-top: 1px;
+			padding-right: 3px;
+			}
+			
+			.full {
+			height: 100%;
+			}
+			
+			.heighthack {
+                        
+                            height: 25px;
+                            
+			}
+			
+			div.titlepadding { 
+			padding-right:3px;
+			padding-left:6px;
+			padding-bottom:3px;
+			padding-top: 2px;
+			}
+			
+			
+					.summary_node {
+						background: rgba(0,0,0,.12);
+						margin-bottom: 1px;
+					}
+				
+			
+			div.column {   
+			padding-right: 3px;
+			padding-left: 4px;
+			padding-top: 0px;
+			padding-bottom: 0px;
+			margin-right: 1px;
+			}
+			
+			.labelpadding {
+			padding-right: 3px;
+			padding-top: 1px;
+			padding-left: 2px;
+			}
+			
+			.indicator {
+			white-space: nowrap;
+			text-align:right;
+			margin-right: 0px;
+			vertical-align: top;
+			padding-top: 1px;
+			padding-left: 0px;
+			}
+			
+			.wholedocgutter {
+			
+			}
+			
+			div.row {
+			}
+			
+			div.headerRow {
+			}
+			
+			.expanded {
+			display: inline;
+			}
+			.collapsed {
+			display: none;
+			}
+			
+            div.palette-hit-zone {
+                position: fixed;
+                bottom: 0px;
+				height: 33%;
+                left:50%;
+                width: 66%;
+                margin-left: -33%;
+            }
+
+			div.floating-palette {
+                -webkit-border-radius: 5px;
+                -webkit-transition: opacity is fade-in-out;
+                -webkit-transition-duration: 1s;
+				background-color: rgb(64, 64, 64);
+                opacity:0.7;
+				width: 88px;
+				height: 44px;
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                margin-left: -44px;
+			}
+            
+            div.palette-cell {
+                opacity:1;
+                margin-top: 6px;
+                margin-bottom: 6px;
+                position: absolute;
+                height: 32px;
+                width: 32px;
+            }
+            
+            div.cell-divider {
+                position: absolute;
+                margin-top: 6px;
+                margin-bottom: 6px;
+                margin-left: 44px;
+                height: 32px;
+                width:0px;
+                position:absolute;
+                left:0px;
+                border-right:rgb(207, 207, 207) 2px solid;
+            }
+			
+			
+			.altRow {
+				background-color: rgba(0,95,191,0.1) !important;  
+			}
+			
+			
+			
+			.note { 
+			padding-left: 5px;
+			padding-right: 3px; 
+			border: none; 
+			color:rgb(110,126,84) ;  font-family: "KaiTi", sans-serif;  font-size: 16px;font-family: "KaiTi", sans-serif;  font-size: 16px;
+			}
+			
+			/* Total table width is 803
+			Adjusted table width is 851 */
+			
+			.wholething {
+				width: auto;
+			}
+			
+			
+			table.row {
+				
+						width: 310px;
+						
+			
+			}
+			
+			
+    .col_width1 { 
+        width: 310px;  /* Actual width is 803 */
+    }
+
+    .col1 { 
+        
+    }
+
+    .colbackground1 { 
+        
+    }
+
+			
+			/* Level Styles */
+			
+			
+    .columntitle { 
+        font-weight: 900;  font-size: 13px;
+    }
+
+    .level1 { 
+        color:rgb(0,0,0) ;  font-family: "Consolas", sans-serif;  
+    }
+
+    .levelcolor1 { 
+        
+    }
+
+    .levelguttercolor1 { 
+        
+    }
+
+    .level2 { 
+        font-family: "Songti SC", sans-serif;  font-size: 13px;
+    }
+
+    .levelcolor2 { 
+        
+    }
+
+    .levelguttercolor2 { 
+        
+    }
+
+    .level3 { 
+        font-family: "Helvetica", sans-serif;  font-size: 12px;
+    }
+
+    .levelcolor3 { 
+        
+    }
+
+    .levelguttercolor3 { 
+        
+    }
+
+    .ns-Highlight:-Yellow { 
+        }
+
+    .ns-Highlight:-Green { 
+        }
+
+    .ns-Highlight:-Pink { 
+        }
+
+    .ns-bg-Highlight:-Yellow { 
+        background-color:rgb(251,237,113) ;  }
+
+    .ns-bg-Highlight:-Green { 
+        background-color:rgb(147,229,189) ;  }
+
+    .ns-bg-Highlight:-Pink { 
+        background-color:rgb(255,164,164) ;  }
+
+    .ns-gutter-Highlight:-Yellow { 
+        }
+
+    .ns-gutter-Highlight:-Green { 
+        }
+
+    .ns-gutter-Highlight:-Pink { 
+        }
+</style>
+</head>
+<body class="wholeDocument altRowColors"><table align="center" cellspacing="0" cellpadding="0" class="top-right-border"><tr><td class="wholething no-border">
+<!--Column Titles--><table cellspacing="0" border="0" cellpadding="0" class="headerRow heighthack"><tr><td class=" col_width1"><div class="columntitle titlepadding">目录<br>
+</div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1" style="width: 28px;">
+<img onmousedown="ioSwitch('pmsrBey-fV7I', event.shiftKey)" id="imsrBey-fV7I" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1" style=" width: 1px; "></td>
+<td class=" content level1 subcell">第一篇　告诉你一个真实的转基因<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pmsrBey-fV7I" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">第1节　转基因食品安全吗？ / 003<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">第2节　转基因会破坏环境吗？ / 006<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">第3节　跨国种子公司会不会影响中国的粮食安全？ / 009<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">第4节　转基因是万能的吗？ / 012<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">第5节　转基因食品应该贴标签吗？ / 014<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1" style="width: 28px;">
+<img onmousedown="ioSwitch('pkKMAEcBQXK0', event.shiftKey)" id="ikKMAEcBQXK0" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1" style=" width: 1px; "></td>
+<td class=" content level1 subcell">第二篇　美国的转基因三十年<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pkKMAEcBQXK0" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">第1节　从“农业诺贝尔奖”看转基因坎坷三十年 / 021<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 28px;">
+<img onmousedown="ioSwitch('pjurCj13QkKS', event.shiftKey)" id="ijurCj13QkKS" border="0" alt="&gt;" class="parent" src="Collapsed.png" title="expand"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">第2节　走访美国“玉米带”，寻找农业的未来 / 029<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pjurCj13QkKS" class="collapsed">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">现代农业的样板间 / 029<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">大农场模式的借鉴意义 / 033<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">转基因农业现状 / 036<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 28px;">
+<img onmousedown="ioSwitch('paRu5_jpal-0', event.shiftKey)" id="iaRu5_jpal-0" border="0" alt="&gt;" class="parent" src="Collapsed.png" title="expand"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">第3节　转基因农业到底有什么问题？ / 041<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="paRu5_jpal-0" class="collapsed">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">反转基因农业的观点与真相 / 043<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">转基因农业的问题：不够好！ / 046<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">从黄金水稻看转基因农业的未来 / 048<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1" style="width: 28px;">
+<img onmousedown="ioSwitch('pkr-yMuMzHGi', event.shiftKey)" id="ikr-yMuMzHGi" border="0" alt="&gt;" class="parent" src="Collapsed.png" title="expand"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1" style=" width: 1px; "></td>
+<td class=" content level1 subcell">第三篇　为什么欧洲反对转基因？<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pkr-yMuMzHGi" class="collapsed">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 28px;">
+<img onmousedown="ioSwitch('plqNVfcBTLcT', event.shiftKey)" id="ilqNVfcBTLcT" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">第1节　转基因背后的政治与经济 / 055<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="plqNVfcBTLcT" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">为什么转基因能够在美国发展起来？ / 055<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">为什么欧洲反对转基因？ / 061<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">转基因背后的经济问题 / 069<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">荒唐的贴标签制度 / 074<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">结语：“对转基因，欧洲搞的是伪环保” / 076<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">第2节　转基因种植的先驱：西班牙 / 081<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">第3节　转基因种植最强烈的反对者：法国 / 087<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">第4节　对转基因态度转变中的英国 / 093<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 28px;">
+<img onmousedown="ioSwitch('pm_ZV329Z80n', event.shiftKey)" id="im_ZV329Z80n" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">第5节　评价标准：一份来自英国的专业报告 / 099<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pm_ZV329Z80n" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">管理农业足迹，建立比较性评估标准 / 101<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">环保领域切忌过度煽情 / 102<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">如何科学地评价农业新技术 / 104<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1" style="width: 28px;">
+<img onmousedown="ioSwitch('pngmLEalzotn', event.shiftKey)" id="ingmLEalzotn" border="0" alt="&gt;" class="parent" src="Collapsed.png" title="expand"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1" style=" width: 1px; "></td>
+<td class=" content level1 subcell">第四篇　转基因农业的亚洲样本<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pngmLEalzotn" class="collapsed">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 28px;">
+<img onmousedown="ioSwitch('pbZcfYGcPe-P', event.shiftKey)" id="ibZcfYGcPe-P" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">第1节　为什么菲律宾种转基因主粮？ / 111<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pbZcfYGcPe-P" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">大农场主罗萨莉为什么种转基因？ / 111<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">一个有机农业主义者的转基因尝试 / 115<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">敢于挺身而出的科学家和官员们 / 118<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 28px;">
+<img onmousedown="ioSwitch('pkMvtoM6P1ur', event.shiftKey)" id="ikMvtoM6P1ur" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">第2节　转基因棉花在印度 / 122<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pkMvtoM6P1ur" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">棉花改变世界 / 123<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">第一次绿色革命：引入现代农业技术 / 126<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">第二次绿色革命：引进转基因棉花 / 130<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">转基因与民主：来自公民社会的阻力 / 134<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1" style="width: 28px;">
+<img onmousedown="ioSwitch('pbDxJMvLHydb', event.shiftKey)" id="ibDxJMvLHydb" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1" style=" width: 1px; "></td>
+<td class=" content level1 subcell">第五篇　转基因在中国<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pbDxJMvLHydb" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 28px;">
+<img onmousedown="ioSwitch('pmPWnRN6oidp', event.shiftKey)" id="imPWnRN6oidp" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">第1节　中国的棉花战争 / 145<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pmPWnRN6oidp" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">守不住的棉花阵地 / 146<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">转基因拯救棉花病虫害 / 149<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">一位有机棉农的尴尬实验 / 155<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 28px;">
+<img onmousedown="ioSwitch('pgNNju_IfgB_', event.shiftKey)" id="igNNju_IfgB_" border="0" alt="&gt;" class="parent" src="Collapsed.png" title="expand"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">第2节　为什么中国没有孟山都？ / 162<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pgNNju_IfgB_" class="collapsed">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">孟山都的豪赌 / 163<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">刘石的豪赌 / 168<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">科技部门的豪赌 / 173<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">张启发的豪赌 / 178<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">结语 / 185<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1" style="width: 28px;">
+<img onmousedown="ioSwitch('plx1xdeHfHR6', event.shiftKey)" id="ilx1xdeHfHR6" border="0" alt="&gt;" class="parent" src="Collapsed.png" title="expand"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1" style=" width: 1px; "></td>
+<td class=" content level1 subcell">第六篇　转基因案例研究：大豆<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="plx1xdeHfHR6" class="collapsed">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 28px;">
+<img onmousedown="ioSwitch('ppRst5V9xYhv', event.shiftKey)" id="ipRst5V9xYhv" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">第1节　中国大豆的曾经与现实 / 189<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="ppRst5V9xYhv" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">大豆沦陷，杂交玉米逆袭 / 190<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">转基因洋豆入侵 / 193<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">中国免耕法的困境 / 198<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 28px;">
+<img onmousedown="ioSwitch('pencijhCpT1g', event.shiftKey)" id="iencijhCpT1g" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">第2节　绝处逢生的阿根廷 / 201<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pencijhCpT1g" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">内陆中的港口 / 201<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">潘帕斯草原上的农场 / 205<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">转基因大豆的秘密 / 210<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 28px;">
+<img onmousedown="ioSwitch('peCpSBp9sxXN', event.shiftKey)" id="ieCpSBp9sxXN" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">第3节 后来居上的巴西 / 215<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="peCpSBp9sxXN" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">南美牛仔非法种植转基因大豆 / 215<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">巴西政治家高超的政治智慧 / 218<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">巴西科学家放手一搏 / 224<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1" style="width: 28px;">
+<img onmousedown="ioSwitch('pe-CUugSrxtl', event.shiftKey)" id="ie-CUugSrxtl" border="0" alt="&gt;" class="parent" src="Collapsed.png" title="expand"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1" style=" width: 1px; "></td>
+<td class=" content level1 subcell">第七篇　转基因动物的时代就要到了<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pe-CUugSrxtl" class="collapsed">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">第1节　迎接转基因动物的时代 / 233<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">第2节　转基因三文鱼 / 237<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">第3节　转基因鱼油 / 240<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">第4节　转基因蚊子 / 243<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1" style="width: 28px;">
+<img onmousedown="ioSwitch('pctteAgO7xe6', event.shiftKey)" id="ictteAgO7xe6" border="0" alt="&gt;" class="parent" src="Collapsed.png" title="expand"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1" style=" width: 1px; "></td>
+<td class=" content level1 subcell">第八篇　转基因话题的媒体呈现<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pctteAgO7xe6" class="collapsed">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell"> 引　言　难写的转基因报道 / 249 <br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 28px;">
+<img onmousedown="ioSwitch('pefnggA5DnEv', event.shiftKey)" id="iefnggA5DnEv" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">第1节　普及转基因的历史 / 252<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pefnggA5DnEv" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">转基因在农业领域已经取得了辉煌的成就 / 253<br>
+</td>
+</tr></table></div></td></tr></table></div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 28px;">
+<img onmousedown="ioSwitch('pa-JzIJ4izRA', event.shiftKey)" id="ia-JzIJ4izRA" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">第2节　如何报道转基因 / 255<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pa-JzIJ4izRA" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">报道转基因需要具备国际视角 / 255<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">从育种的角度考察转基因技术 / 256<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">如实报道转基因的缺点 / 257<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 49px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 28px;">
+<img border="0" alt="*" class="leaf" src="LeafRowHandle.png"><img border="0" alt=" " class="status" src="Unchecked.png">
+</td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">用大视角看待转基因技术<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+</div>
+</td></tr></table></body>
+</html>
