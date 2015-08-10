@@ -1,8 +1,8 @@
 title: Business trip cycle begins
 date: 2015-08-10 21:40:01
 updated: 2015-08-10 21:40:01
-tags: [life]
-categories: profession
+tags: [life, pet]
+categories: life
 ---
 <div align=center>
 <img src="http://daweih.github.io/images/together.jpg">
