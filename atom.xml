@@ -34,7 +34,9 @@
     
       <category term="life" scheme="http://daweih.github.io/tags/life/"/>
     
-      <category term="profession" scheme="http://daweih.github.io/categories/profession/"/>
+      <category term="pet" scheme="http://daweih.github.io/tags/pet/"/>
+    
+      <category term="life" scheme="http://daweih.github.io/categories/life/"/>
     
   </entry>
   
