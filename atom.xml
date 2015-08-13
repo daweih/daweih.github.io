@@ -5,7 +5,7 @@
   <subtitle><![CDATA[桑榆]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://daweih.github.io//"/>
-  <updated>2015-08-10T13:40:01.000Z</updated>
+  <updated>2015-08-13T21:07:06.000Z</updated>
   <id>http://daweih.github.io//</id>
   
   <author>
@@ -14,6 +14,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[JBrowse Quick-Start Tutorial]]></title>
+    <link href="http://daweih.github.io/2015/08/14/JBrowse-Quick-Start-Tutorial/"/>
+    <id>http://daweih.github.io/2015/08/14/JBrowse-Quick-Start-Tutorial/</id>
+    <published>2015-08-13T21:07:06.000Z</published>
+    <updated>2015-08-13T21:07:06.000Z</updated>
+    <content type="html"><![CDATA[<h4 id="Reference">Reference</h4><ol>
+<li><a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=" target="_blank" rel="external">title</a><br><br><div align="center"><br><img src="http://daweih.github.io/images/wechat_small_black.jpg"><br></div></li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h4 id="Reference">Reference</h4><ol>
+<li><a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=" target="_blank" rel="external">title</a><br><b]]>
+    </summary>
+    
+      <category term="baby step" scheme="http://daweih.github.io/tags/baby-step/"/>
+    
+      <category term="bioinformatics" scheme="http://daweih.github.io/tags/bioinformatics/"/>
+    
+      <category term="gene annotation" scheme="http://daweih.github.io/tags/gene-annotation/"/>
+    
+      <category term="javascript" scheme="http://daweih.github.io/tags/javascript/"/>
+    
+      <category term="visualization" scheme="http://daweih.github.io/tags/visualization/"/>
+    
+      <category term="profession" scheme="http://daweih.github.io/categories/profession/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Business trip cycle begins]]></title>
@@ -210,82 +239,6 @@
       <category term="travel" scheme="http://daweih.github.io/tags/travel/"/>
     
       <category term="life" scheme="http://daweih.github.io/categories/life/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Looing for publicly available NGS data]]></title>
-    <link href="http://daweih.github.io/2015/08/01/Looing-for-data-at-SRA/"/>
-    <id>http://daweih.github.io/2015/08/01/Looing-for-data-at-SRA/</id>
-    <published>2015-07-31T20:24:05.000Z</published>
-    <updated>2015-08-02T19:24:05.000Z</updated>
-    <content type="html"><![CDATA[<p>最近 2 年，NGS 的成本越来越低，让研究者可以产生大量的数据，其中有很多优秀的工作，发表了高水平文章。</p>
-<div align="center"><br><img src="http://daweih.github.io/images/sra.jpg"><br></div>
-
-<h3 id="主要的_NGS_原始数据库">主要的 NGS 原始数据库</h3><p>按照学术期刊的要求（比如CNS），NGS 的原始数据，在发表前一般会被上传到几个主要的数据库，包括：</p>
-<ul>
-<li><a href="http://www.ncbi.nlm.nih.gov/sra" target="_blank" rel="external">NCBI European Nucleotide Archive (SRA)</a></li>
-<li><a href="http://www.ebi.ac.uk/ena" target="_blank" rel="external">EBI European Nucleotide Archive (ENA)</a></li>
-</ul>
-<p>作为期刊的读者，我们需要下载某些数据，无非是基于以下一些原因：</p>
-<ul>
-<li>数据基于的物种 / 组织是研究对象。通过下载公共数据而非自产，来节约研究的开支</li>
-<li>对研究者发表的结果感兴趣，想进行重复或深入研究；认为发表数据的研究者有遗漏或忽略了重要的研究方向，想对其数据进入深入挖掘</li>
-<li>想用数据来练手（这个动机在学生中很普遍）</li>
-</ul>
-<p>当然，还会有其它原因，欢迎补充。于是，如何下载呢？</p>
-<h3 id="通过文章正文内的线索来寻找">通过文章正文内的线索来寻找</h3><p>这种情况下，发表的文章会直接给出数据提交到的数据库，数据的 accession。比如：</p>
-<blockquote>
-<p>DNA sequencing data are deposited in the <code>European Nucleotide Archive</code> (<a href="http://www.ebi.ac.uk/ena/" target="_blank" rel="external">http://www.ebi.ac.uk/ena/</a>) under <u style="color:darkred"><code>accession numbers</code> ERP001143, ERP000729 and ERP000106.</u> De novo assembly and genome annotation of wild rice W1943, the genotype dataset of 1,529 rice accessions and the imputed dataset of 446 O. rufipogon accessions for GWAS are available at the Rice Haplotype Map Project database (<a href="http://www.ncgr.ac.cn/RiceHap3" target="_blank" rel="external">http://www.ncgr.ac.cn/RiceHap3</a>). [1]</p>
-</blockquote>
-<p>再比如：</p>
-<blockquote>
-<p>Accession codes. Raw sequences have been deposited in the EBI European Nucleotide Archive with <u style="color:darkred">accession number ERP000729 for worldwide rice germplasm (330 worldwide rice accessions: ERS037511–ERS037840)</u> and with accession number ERP000106 for Chinese rice landraces (100 newly added Chinese rice landraces: ERS039279–ERS039378). [2]</p>
-</blockquote>
-<h3 id="通过数据库的分类系统来寻找，筛选">通过数据库的分类系统来寻找，筛选</h3><p>通过关键词系统、分类系统，你可以在一个数据库，整合所有符合你研究兴趣的数据。</p>
-<h3 id="通过其他信息定位">通过其他信息定位</h3><p>但很多时候，文章的作者并没有给出数据具体的存放位置，或者没有给出数据的ID。我们无法很简单地确定数据的位置，这样就要通过多方面的信息来判断。比如参考文献 [3] 就是如此。在这篇文献里，虽然没有给出具体的位置和数据的 accession，但可以参考的信息还有很多，比如：</p>
-<ol>
-<li>物种是 <em>Triticum aestivum</em> L. cv Chinese Spring</li>
-<li>发表日期：Published 18 July 2014</li>
-<li>作者单位：Department of Plant Sciences/Centre for Integrative Genetics,The Norwegian University of Life Sciences (NMBU)</li>
-<li>Paired end (PE) sequencing libraries</li>
-<li>HiSeq2000 (Illumina, San Diego, USA)</li>
-<li>RNA was isolated and prepared for RNA-seq by using paired-end libraries with <u style="color:darkred">200–base pair inserts for 30 samples</u> with four biological replicates per cell type and time point (two replicates per room) and two additional technical replicates. Total RNA was extracted from frozen plant material using the RNeasy Lipid Tissue Mini kit (QIAGEN, Hilden, Germany; <a href="http://www.qiagen.com/applications/plant" target="_blank" rel="external">http://www.qiagen.com/applications/plant</a>). </li>
-</ol>
-<p>用文章的标题、物种名、技术和研究的关键词作为搜索条件，利用 google 的搜索和在数据库内的检索，定位到候选纪录。</p>
-<p>通过和潜在的数据的<a href="http://www.ncbi.nlm.nih.gov/bioproject/?term=%22Genome+interplay+in+the+grain+transcriptome+of+hexaploid+bread+wheat%22" target="_blank" rel="external">基本信息</a>的比较，发现支持此数据为文章的数据：</p>
-<ol>
-<li>Organism:    <em>Triticum aestivum</em>, cultivar: Chinese Spring</li>
-<li>Registration date: 19-Jul-2014</li>
-<li>Submitted by: Department of Plant and Environmental Sciences/CIGENE, Norwegian University of Life Sciences</li>
-<li>Paired end (PE) sequencing libraries</li>
-<li>Illumina HiSeq 2000</li>
-<li>30 samples. Total RNA was extracted from frozen plant material using the RNeasy Lipid Tissue Mini kit (QIAGEN, Hilden, Germany; <a href="http://www.qiagen.com/applications/plant" target="_blank" rel="external">http://www.qiagen.com/applications/plant</a>). Illumina TruSeq RNA Sample Preparation Kits v2</li>
-</ol>
-<p>上面的信息的排列，我按照一一对应做了总结。比对之后，确信这个数据和文章的对应关系。</p>
-<p>之后就可以把每个 SRA 文件的取样和实验信息整理成表，和发表的文章的信息做对照（这里就开始细活了）。</p>
-<h3 id="下载方法">下载方法</h3><p>SRA 数据的下载方法，推荐使用 Aspera。用法请参考<a href="http://daweih.github.io/2015/07/24/aspera-download-data-from-sra/">旧时博文</a>。对于数据量较少的，也可以使用 wget 等命令下载，但耗时较长。</p>
-<h3 id="Reference">Reference</h3><ol>
-<li><a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=23034647" target="_blank" rel="external">Huang, X. et al. A map of rice genome variation reveals the origin of cultivated rice. Nature 490, 497–501 (2012).</a></li>
-<li><a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=20972439" target="_blank" rel="external">Huang, X. et al. Genome-wide association studies of 14 agronomic traits in rice landraces. Nat. Genet. 42, 961–967 (2010).</a></li>
-<li><a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=25035498" target="_blank" rel="external">Pfeifer, M. et al. Genome interplay in the grain transcriptome of hexaploid bread wheat. Science 345, 1250091–1250091 (2014).</a></li>
-</ol>
-<p><br></p>
-<div align="center"><br><img src="http://daweih.github.io/images/wechat_small_black.jpg"><br></div>]]></content>
-    <summary type="html">
-    <![CDATA[<p>最近 2 年，NGS 的成本越来越低，让研究者可以产生大量的数据，其中有很多优秀的工作，发表了高水平文章。</p>
-<div align="center"><br><img src="http://daweih.github.io/images/sra.jpg"><br><]]>
-    </summary>
-    
-      <category term="NGS" scheme="http://daweih.github.io/tags/NGS/"/>
-    
-      <category term="SRA" scheme="http://daweih.github.io/tags/SRA/"/>
-    
-      <category term="baby step" scheme="http://daweih.github.io/tags/baby-step/"/>
-    
-      <category term="bioinformatics" scheme="http://daweih.github.io/tags/bioinformatics/"/>
-    
-      <category term="profession" scheme="http://daweih.github.io/categories/profession/"/>
     
   </entry>
   
