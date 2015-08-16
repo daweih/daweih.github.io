@@ -1,4 +1,4 @@
-title: Beihai after 8 years
+title: "北海 8 年后故地重游"
 date: 2015-08-15 23:02:44
 updated: 2015-08-15 23:02:44
 tags: [life, memory, Beijing]
@@ -19,24 +19,24 @@ categories: life
 <div align=center>
 <img src="http://daweih.github.io/images/beihai1.jpg">
 </div>
-###### 第一次去看白塔，觉得无甚趣味，皇家园林看过许多，白塔都排不上号；此时依旧排不上，还在还可以拍照发朋友圈。
+##### 第一次去看白塔，觉得无甚趣味，皇家园林看过许多，白塔都排不上号；此时依旧排不上，还在还可以拍照发朋友圈。
 
 <div align=center>
 <img src="http://daweih.github.io/images/beihai2.jpg">
 </div>
-###### 荷花年年盛开，人的心态却不断变化。过去无所畏惧，现在更是，只是吞下那些不怕说出口的话之原因，变成了懒得去絮叨。
+##### 荷花年年盛开，人的心态却不断变化。过去无所畏惧，现在更是，只是吞下那些不怕说出口的话之原因，变成了懒得去絮叨。
 
 <div align=center>
 <img src="http://daweih.github.io/images/beihai3.jpg">
 </div>
-###### 颜值涨了一点点，对自拍的热爱增长了许多。
+##### 颜值涨了一点点，对自拍的热爱增长了许多。
 
 <div align=center>
 <img src="http://daweih.github.io/images/beihai4.jpg">
 </div>
-###### 蓝天的日子变得屈指可数了（虽然并不记得 2007 年有多少天有蓝天）。
+##### 蓝天的日子变得屈指可数了（虽然并不记得 2007 年有多少天有蓝天）。
 
 <div align=center>
 <img src="http://daweih.github.io/images/beihai5.jpg">
 </div>
-###### 花谢了结莲蓬，也好。
+##### 花谢了结莲蓬，也好。
