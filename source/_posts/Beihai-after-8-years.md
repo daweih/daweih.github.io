@@ -19,12 +19,12 @@ categories: life
 <div align=center>
 <img src="http://daweih.github.io/images/beihai1.jpg">
 </div>
-##### 第一次去看白塔，觉得无甚趣味，皇家园林看过许多，白塔都排不上号；此时依旧排不上，还在还可以拍照发朋友圈。
+##### 第一次去看白塔，觉得无甚趣味，皇家园林看过许多，白塔都排不上号；此时依旧排不上，好在可以拍照发朋友圈。
 
 <div align=center>
 <img src="http://daweih.github.io/images/beihai2.jpg">
 </div>
-##### 荷花年年盛开，人的心态却不断变化。过去无所畏惧，现在更是，只是吞下那些不怕说出口的话之原因，变成了懒得去絮叨。
+##### 荷花年年盛开，人的心态却不断变化。过去无所畏惧，现在更是；咽回那些并不怕说出口的话的原因，现在变成了懒得去絮叨。
 
 <div align=center>
 <img src="http://daweih.github.io/images/beihai3.jpg">
@@ -34,7 +34,7 @@ categories: life
 <div align=center>
 <img src="http://daweih.github.io/images/beihai4.jpg">
 </div>
-##### 蓝天的日子变得屈指可数了（虽然并不记得 2007 年有多少天有蓝天）。
+##### 蓝天的日子变得屈指可数了（虽然并不记得 2007 年有多少天有蓝天，而且附近最近刚发生爆炸）。
 
 <div align=center>
 <img src="http://daweih.github.io/images/beihai5.jpg">
