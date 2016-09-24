@@ -15,9 +15,16 @@ categories: profession
 
 现在做 FileMaker 开发也有 3 年多，可以算得心应手吧。过去学的很多语言和技术也都逐渐在这个平台上应用起来。总体上，FileMaker 确实是上手容易的数据库平台，有着 Apple 一贯易用的特色。单进阶还是比较难的。而且中文的教材也很缺乏。在国内想成为 FileMaker 高手，英语水平是硬性的指标。
 
+不过由于部署容易，有商业化系统的安全性，授权费用也不高，FileMaker 还是很适合开发中小型企业的信息化的解决方案。对于中小型企业，本身 IT 团队就小。特别是一些非 IT 类的研发型公司，如农业公司、销售公司、试剂公司，本身公司结构就比较扁平，用户群体庞大，开发者遇到的问题比较稀碎，但却有数据集中化的需求。其数据库的维护本身就是个难题。FileMaker 的服务器端部署非常容易，解决方案文件也很容易部署。从而可以让开发者专注于如何将工作流程转化为解决方案。
+
+此外，由于开发便捷，FileMaker 也适合快速将研究型流程转化为标准化的高通量流程。比如在生物信息分析中，常遇到的一个问题就是各自为战的研究者的脚本如何整合，实验室的研究如何延续。通过 FileMaker 的脚本编辑和执行功能，就可以很好地解决这个问题；同时 FileMaker 也可以调用存储的脚本在服务器端执行。同一个数据库实现了数据的存储、流程的整合、实验日志的收集和数据的分析等多项功能。很适合作为分子生物学实验室的核心过程管理＋数据管理系统。
+
+
+
 
 #### Reference
-1. [title](http://www.ncbi.nlm.nih.gov/pubmed/?term=)
+1. [FileMaker](http://www.filemaker.com)
+2. [我写的一个 FileMaker 脚本编辑和执行工具](https://github.com/daweih/FileMakerScriptEditor)
 <br>
 <div align=center>
 <img src="http://daweih.github.io/images/wechat_small_black.jpg">
