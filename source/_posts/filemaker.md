@@ -1,4 +1,4 @@
-title: "FileMaker 和我的一些小故事"
+title: "FileMaker 和我的一些小故事 (1)"
 date: 2016-09-24 22:44:31
 updated: 2016-09-24 22:44:31
 tags: [baby step, FileMaker, web, javascript, writting]
@@ -21,7 +21,7 @@ categories: profession
 
 
 #### Reference
-1. [FileMaker](http://www.filemaker.com)
+1. [FileMaker Inc.](http://www.filemaker.com)
 2. [我写的一个 FileMaker 脚本编辑和执行工具](https://github.com/daweih/FileMakerScriptEditor)
 <br>
 <div align=center>
