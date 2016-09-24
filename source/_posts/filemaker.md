@@ -1,11 +1,9 @@
 title: "FileMaker 和我的一些小故事"
 date: 2016-09-24 22:44:31
 updated: 2016-09-24 22:44:31
-tags:
-categories:
----
 tags: [baby step, FileMaker, web, javascript, writting]
 categories: profession
+---
 
 第一次看到 FileMaker 是在三里屯的苹果零售店里。当时中国刚开了第一家零售店。在货架上看到了 FileMaker 的盒装版。
 
