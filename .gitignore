@@ -1,11 +1,8 @@
 .DS_Store
-Thumbs.db
-db.json
+.deploy_git/
 *.log
 node_modules/
 public/
-.deploy*/
 .gitignore
 blog.bbprojectd/
-atom.xml
 oo3/
