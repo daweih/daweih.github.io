@@ -8,6 +8,8 @@ categories: profession
 
 在开发解决方案时，常常需要将数据库内的数据导出。除了常用的导出通道（export）之外，FileMaker 14 支持将数据保存为容器中的文件。导出容器中的文件是 FileMaker 已经支持的功能，也可以用脚本执行。[这里](https://github.com/daweih/FileMakerScriptEditor/blob/master/base64encode.container.fmp12)有一个示例，演示在 13，14，15 上此功能的差别。
 
+<center>![1](http://daweih.github.io/images/fm2.1.png "base64encode.container.fmp12")
+
 目前，FileMaker 最新的发行版..
 
 #### Reference
