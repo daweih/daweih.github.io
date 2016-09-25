@@ -51,7 +51,7 @@ var _hmt = _hmt || [];
 
 
 
-  <meta name="keywords" content="Forest,Friends,Larry,V,Vincent,life,tianjin,travel," />
+  <meta name="keywords" content="baby step,bioinformatics,javascript,visualization,web," />
 
 
 
@@ -62,36 +62,26 @@ var _hmt = _hmt || [];
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.4" />
 
 
-<meta name="description" content="周末去天津玩，按工作日通勤时间起床，一个小时的地铁，半个小时的火车，抵达。
-上一次去还是去欣赏废 (háng) 铁 (mû)，瞻仰先贤祠堂，间隔数年，心态大不同。
-住利兹卡尔顿，去临近的老利顺德玩，拍完照片自然要发 SNS，然后被评论“进入了游戏场景”。好吧，其实我还挺期待真正的“洋馆之旅”，全程小刀。
-
-然后隔墙偷拍久负盛名，号称向高迪致敬，但我感觉阴气森森的瓷房子，主题自“Biohazard”">
+<meta name="description" content="由于开发 FileMaker 系统下的脚本编辑和执行功能，需要让 FileMaker 内置更友好的代码编辑功能。因此调研了一番之后，发现在线支持语法高亮的代码编辑器 CodeMirror 适合，也方便移植，因此入坑（官方介绍）。
+本项目有个简单的实现在这里。
+部署其实很简单：
+12&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;../lib/codemirror.css&quot;&amp;gt;&amp;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="津门非主流游玩">
-<meta property="og:url" content="http://daweih.github.io/2015/08/02/tianjin-2-day/index.html">
+<meta property="og:title" content="CodeMirror 学习笔记 0">
+<meta property="og:url" content="http://daweih.github.io/2016/09/25/code-mirror0/index.html">
 <meta property="og:site_name" content="东隅">
-<meta property="og:description" content="周末去天津玩，按工作日通勤时间起床，一个小时的地铁，半个小时的火车，抵达。
-上一次去还是去欣赏废 (háng) 铁 (mû)，瞻仰先贤祠堂，间隔数年，心态大不同。
-住利兹卡尔顿，去临近的老利顺德玩，拍完照片自然要发 SNS，然后被评论“进入了游戏场景”。好吧，其实我还挺期待真正的“洋馆之旅”，全程小刀。
-
-然后隔墙偷拍久负盛名，号称向高迪致敬，但我感觉阴气森森的瓷房子，主题自“Biohazard”">
-<meta property="og:image" content="http://daweih.github.io/images/tj1.jpg">
-<meta property="og:image" content="http://daweih.github.io/images/tj2.jpg">
-<meta property="og:image" content="http://daweih.github.io/images/tj3.jpg">
-<meta property="og:image" content="http://daweih.github.io/images/tj4.jpg">
-<meta property="og:image" content="http://daweih.github.io/images/tj5.jpg">
-<meta property="og:image" content="http://daweih.github.io/images/tj6.jpg">
-<meta property="og:image" content="http://daweih.github.io/images/tj7.jpg">
-<meta property="og:image" content="http://daweih.github.io/images/tj8.jpg">
-<meta property="og:updated_time" content="2015-08-09T11:48:22.000Z">
+<meta property="og:description" content="由于开发 FileMaker 系统下的脚本编辑和执行功能，需要让 FileMaker 内置更友好的代码编辑功能。因此调研了一番之后，发现在线支持语法高亮的代码编辑器 CodeMirror 适合，也方便移植，因此入坑（官方介绍）。
+本项目有个简单的实现在这里。
+部署其实很简单：
+12&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;../lib/codemirror.css&quot;&amp;gt;&amp;">
+<meta property="og:image" content="http://daweih.github.io/images/wechat_small_black.jpg">
+<meta property="og:updated_time" content="2016-09-25T09:10:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="津门非主流游玩">
-<meta name="twitter:description" content="周末去天津玩，按工作日通勤时间起床，一个小时的地铁，半个小时的火车，抵达。
-上一次去还是去欣赏废 (háng) 铁 (mû)，瞻仰先贤祠堂，间隔数年，心态大不同。
-住利兹卡尔顿，去临近的老利顺德玩，拍完照片自然要发 SNS，然后被评论“进入了游戏场景”。好吧，其实我还挺期待真正的“洋馆之旅”，全程小刀。
-
-然后隔墙偷拍久负盛名，号称向高迪致敬，但我感觉阴气森森的瓷房子，主题自“Biohazard”">
+<meta name="twitter:title" content="CodeMirror 学习笔记 0">
+<meta name="twitter:description" content="由于开发 FileMaker 系统下的脚本编辑和执行功能，需要让 FileMaker 内置更友好的代码编辑功能。因此调研了一番之后，发现在线支持语法高亮的代码编辑器 CodeMirror 适合，也方便移植，因此入坑（官方介绍）。
+本项目有个简单的实现在这里。
+部署其实很简单：
+12&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;../lib/codemirror.css&quot;&amp;gt;&amp;">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -101,7 +91,7 @@ var _hmt = _hmt || [];
   };
 </script>
 
-    <title> 津门非主流游玩 // 东隅 </title>
+    <title> CodeMirror 学习笔记 0 // 东隅 </title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
 <!--[if lte IE 8]>
@@ -230,7 +220,7 @@ var _hmt = _hmt || [];
           
           
             
-              津门非主流游玩
+              CodeMirror 学习笔记 0
             
           
         </h1>
@@ -239,8 +229,8 @@ var _hmt = _hmt || [];
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-08-02T19:48:22+08:00" content="2015-08-02">
-            2015-08-02
+          <time itemprop="dateCreated" datetime="2016-09-25T17:10:34+08:00" content="2016-09-25">
+            2016-09-25
           </time>
         </span>
 
@@ -248,7 +238,7 @@ var _hmt = _hmt || [];
           <span class="post-category" >
             &nbsp; | &nbsp; In
             
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/life/" itemprop="url" rel="index"><span itemprop="name">life</span></a></span>
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/profession/" itemprop="url" rel="index"><span itemprop="name">profession</span></a></span>
 
               
               
@@ -261,8 +251,8 @@ var _hmt = _hmt || [];
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/08/02/tianjin-2-day/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/02/tianjin-2-day/" itemprop="commentsCount"></span>
+              <a href="/2016/09/25/code-mirror0/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/25/code-mirror0/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -276,17 +266,13 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><p>周末去天津玩，按工作日通勤时间起床，一个小时的地铁，半个小时的火车，抵达。</p>
-<p>上一次去还是去欣赏<code>废 (háng) 铁 (mû</code>)，瞻仰<code>先贤祠堂</code>，间隔数年，心态大不同。</p>
-<p>住<code>利兹卡尔顿</code>，去临近的老<code>利顺德</code>玩，拍完照片自然要发 SNS，然后被评论“进入了游戏场景”。好吧，其实我还挺期待真正的“洋馆之旅”，全程小刀。</p>
-<p><center><img src="http://daweih.github.io/images/tj1.jpg" alt="1" title="经典的复古楼梯"><br><img src="http://daweih.github.io/images/tj2.jpg" alt="2" title="大陆最早的客用电梯，铁达尼的复古感"><br><img src="http://daweih.github.io/images/tj3.jpg" alt="3" title="就差红漆来烘托气氛了"><br><img src="http://daweih.github.io/images/tj4.jpg" alt="4" title="Red Quene 的宫殿"></center></p>
-<p>然后隔墙偷拍久负盛名，号称向高迪致敬，但我感觉阴气森森的瓷房子，主题自“<code>Biohazard</code>”换成“<code>Thriller</code>”，于是晚上回去复习了一下 <code>MJ</code>。</p>
-<p><center><img src="http://daweih.github.io/images/tj5.jpg" alt="5" title="China House"></center></p>
-<p>当然，<code>相声</code>自然是不可错过的。来，爷们亮个相；舞台质量真不错，不仅结实，而且出的这响儿附赠您心跳的。</p>
-<p><center><img src="http://daweih.github.io/images/tj6.jpg" alt="6" title="万一倒了会坐死人的亮相，金鸡独立"></center></p>
-<p>萌宠压轴，最后负责拉赞，黑猫警长，拜托了。</p>
-<p><center><img src="http://daweih.github.io/images/tj7.jpg" alt="7" title="黑猫警长：今天吐毛日。这草咋咬不动？"><br><img src="http://daweih.github.io/images/tj8.jpg" alt="8" title="娃娃的毛被剃了"></center></p>
-<p>懒散二日游，慢慢走，休闲不累，周末该如此。</p>
+        <span itemprop="articleBody"><p>由于开发 FileMaker 系统下的脚本编辑和执行功能，需要让 FileMaker 内置更友好的代码编辑功能。因此调研了一番之后，发现在线支持语法高亮的代码编辑器 CodeMirror 适合，也方便移植，因此入坑（<a href="http://codemirror.net" target="_blank" rel="external">官方介绍</a>）。</p>
+<p>本项目有个简单的实现在<a href="https://github.com/daweih/FileMakerScriptEditor" target="_blank" rel="external">这里</a>。</p>
+<p>部署其实很简单：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">href</span>=<span class="value">"../lib/codemirror.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"../lib/codemirror.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="Reference">Reference</h4><ol>
+<li><a href="http://codemirror.net/" target="_blank" rel="external">Code Mirror</a><br><br><div align="center"><br><img src="http://daweih.github.io/images/wechat_small_black.jpg"><br></div></li>
+</ol>
 </span>
       
     </div>
@@ -295,21 +281,15 @@ var _hmt = _hmt || [];
       
         <div class="post-tags">
           
-            <a href="/tags/Forest/" rel="tag">#Forest</a>
+            <a href="/tags/baby-step/" rel="tag">#baby step</a>
           
-            <a href="/tags/Friends/" rel="tag">#Friends</a>
+            <a href="/tags/bioinformatics/" rel="tag">#bioinformatics</a>
           
-            <a href="/tags/Larry/" rel="tag">#Larry</a>
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
           
-            <a href="/tags/V/" rel="tag">#V</a>
+            <a href="/tags/visualization/" rel="tag">#visualization</a>
           
-            <a href="/tags/Vincent/" rel="tag">#Vincent</a>
-          
-            <a href="/tags/life/" rel="tag">#life</a>
-          
-            <a href="/tags/tianjin/" rel="tag">#tianjin</a>
-          
-            <a href="/tags/travel/" rel="tag">#travel</a>
+            <a href="/tags/web/" rel="tag">#web</a>
           
         </div>
       
@@ -318,13 +298,11 @@ var _hmt = _hmt || [];
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/08/04/reading-note-Becoming-a-technical-leader/" rel="prev">Reading note 1: Becoming a technical leader</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/08/01/Looing-for-data-at-SRA/" rel="next">Looing for publicly available NGS data</a>
+              <a href="/2016/09/25/filemaker2/" rel="next">FileMaker 和我的一些小故事 (2): 版本的故事－Base64Decode</a>
             
           </div>
         </div>
@@ -350,8 +328,8 @@ var _hmt = _hmt || [];
             
               <div class="comments" id="comments">
                 
-                  <div class="ds-thread" data-thread-key="2015/08/02/tianjin-2-day/"
-                       data-title="津门非主流游玩" data-url="http://daweih.github.io/2015/08/02/tianjin-2-day/">
+                  <div class="ds-thread" data-thread-key="2016/09/25/code-mirror0/"
+                       data-title="CodeMirror 学习笔记 0" data-url="http://daweih.github.io/2016/09/25/code-mirror0/">
                   </div>
                 
               </div>
@@ -469,7 +447,7 @@ var _hmt = _hmt || [];
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">This post does not have a Table Of Contents</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Reference"><span class="nav-number">1.</span> <span class="nav-text">Reference</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
