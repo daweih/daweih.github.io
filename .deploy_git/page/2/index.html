@@ -211,6 +211,128 @@ var _hmt = _hmt || [];
           
           
             
+              <a class="post-title-link" href="/2015/07/24/aspera-download-data-from-sra/" itemprop="url">
+                Aspera download data from SRA
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2015-07-24T22:15:54+08:00" content="2015-07-24">
+            2015-07-24
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/profession/" itemprop="url" rel="index"><span itemprop="name">profession</span></a></span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/07/24/aspera-download-data-from-sra/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/24/aspera-download-data-from-sra/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><h4 id="背景">背景</h4><ul>
+<li><p>为什么要使用 aspera？</p>
+<ul>
+<li>因为测序数据迈入 NGS 时代后，通量增长很快，尤其是 NCBI SRA 的数据，单个压缩包很大，需要使用更快速的传输工具。</li>
+<li>aspera 提供命令行的交互，便于管理</li>
+</ul>
+</li>
+<li><p>aspera 比传统的 scp, wget 速度更快，同时具有命令行程序的纯文本输出特性。</p>
+</li>
+<li><p>aspera 还有图形界面版本，适合多种偏好的用户。</p>
+</li>
+</ul>
+<p><a href="http://boyun.sh.cn/bio/?p=1933" target="_blank" rel="external">博耘生物说</a>:</p>
+<blockquote>
+<p>速铂Aspera是一套商业的高速文件传输解决方案，随着高通量数据的大量产生，从而对于大文件快速传输的需求，开始应用到生物领域，目前 NCBI、EBI 的 SRA 库都提供这样的服务。<br>…<br>一句话，远距离，大文件，Aspera 优势巨大。</p>
+</blockquote>
+<p>我说：</p>
+<blockquote>
+<p>你如果经历过使用 <code>wget</code> 下载 sra 数据要等几天几个星期，还可能断掉，就知道用下面这个黑科技有多爽了。</p>
+</blockquote>
+<h4 id="安装_aspera-connect：">安装 aspera-connect：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看系统的版本</span></span><br><span class="line">$ uname <span class="operator">-a</span></span><br><span class="line">*x86_64*</span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载对应的版本（目前测试需要翻墙）</span></span><br><span class="line">$ wget http://download.asperasoft.com/download/sw/connect/<span class="number">3.6</span>.<span class="number">0</span>/aspera-connect-<span class="number">3.6</span>.<span class="number">0.106805</span>-linux-<span class="number">64</span>.tar.gz</span><br><span class="line"></span><br><span class="line">$ gunzip aspera-connect-<span class="number">3.6</span>.<span class="number">0.106805</span>-linux-<span class="number">64</span>.tar.gz</span><br><span class="line">$ tar -xvf aspera-connect-<span class="number">3.6</span>.<span class="number">0.106805</span>-linux-<span class="number">64</span>.tar</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装</span></span><br><span class="line">$ sh aspera-connect-<span class="number">3.6</span>.<span class="number">0.106805</span>-linux-<span class="number">64</span>.sh</span><br></pre></td></tr></table></figure>
+<p>安装输出结果</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Installing Aspera Connect</span><br><span class="line"></span><br><span class="line">Deploying Aspera Connect (/home/your_user_name/.aspera/connect) <span class="keyword">for</span> the current user only.</span><br><span class="line">Restart firefox manually to load the Aspera Connect plug-in</span><br><span class="line"></span><br><span class="line">Install complete.</span><br></pre></td></tr></table></figure>
+<h4 id="修改环境变量">修改环境变量</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ vi ~/.bash_profile</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加下面一行</span></span><br><span class="line"><span class="built_in">export</span> PATH=/home/your_user_name/.aspera/connect/bin:<span class="variable">$PATH</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 环境变量生效</span></span><br><span class="line">$ <span class="built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure>
+<h4 id="配置参数，测试下载">配置参数，测试下载</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># PRIVATE-KEY-FILE 文件位置</span></span><br><span class="line">~/.aspera/connect/etc/asperaweb_id_dsa.openssh</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载用的命令</span></span><br><span class="line">$ ascp  -i asperaweb_id_dsa.openssh --mode recv --host ftp-private.ncbi.nlm.nih.gov --user anonftp   --file-list  sra_list.txt  -k <span class="number">1</span> -QT <span class="operator">-l</span> <span class="number">200</span>m  /path_to_save_download/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 对参数的解释</span></span><br><span class="line">Usage: ascp [OPTION] SRC... DEST</span><br><span class="line">          SRC to DEST, or multiple SRC to DEST dir</span><br><span class="line">          SRC, DEST format: [[user@]host:]PATH</span><br><span class="line">  -h,--help                       Display usage</span><br><span class="line">  -A,--version                    Display version.</span><br><span class="line">  -i PRIVATE-KEY-FILE             Private-key file name (id_rsa)</span><br><span class="line">  --mode=MODE                     MODE: send, recv</span><br><span class="line">  --host=HOSTNAME</span><br><span class="line">  --user=USERNAME</span><br><span class="line">  --file-list=FILENAME            File with list of sources</span><br><span class="line">  -k RESUME-LEVEL                 Resume criterion: <span class="number">0</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span></span><br><span class="line">  <span class="operator">-l</span> MAX-RATE                     Max transfer rate</span><br><span class="line">  -q                              Disable progress display</span><br><span class="line">  -T                              Disable encryption</span><br><span class="line"><span class="comment"># 一般来说，你只要修改 `--file-list` `-i` 对因你自己的情况即可</span></span><br></pre></td></tr></table></figure>
+<h4 id="获取下载文件地址">获取下载文件地址</h4><p>一个 <code>sra_list.txt</code> 例子:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/sra/sra-instant/reads/ByRun/sra/ERR/ERR009/ERR009428/ERR009428.sra</span><br></pre></td></tr></table></figure>
+<p>如何获取此地址：</p>
+<ol>
+<li><p>找到 <code>sra</code> 文件的页面（发表的文章一般会提供这个页面的 ID），点击红框进入下一页</p>
+<p><img src="http://daweih.github.io/images/sra1.png" alt="找到sra文件的页面（发表的文章一般会提供这个页面的 ID），点击红框进入下一页"></p>
+</li>
+<li><p>地址栏里显示了地址，然后按照上文的 <code>sra_list.txt</code> 模式编写</p>
+<p><img src="http://daweih.github.io/images/sra2.png" alt="地址栏里显示了地址，然后按照上文的 `sra_list.txt` 模式编写"></p>
+</li>
+</ol>
+<h4 id="OS_X_如何使用？">OS X 如何使用？</h4><p>在 OS X 下，可以直接从官网下载 dmg 的安装包。安装之后，注意：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 程序的可执行文件路径</span></span><br><span class="line">/Users/your_user_name/Applications/Aspera\ Connect.app/Contents/Resources/ascp</span><br><span class="line"></span><br><span class="line"><span class="comment"># PRIVATE-KEY-FILE 文件位置</span></span><br><span class="line">/Users/your_user_name/Applications/Aspera\ Connect.app/Contents/Resources/asperaweb_id_dsa.openssh</span><br></pre></td></tr></table></figure>
+<p>其他上述参数沿用。</p>
+<p><br></p>
+<p>最后，请欣赏华丽丽的下载速度。</p>
+<p>  <img src="http://daweih.github.io/images/ascp.png" alt="ascp"></p>
+<p><br></p>
+<div align="center"><br><img src="http://daweih.github.io/images/wechat_small_black.jpg"><br></div></span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2015/07/24/Install-and-test-bowtie-and-tophat/" itemprop="url">
                 Install and test bowtie and tophat
               </a>
@@ -1084,85 +1206,6 @@ var _hmt = _hmt || [];
 
 
     
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/07/20/hello-world/" itemprop="url">
-                Hello World
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on
-          <time itemprop="dateCreated" datetime="2015-07-20T08:04:40+08:00" content="2015-07-20">
-            2015-07-20
-          </time>
-        </span>
-
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/07/20/hello-world/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/20/hello-world/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody"><p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-<blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p>
-<footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote>
-</span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1202,7 +1245,7 @@ var _hmt = _hmt || [];
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">28</span>
+              <span class="site-state-item-count">29</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
