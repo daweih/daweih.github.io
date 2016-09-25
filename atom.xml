@@ -36,7 +36,8 @@
 <p>添加行号，折行（因为我们不希望 FileMaker 用户频繁地左右拖动，那个动作太反人类），让代码区域根据长度自动调整尺寸。</p>
 <p>这个项目中采用了直接加载 DOM 中文本的模式加载数据，又有其他方法，比如使用上个语句块中 options 区域中的参数 value 传递。</p>
 <h5 id="更多参数">更多参数</h5><h6 id="indentUnit">indentUnit</h6><p>integer. 定义锁进的单位。个人比较喜欢制表符大小的锁进，4个空格。</p>
-<h6 id="theme">theme</h6><p>string. 配置编辑器的主题样式。</p>
+<h6 id="theme">theme</h6><p>string. 配置编辑器的主题样式。个人感觉 ambiance 这个主题还是很好看的，如图。</p>
+<p><center><img src="http://daweih.github.io/images/cm.0.png" alt="1" title="CodeMirrorOnFM"></center></p>
 <h6 id="smartIndent">smartIndent</h6><p>boolean. 自动缩进: 是否根据上下文自动缩进，默认true。</p>
 <h6 id="lineNumbers">lineNumbers</h6><p>boolean. 是否在编辑器左侧显示行号。</p>
 <h6 id="undoDepth">undoDepth</h6><p>integer. 最大撤消次数，默认为200。</p>
