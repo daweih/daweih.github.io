@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  
+  <title><![CDATA[东隅]]></title>
+  <subtitle><![CDATA[桑榆]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://daweih.github.io//"/>
+  <updated>2016-09-25T06:12:32.000Z</updated>
+  <id>http://daweih.github.io//</id>
+  
+  <author>
+    <name><![CDATA[Dawei Huang]]></name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[FileMaker 和我的一些小故事 (2): 版本的故事－Base64Decode]]></title>
+    <link href="http://daweih.github.io/2016/09/25/filemaker2/"/>
+    <id>http://daweih.github.io/2016/09/25/filemaker2/</id>
+    <published>2016-09-25T06:12:32.000Z</published>
+    <updated>2016-09-25T06:12:32.000Z</updated>
+    <content type="html"><![CDATA[<p>似乎每次版本更新，FileMaker 都会给开发者带来一些“早就该有的”新功能。然而和 Apple Inc. 出 iPhone 的习惯一样，FileMaker 也不爱啰嗦把每次更新的内容说清楚，于是有了 Base64Decode 这个坑。</p>
+<p><center><img src="http://daweih.github.io/images/fm2.0.png" alt="1" title="Export records"></center></p>
+<p>在开发解决方案时，常常需要将数据库内的数据导出。除了常用的导出通道（Export）之外，FileMaker 14 支持将数据保存为容器中的文件。导出容器中的文件是 FileMaker 已经支持的功能，也可以用脚本执行。<a href="https://github.com/daweih/FileMakerScriptEditor/blob/master/base64encode.container.fmp12" target="_blank" rel="external">这里</a>有一个示例，演示在 13，14，15 上此功能的差别。采用的代码如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ Set Field [ container::container ; Base64Decode ( Base64Encode ( GetAsText ( container::text ) );<span class="string">"demo.txt"</span> ) ] </span><br><span class="line">$ Set Field [ container::File2Text ; Base64Decode ( Base64Encode ( container::container ) ) ]</span><br></pre></td></tr></table></figure>
+<p>可以看出，将字段内的数据直接导出为文件或从文件导入到字段，一个命令搞定，非常方便。下一步就可以用这个文件调用外部程序处理了，比如用插件 <a href="http://www.360works.com/scriptmaster/" target="_blank" rel="external">ScriptMaster</a> 的运行脚本功能使用 perl 语言处理文本，会比 FileMaker 自带的脚本强大得多。基于这个设计，我做了 <a href="https://github.com/daweih/FileMakerScriptEditor" target="_blank" rel="external">FileMakerScriptEditor</a> 这个项目，可以在 FileMaker 内编辑脚本，运行脚本处理 FileMaker 内存储的数据。</p>
+<p><center><img src="http://daweih.github.io/images/fm2.1.png" alt="2" title="base64encode.container.fmp12"></center></p>
+<p>目前，FileMaker 最新的发行版是 15。在这个平台下开发出来的解决方案常常遇到需要对旧版本适配的问题。比如我供职的公司，就有大量的用户还在使用 FileMaker 13。比如上述功能，就产生了不兼容。于是免不了到处搜寻bug……最终，针对 FileMakerScriptEditor，采用了先计算客户端版本，在判断为 13 后，选择用 ScriptMaster 替代 Base64Decode 实现了此功能。</p>
+<p>此外，从文件导入内容到字段的功能，最常用的另一个方面是库内置包的更新。我们知道，FileMaker 在 14 及以后的版本中，对 javascript 的支持越来越好。我们常用的 JS 包如果内置在库内部，直接调用，会比调用外部的包稳定很多。采用对拖入容器（container）的包直接提取代码，可以简单地实现拖入包文件即升级系统 JS 的包代码。此外，拖入文本文件直接导入其中的数据也是很便捷的一个应用。</p>
+<h4 id="Reference">Reference</h4><ol>
+<li><a href="http://www.filemaker.com/help/13/fmp/en/html/func_ref1.31.13.html" target="_blank" rel="external">Base64Decode</a></li>
+<li><a href="https://github.com/daweih/FileMakerScriptEditor" target="_blank" rel="external">FileMakerScriptEditor</a></li>
+<li><a href="http://www.360works.com/scriptmaster/" target="_blank" rel="external">ScriptMaster</a></li>
+</ol>
+<p><br></p>
+<div align="center"><br><img src="http://daweih.github.io/images/wechat_small_black.jpg"><br></div>]]></content>
+    <summary type="html">
+    <![CDATA[<p>似乎每次版本更新，FileMaker 都会给开发者带来一些“早就该有的”新功能。然而和 Apple Inc. 出 iPhone 的习惯一样，FileMaker 也不爱啰嗦把每次更新的内容说清楚，于是有了 Base64Decode 这个坑。</p>
+<p><center><i]]>
+    </summary>
+    
+      <category term="FileMaker" scheme="http://daweih.github.io/tags/FileMaker/"/>
+    
+      <category term="baby step" scheme="http://daweih.github.io/tags/baby-step/"/>
+    
+      <category term="javascript" scheme="http://daweih.github.io/tags/javascript/"/>
+    
+      <category term="web" scheme="http://daweih.github.io/tags/web/"/>
+    
+      <category term="writting" scheme="http://daweih.github.io/tags/writting/"/>
+    
+      <category term="profession" scheme="http://daweih.github.io/categories/profession/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[FileMaker 和我的一些小故事 (1)]]></title>
+    <link href="http://daweih.github.io/2016/09/24/filemaker/"/>
+    <id>http://daweih.github.io/2016/09/24/filemaker/</id>
+    <published>2016-09-24T14:44:31.000Z</published>
+    <updated>2016-09-24T14:44:31.000Z</updated>
+    <content type="html"><![CDATA[<p>第一次看到 FileMaker 是在三里屯的苹果零售店里。当时中国刚开了第一家零售店。在货架上看到了 FileMaker 的盒装版。</p>
+<p>当时已经是资深的 Mac 用户，对苹果的软件总喜欢研究以下。看到 Apple Inc. 自己子公司的产品，自然想尝试一番。不过在试用的一个月内，并没有产生太好的印象，现在想来，可能是因为当时做生物信息用脚本语言太过于随意，对这种刻板的商业化软件，是在是体会不不到好处。</p>
+<p>后来再深入接触已经是博士毕业以后了，开始做一些面向多用户的产品，数据库和网站也做了一些，逐渐开始体会到数据整合、标准格式、协作的优势。</p>
+<p>现在做 FileMaker 开发也有 3 年多，可以算得心应手吧。过去学的很多语言和技术也都逐渐在这个平台上应用起来。总体上，FileMaker 确实是上手容易的数据库平台，有着 Apple 一贯易用的特色。单进阶还是比较难的。而且中文的教材也很缺乏。在国内想成为 FileMaker 高手，英语水平是硬性的指标。</p>
+<p>不过由于部署容易，有商业化系统的安全性，授权费用也不高，FileMaker 还是很适合开发中小型企业的信息化的解决方案。对于中小型企业，本身 IT 团队就小。特别是一些非 IT 类的研发型公司，如农业公司、销售公司、试剂公司，本身公司结构就比较扁平，用户群体庞大，开发者遇到的问题比较稀碎，但却有数据集中化的需求。其数据库的维护本身就是个难题。FileMaker 的服务器端部署非常容易，解决方案文件也很容易部署。从而可以让开发者专注于如何将工作流程转化为解决方案。</p>
+<p>此外，由于开发便捷，FileMaker 也适合快速将研究型流程转化为标准化的高通量流程。比如在生物信息分析中，常遇到的一个问题就是各自为战的研究者的脚本如何整合，实验室的研究如何延续。通过 FileMaker 的脚本编辑和执行功能，就可以很好地解决这个问题；同时 FileMaker 也可以调用存储的脚本在服务器端执行。同一个数据库实现了数据的存储、流程的整合、实验日志的收集和数据的分析等多项功能。很适合作为分子生物学实验室的核心过程管理＋数据管理系统。</p>
+<h4 id="Reference">Reference</h4><ol>
+<li><a href="http://www.filemaker.com" target="_blank" rel="external">FileMaker Inc.</a></li>
+<li><a href="https://github.com/daweih/FileMakerScriptEditor" target="_blank" rel="external">我写的一个 FileMaker 脚本编辑和执行工具</a><br><br><div align="center"><br><img src="http://daweih.github.io/images/wechat_small_black.jpg"><br></div></li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>第一次看到 FileMaker 是在三里屯的苹果零售店里。当时中国刚开了第一家零售店。在货架上看到了 FileMaker 的盒装版。</p>
+<p>当时已经是资深的 Mac 用户，对苹果的软件总喜欢研究以下。看到 Apple Inc. 自己子公司的产品，自然想尝试一番。不过]]>
+    </summary>
+    
+      <category term="FileMaker" scheme="http://daweih.github.io/tags/FileMaker/"/>
+    
+      <category term="baby step" scheme="http://daweih.github.io/tags/baby-step/"/>
+    
+      <category term="javascript" scheme="http://daweih.github.io/tags/javascript/"/>
+    
+      <category term="web" scheme="http://daweih.github.io/tags/web/"/>
+    
+      <category term="writting" scheme="http://daweih.github.io/tags/writting/"/>
+    
+      <category term="profession" scheme="http://daweih.github.io/categories/profession/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[北海 8 年后故地重游]]></title>
+    <link href="http://daweih.github.io/2015/08/15/Beihai-after-8-years/"/>
+    <id>http://daweih.github.io/2015/08/15/Beihai-after-8-years/</id>
+    <published>2015-08-15T15:02:44.000Z</published>
+    <updated>2015-08-15T15:02:44.000Z</updated>
+    <content type="html"><![CDATA[<p>第一次去北海，还是 2007 年，我刚到帝都某研究生院就读。阴差阳错，换了个象牙塔，彼时，我的学术理想树立起来，只是还没有血肉。</p>
+<div align="center"><br><img src="http://daweih.github.io/images/beihai0.jpg"><br></div>
+
+<p>记得是在和同学共游北海之前，第一次去挨着北海的中国美术馆看夕阳画展，当时纤细纯良，还没有感觉长发的邋遢和不整齐，尚尊敬自然如我师。第一次看高迪展，也是在那年夏天。</p>
+<p>然后，8 年过去了。</p>
+<p><div align="center"><br><img src="http://daweih.github.io/images/beihai1.jpg"><br></div></p>
+<h5 id="第一次去看白塔，觉得无甚趣味，皇家园林看过许多，白塔都排不上号；此时依旧排不上，好在可以拍照发朋友圈。">第一次去看白塔，觉得无甚趣味，皇家园林看过许多，白塔都排不上号；此时依旧排不上，好在可以拍照发朋友圈。</h5><p><div align="center"><br><img src="http://daweih.github.io/images/beihai2.jpg"><br></div></p>
+<h5 id="荷花年年盛开，人的心态却不断变化。过去无所畏惧，现在更是；咽回那些并不怕说出口的话的原因，现在变成了懒得去絮叨。">荷花年年盛开，人的心态却不断变化。过去无所畏惧，现在更是；咽回那些并不怕说出口的话的原因，现在变成了懒得去絮叨。</h5><p><div align="center"><br><img src="http://daweih.github.io/images/beihai3.jpg"><br></div></p>
+<h5 id="颜值涨了一点点，对自拍的热爱增长了许多。">颜值涨了一点点，对自拍的热爱增长了许多。</h5><p><div align="center"><br><img src="http://daweih.github.io/images/beihai4.jpg"><br></div></p>
+<h5 id="蓝天的日子变得屈指可数了（虽然并不记得_2007_年有多少天有蓝天，而且附近最近刚发生爆炸）。">蓝天的日子变得屈指可数了（虽然并不记得 2007 年有多少天有蓝天，而且附近最近刚发生爆炸）。</h5><p><div align="center"><br><img src="http://daweih.github.io/images/beihai5.jpg"><br></div></p>
+<h5 id="花谢了结莲蓬，也好。">花谢了结莲蓬，也好。</h5>]]></content>
+    <summary type="html">
+    <![CDATA[<p>第一次去北海，还是 2007 年，我刚到帝都某研究生院就读。阴差阳错，换了个象牙塔，彼时，我的学术理想树立起来，只是还没有血肉。</p>
+<div align="center"><br><img src="http://daweih.github.io/images/bei]]>
+    </summary>
+    
+      <category term="Beijing" scheme="http://daweih.github.io/tags/Beijing/"/>
+    
+      <category term="life" scheme="http://daweih.github.io/tags/life/"/>
+    
+      <category term="memory" scheme="http://daweih.github.io/tags/memory/"/>
+    
+      <category term="life" scheme="http://daweih.github.io/categories/life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Business trip cycle begins]]></title>
+    <link href="http://daweih.github.io/2015/08/10/together/"/>
+    <id>http://daweih.github.io/2015/08/10/together/</id>
+    <published>2015-08-10T13:40:01.000Z</published>
+    <updated>2015-08-10T13:40:01.000Z</updated>
+    <content type="html"><![CDATA[<div align="center"><br><img src="http://daweih.github.io/images/together.jpg"><br></div>
+
+<p>第一次出远门，家里只剩下一个人和两只鼠。被从实验室解救后，它们可还觉得滋润？</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<div align="center"><br><img src="http://daweih.github.io/images/together.jpg"><br></div>
+
+<p>第一次出远门，家里只剩下一个人和两只鼠。被从实验室解救后，它们可还觉得滋润？</p>
+]]>
+    </summary>
+    
+      <category term="life" scheme="http://daweih.github.io/tags/life/"/>
+    
+      <category term="pet" scheme="http://daweih.github.io/tags/pet/"/>
+    
+      <category term="life" scheme="http://daweih.github.io/categories/life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[移植，测试嵌入的 D3: Coffee Flavour Wheel]]></title>
+    <link href="http://daweih.github.io/2015/08/04/Coffee-Flavour-Wheel/"/>
+    <id>http://daweih.github.io/2015/08/04/Coffee-Flavour-Wheel/</id>
+    <published>2015-08-04T13:09:31.000Z</published>
+    <updated>2015-08-04T13:09:31.000Z</updated>
+    <content type="html"><![CDATA[<p>为了在 Hexo 系统的 <code>markdown</code> 正文中测试 <code>D3</code> 的可用性，移植了一个<code>咖啡风味轮</code>的可视化，如下：</p>
+<h4 id="Coffee_Flavour_Wheel">Coffee Flavour Wheel</h4><script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+<div align="center" id="vis" style="font-size:13pt;font-family:helvetica;zoom:0.4;"></div>
+<script src="http://daweih.github.io/js/coffee_flavour_wheel.js" charset="utf-8"></script>
+<script>
+//    d3.select("div#vis").remove();
+</script>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"</span> charset=<span class="string">"utf-8"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;div align=center id=<span class="string">"vis"</span> style=<span class="string">"font-size:13pt;font-family:helvetica;zoom:0.4;"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;script src=<span class="string">"http://daweih.github.io/js/coffee_flavour_wheel.js"</span> charset=<span class="string">"utf-8"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="代码注释：">代码注释：</h4><ul>
+<li>第一行装载 <code>D3</code> 包。</li>
+<li>第二行，插入绘图区域，这里的绘图区域是用 <code>div#viz</code> 来定位并操作</li>
+<li>第三行，引用绘图用代码，保存在 <code>Hexo</code> 博客系统的 <code>js</code> 文件夹下，会被同步到 github。当然你也可以通过用 <code>&lt;script&gt;&lt;/script&gt;</code> 直接嵌入本页。个人更推荐单独存放，避免 markdown 页面太长。</li>
+</ul>
+<h4 id="编写小贴士">编写小贴士</h4><ul>
+<li><strong>改动 <code>md</code> 文件后直接看效果：</strong>对 DOM 的 <code>attr</code> 和 <code>style</code> 编写，更改无需 <code>hexo d</code>, <code>hexo d</code>，就可以在 <code>hexo s</code> 开启状态的浏览器中查看。写可视化代码时候，需要经常看改动带来的变化，此时可以省去前述的两步。</li>
+<li><strong>在 md 文件中编写并测试 <code>js</code> 代码：</strong>使用 <code>hexo s</code> 测试中，代码需要写在页面内测试。测试完毕后再移动到独立文件。因为 gihub 处的代码改动需要 <code>git commit</code>, <code>git push</code> 之后才会生效。如果每次改动后都进行前面 2 项操作，则无妨。这里的问题在于，<code>hexo s</code> 状态下，无法引用本地的文件。这个问题在图片的引用代码中，也是让人不爽。</li>
+<li><strong>模块化：</strong>重复使用的 js 代码，尽量放在一处，引用到每个页面，减少维护的复杂度。</li>
+</ul>
+<p>目前，文章页面的 <code>CSS</code> 还是无法通过嵌入正文生效。需要 D3 直接写入 <code>DOM</code> 的属性。</p>
+<p><code>D3</code> 在本站嵌入成功后，我就可以做一些可视化的学习笔记。这样，在笔记里面，就可以添加实时的演示了。</p>
+<p>本次嵌入的可视化来自<a href="http://www.jasondavies.com/coffee-wheel/" target="_blank" rel="external">这里</a>。</p>
+<h4 id="其他相关博文">其他相关博文</h4><ul>
+<li><a href="http://daweih.github.io/2015/07/20/viz-of-chromosome/">一个染色体的可视化</a></li>
+</ul>
+<p><br></p>
+<div align="center"><br><img src="http://daweih.github.io/images/wechat_small_black.jpg"><br></div>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>为了在 Hexo 系统的 <code>markdown</code> 正文中测试 <code>D3</code> 的可用性，移植了一个<code>咖啡风味轮</code>的可视化，如下：</p>
+<h4 id="Coffee_Flavour_Wheel">Coffee Fl]]>
+    </summary>
+    
+      <category term="baby step" scheme="http://daweih.github.io/tags/baby-step/"/>
+    
+      <category term="coffee" scheme="http://daweih.github.io/tags/coffee/"/>
+    
+      <category term="d3" scheme="http://daweih.github.io/tags/d3/"/>
+    
+      <category term="visualization" scheme="http://daweih.github.io/tags/visualization/"/>
+    
+      <category term="profession" scheme="http://daweih.github.io/categories/profession/"/>
+    
+  </entry>
+  
+</feed>
